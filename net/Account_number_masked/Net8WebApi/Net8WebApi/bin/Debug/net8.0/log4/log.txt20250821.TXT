@@ -1,0 +1,20 @@
+2025-08-21 17:18:13,277 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-21 17:18:13,416 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-21 17:18:13,453 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-21 17:18:13,495 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-21 17:33:33,193 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-21 17:33:33,285 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-21 17:33:33,323 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-21 17:33:33,334 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-21 17:45:03,265 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-21 17:45:03,357 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-21 17:45:03,391 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-21 17:45:03,403 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-21 17:48:33,360 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-21 17:48:33,452 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-21 17:48:33,486 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-21 17:48:33,498 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-21 18:01:29,511 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-21 18:01:29,601 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-21 18:01:29,634 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-21 18:01:29,645 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi

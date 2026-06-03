@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片管理系统</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 配置Tailwind自定义颜色和字体 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        danger: '#EF4444',
+                        neutral: '#F3F4F6',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            .btn-hover {
+                @apply transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800 min-h-screen">
+    <!-- 顶部导航栏 -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary">
+                <i class="fa fa-th-large mr-2"></i>卡片管理
+            </h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- 搜索框区域 -->
+        <div class="mb-8 relative max-w-2xl mx-auto">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="搜索卡片内容..." 
+                class="w-full px-5 py-3 rounded-full border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-300 pr-12"
+            >
+            <i class="fa fa-search absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+
+        <!-- 卡片列表区域 -->
+        <div id="cardList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 卡片1 -->
+            <div class="card bg-white rounded-xl p-6 card-shadow transition-all duration-300 hover:shadow-xl" data-content="工作项目 会议 截止日期">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">项目进度更新</h3>
+                        <p class="text-gray-600 mb-4">完成第三季度营销计划的制定，准备下周会议讨论。</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="bg-blue-100 text-primary px-2 py-1 rounded-full mr-2">工作</span>
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full">待办</span>
+                        </div>
+                    </div>
+                    <button class="delete-btn text-gray-400 hover:text-danger transition-colors duration-200 p-2" aria-label="删除卡片">
+                        <i class="fa fa-trash-o text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 卡片2 -->
+            <div class="card bg-white rounded-xl p-6 card-shadow transition-all duration-300 hover:shadow-xl" data-content="购物清单 食品 周末">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">周末购物清单</h3>
+                        <p class="text-gray-600 mb-4">水果、蔬菜、肉类和零食，准备周末家庭聚餐。</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full mr-2">生活</span>
+                            <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">计划</span>
+                        </div>
+                    </div>
+                    <button class="delete-btn text-gray-400 hover:text-danger transition-colors duration-200 p-2" aria-label="删除卡片">
+                        <i class="fa fa-trash-o text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 卡片3 -->
+            <div class="card bg-white rounded-xl p-6 card-shadow transition-all duration-300 hover:shadow-xl" data-content="电影 娱乐 推荐">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">电影推荐</h3>
+                        <p class="text-gray-600 mb-4">最近观看的几部精彩电影，值得推荐给朋友。</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="bg-red-100 text-red-700 px-2 py-1 rounded-full mr-2">娱乐</span>
+                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full">推荐</span>
+                        </div>
+                    </div>
+                    <button class="delete-btn text-gray-400 hover:text-danger transition-colors duration-200 p-2" aria-label="删除卡片">
+                        <i class="fa fa-trash-o text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 卡片4 -->
+            <div class="card bg-white rounded-xl p-6 card-shadow transition-all duration-300 hover:shadow-xl" data-content="健身 运动 计划">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">健身计划</h3>
+                        <p class="text-gray-600 mb-4">每周三次有氧运动，两次力量训练，保持身体健康。</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full mr-2">健康</span>
+                            <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">计划</span>
+                        </div>
+                    </div>
+                    <button class="delete-btn text-gray-400 hover:text-danger transition-colors duration-200 p-2" aria-label="删除卡片">
+                        <i class="fa fa-trash-o text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 空状态提示 -->
+        <div id="emptyState" class="hidden text-center py-16">
+            <i class="fa fa-folder-open-o text-5xl text-gray-300 mb-4"></i>
+            <p class="text-gray-500 text-lg">没有找到卡片</p>
+            <button id="addEmptyBtn" class="mt-4 bg-primary text-white px-4 py-2 rounded-lg btn-hover">
+                <i class="fa fa-plus mr-1"></i> 添加第一张卡片
+            </button>
+        </div>
+    </main>
+
+    <!-- 悬浮添加按钮 -->
+    <button id="addButton" class="fixed bottom-6 right-6 bg-primary text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg btn-hover z-20">
+        <i class="fa fa-plus text-xl"></i>
+    </button>
+
+    <!-- 添加卡片模态框 -->
+    <div id="addModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-xl p-6 w-full max-w-md transform transition-transform duration-300 scale-95">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold">添加新卡片</h2>
+                <button id="closeModal" class="text-gray-400 hover:text-gray-600">
+                    <i class="fa fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="addCardForm">
+                <div class="mb-4">
+                    <label for="cardTitle" class="block text-sm font-medium text-gray-700 mb-1">标题</label>
+                    <input type="text" id="cardTitle" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" required>
+                </div>
+                <div class="mb-4">
+                    <label for="cardContent" class="block text-sm font-medium text-gray-700 mb-1">内容</label>
+                    <textarea id="cardContent" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none" required></textarea>
+                </div>
+                <div class="mb-6">
+                    <label for="cardTags" class="block text-sm font-medium text-gray-700 mb-1">标签（用逗号分隔）</label>
+                    <input type="text" id="cardTags" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none">
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-primary text-white px-4 py-2 rounded-lg btn-hover">
+                        <i class="fa fa-save mr-1"></i> 保存
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 获取DOM元素
+        const searchInput = document.getElementById('searchInput');
+        const cardList = document.getElementById('cardList');
+        const cards = document.querySelectorAll('.card');
+        const emptyState = document.getElementById('emptyState');
+        const addButton = document.getElementById('addButton');
+        const addEmptyBtn = document.getElementById('addEmptyBtn');
+        const addModal = document.getElementById('addModal');
+        const closeModal = document.getElementById('closeModal');
+        const addCardForm = document.getElementById('addCardForm');
+
+        // 搜索功能
+        searchInput.addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            let hasVisibleCards = false;
+
+            cards.forEach(card => {
+                const content = card.getAttribute('data-content').toLowerCase();
+                const isVisible = content.includes(searchTerm);
+                
+                card.classList.toggle('hidden', !isVisible);
+                
+                if (isVisible) {
+                    hasVisibleCards = true;
+                }
+            });
+
+            // 显示/隐藏空状态
+            cardList.classList.toggle('hidden', !hasVisibleCards);
+            emptyState.classList.toggle('hidden', hasVisibleCards);
+        });
+
+        // 删除卡片功能
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.delete-btn')) {
+                const btn = e.target.closest('.delete-btn');
+                const card = btn.closest('.card');
+                
+                // 添加删除动画
+                card.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    card.remove();
+                    // 更新卡片列表引用
+                    updateCardList();
+                    // 检查是否还有卡片
+                    checkEmptyState();
+                }, 300);
+            }
+        });
+
+        // 打开模态框
+        function openModal() {
+            addModal.classList.remove('hidden');
+            // 触发重排后添加动画类
+            setTimeout(() => {
+                addModal.classList.add('opacity-100');
+                addModal.querySelector('div').classList.remove('scale-95');
+                addModal.querySelector('div').classList.add('scale-100');
+            }, 10);
+            // 聚焦到标题输入框
+            document.getElementById('cardTitle').focus();
+        }
+
+        // 关闭模态框
+        function closeModalFunc() {
+            addModal.classList.remove('opacity-100');
+            addModal.querySelector('div').classList.remove('scale-100');
+            addModal.querySelector('div').classList.add('scale-95');
+            
+            setTimeout(() => {
+                addModal.classList.add('hidden');
+                addCardForm.reset();
+            }, 300);
+        }
+
+        // 添加卡片按钮事件
+        addButton.addEventListener('click', openModal);
+        addEmptyBtn.addEventListener('click', openModal);
+        closeModal.addEventListener('click', closeModalFunc);
+
+        // 点击模态框外部关闭
+        addModal.addEventListener('click', function(e) {
+            if (e.target === addModal) {
+                closeModalFunc();
+            }
+        });
+
+        // 提交表单添加新卡片
+        addCardForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('cardTitle').value;
+            const content = document.getElementById('cardContent').value;
+            const tags = document.getElementById('cardTags').value.split(',').map(tag => tag.trim()).filter(Boolean);
+            
+            // 创建新卡片
+            const newCard = document.createElement('div');
+            newCard.className = 'card bg-white rounded-xl p-6 card-shadow transition-all duration-300 hover:shadow-xl scale-95 opacity-0';
+            newCard.setAttribute('data-content', `${title.toLowerCase()} ${content.toLowerCase()} ${tags.join(' ').toLowerCase()}`);
+            
+            // 生成标签HTML
+            let tagsHtml = '';
+            const tagColors = [
+                { bg: 'bg-blue-100', text: 'text-blue-700' },
+                { bg: 'bg-green-100', text: 'text-green-700' },
+                { bg: 'bg-purple-100', text: 'text-purple-700' },
+                { bg: 'bg-red-100', text: 'text-red-700' },
+                { bg: 'bg-yellow-100', text: 'text-yellow-700' }
+            ];
+            
+            tags.forEach((tag, index) => {
+                const color = tagColors[index % tagColors.length];
+                tagsHtml += `<span class="${color.bg} ${color.text} px-2 py-1 rounded-full mr-2">${tag}</span>`;
+            });
+            
+            newCard.innerHTML = `
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">${title}</h3>
+                        <p class="text-gray-600 mb-4">${content}</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            ${tagsHtml || '<span class="bg-gray-100 text-gray-700 px-2 py-1 rounded-full">无标签</span>'}
+                        </div>
+                    </div>
+                    <button class="delete-btn text-gray-400 hover:text-danger transition-colors duration-200 p-2" aria-label="删除卡片">
+                        <i class="fa fa-trash-o text-lg"></i>
+                    </button>
+                </div>
+            `;
+            
+            // 添加到列表
+            cardList.appendChild(newCard);
+            
+            // 触发动画
+            setTimeout(() => {
+                newCard.classList.remove('scale-95', 'opacity-0');
+            }, 10);
+            
+            // 更新卡片列表引用
+            updateCardList();
+            // 确保空状态隐藏
+            checkEmptyState();
+            // 关闭模态框
+            closeModalFunc();
+        });
+
+        // 更新卡片列表引用
+        function updateCardList() {
+            // 更新全局卡片引用
+            cards = document.querySelectorAll('.card');
+        }
+
+        // 检查空状态
+        function checkEmptyState() {
+            const visibleCards = document.querySelectorAll('.card:not(.hidden)');
+            const hasVisibleCards = visibleCards.length > 0;
+            
+            cardList.classList.toggle('hidden', !hasVisibleCards);
+            emptyState.classList.toggle('hidden', hasVisibleCards);
+        }
+
+        // 初始化检查空状态
+        checkEmptyState();
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "+sivZjzon5l7SsM/HAbc130YUvv/nSTZ+d4kJ85MqKU=",
+  "Source": "JWT",
+  "BasePath": "_content/JWT",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "G:\\UnityP\\进阶\\Net8WebApi\\Net8WebApi\\Net8WebApi.csproj",
+      "Version": 2,
+      "Source": "Net8WebApi",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

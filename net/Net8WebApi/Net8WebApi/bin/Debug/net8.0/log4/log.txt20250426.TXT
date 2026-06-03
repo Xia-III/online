@@ -1,0 +1,176 @@
+2025-04-26 13:34:09,755 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 13:34:09,902 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 13:34:09,905 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 13:34:09,911 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 13:34:15,350 [.NET TP Worker] INFO  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:34:15,357 [.NET TP Worker] WARN  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:34:15,360 [.NET TP Worker] ERROR Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:34:16,276 [.NET TP Worker] INFO  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:34:16,279 [.NET TP Worker] WARN  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:34:16,282 [.NET TP Worker] ERROR Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:59:42,668 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 13:59:42,758 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 13:59:42,801 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 13:59:42,819 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 13:59:49,197 [.NET TP Worker] INFO  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:59:49,205 [.NET TP Worker] WARN  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:59:49,208 [.NET TP Worker] ERROR Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:59:50,629 [.NET TP Worker] INFO  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:59:50,633 [.NET TP Worker] WARN  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 13:59:50,636 [.NET TP Worker] ERROR Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-04-26 16:28:10,514 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:28:10,694 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:28:10,725 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:28:10,737 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:32:39,528 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:32:39,632 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:32:39,639 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:32:39,642 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:38:52,362 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:38:52,448 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:38:52,471 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:38:52,473 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:38:59,581 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，错误信息：ConnectionString 属性尚未初始化。DbType="SqlServer";ConfigId="".
+English Message : Connection open error . ConnectionString 属性尚未初始化。DbType="SqlServer";ConfigId="" 
+   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.AdoProvider.CheckConnection()
+   at SqlSugar.SqlServerProvider.GetCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at Net8WebApi.Controllers.LogController.findAll() in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\LogController.cs:line 28
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-26 16:42:09,176 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:42:09,268 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:42:09,275 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:42:09,277 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:42:59,272 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:42:59,358 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:42:59,366 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:42:59,369 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:43:09,645 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，错误信息：ConnectionString 属性尚未初始化。DbType="SqlServer";ConfigId="".
+English Message : Connection open error . ConnectionString 属性尚未初始化。DbType="SqlServer";ConfigId="" 
+   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.AdoProvider.CheckConnection()
+   at SqlSugar.SqlServerProvider.GetCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at Net8WebApi.Controllers.LogController.findAll() in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\LogController.cs:line 28
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-26 16:45:20,305 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:45:20,389 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:45:20,405 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:45:20,407 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:45:25,014 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，错误信息：ConnectionString 属性尚未初始化。DbType="SqlServer";ConfigId="".
+English Message : Connection open error . ConnectionString 属性尚未初始化。DbType="SqlServer";ConfigId="" 
+   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.AdoProvider.CheckConnection()
+   at SqlSugar.SqlServerProvider.GetCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at Net8WebApi.Controllers.LogController.findAll() in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\LogController.cs:line 28
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-26 16:47:15,226 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:47:15,361 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:47:15,384 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:47:15,387 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:51:03,692 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:51:03,831 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:51:04,042 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:51:05,021 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:51:09,765 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+SqlSugar.SqlSugarException: 中文提示 :  连接数据库过程中发生错误，检查服务器是否正常连接字符串是否正确，错误信息：ConnectionString 属性尚未初始化。DbType="SqlServer";ConfigId="".
+English Message : Connection open error . ConnectionString 属性尚未初始化。DbType="SqlServer";ConfigId="" 
+   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.AdoProvider.CheckConnection()
+   at SqlSugar.SqlServerProvider.GetCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at Net8WebApi.Controllers.LogController.findAll() in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\LogController.cs:line 28
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-26 16:58:12,035 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:58:12,474 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:58:12,518 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:58:12,551 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-04-26 16:58:28,637 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-04-26 16:58:30,585 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-04-26 16:58:30,833 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-04-26 16:58:30,971 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi

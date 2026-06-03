@@ -1,0 +1,223 @@
+2025-05-07 09:15:25,334 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 09:15:25,544 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 09:15:25,566 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 09:15:25,568 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 10:02:29,650 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 10:02:29,824 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 10:02:29,828 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 10:02:29,835 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 10:42:17,369 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 10:42:17,461 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 10:42:17,464 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 10:42:17,493 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 10:45:26,386 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 10:45:26,480 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 10:45:26,498 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 10:45:26,501 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 10:45:51,614 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 10:45:51,705 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 10:45:51,708 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 10:45:51,715 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 10:54:33,719 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 10:54:33,817 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 10:54:33,858 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 10:54:33,861 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 10:57:14,298 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 10:57:14,390 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 10:57:14,409 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 10:57:14,411 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 13:45:54,152 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 13:45:54,304 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 13:45:54,307 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 13:45:54,309 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 14:35:30,292 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 14:35:30,383 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 14:35:30,395 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 14:35:30,397 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 14:40:54,545 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 14:40:54,660 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 14:40:54,669 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 14:40:54,706 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 14:57:13,129 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 14:57:13,220 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 14:57:13,223 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 14:57:13,229 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 14:58:05,076 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 14:58:05,176 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 14:58:05,179 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 14:58:05,213 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 15:02:32,543 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 15:02:32,630 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 15:02:32,634 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 15:02:32,640 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 15:02:42,113 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.ArgumentException: Expression of type 'System.Object' cannot be used for parameter of type 'System.String' of method 'Boolean Contains(System.String, System.String)' (Parameter 'arg1')
+   at System.Dynamic.Utils.ExpressionUtils.ValidateOneArgument(MethodBase method, ExpressionType nodeKind, Expression arguments, ParameterInfo pi, String methodParamName, String argumentParamName, Int32 index)
+   at System.Linq.Expressions.Expression.Call(MethodInfo method, Expression arg0, Expression arg1)
+   at RepositoryImpl.BaseRepository`1.FuzzyQueryAsync(String fieldName, String keyword, Int32 page, Int32 size, RefAsync`1 total) in G:\UnityP\进阶\Net8WebApi\RepositoryImpl\BaseRepository.cs:line 97
+   at Net8WebApi.Controllers.UserController.FindByUsernamePage(Int32 page, Int32 pageSize, String username) in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\UserController.cs:line 134
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-07 15:05:20,351 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 15:05:20,447 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 15:05:20,450 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 15:05:20,457 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 15:07:46,133 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot resolve 'IService.IFileRecordService' from root provider because it requires scoped service 'IRepository.IFileRecordRepository'.
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Net8WebApi.Utility.FileExt.GetFileRecordService() in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Utility\FileExt.cs:line 19
+   at Net8WebApi.Utility.FileExt.UpdateFileUsageStatus(String url, Boolean isUsed) in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Utility\FileExt.cs:line 27
+   at Net8WebApi.Controllers.WarehouseController.UpdateById(Warehouse warehouse) in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\WarehouseController.cs:line 108
+   at lambda_method61(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-07 15:14:13,311 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 15:14:13,416 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 15:14:13,420 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 15:14:13,426 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 15:22:33,221 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 15:22:33,328 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 15:22:33,350 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 15:22:33,356 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 15:23:02,162 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.Collections.Generic.List`1.Enumerator.MoveNext()
+   at Net8WebApi.Controllers.UserController.FindByUsernamePage(Int32 page, Int32 pageSize, String username) in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\UserController.cs:line 141
+   at lambda_method8(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-07 15:25:21,724 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 15:25:21,822 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 15:25:21,826 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 15:25:21,833 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 15:26:27,228 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Collection was modified; enumeration operation may not execute.
+   at System.Collections.Generic.List`1.Enumerator.MoveNext()
+   at Net8WebApi.Controllers.UserController.FindByUsernamePage(Int32 page, Int32 pageSize, String username) in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\UserController.cs:line 141
+   at lambda_method5(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-07 15:28:09,676 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 15:28:09,775 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 15:28:09,823 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 15:28:09,830 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 16:30:27,824 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 16:30:27,927 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 16:30:27,930 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 16:30:27,936 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 16:32:00,554 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 16:32:00,642 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 16:32:00,645 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 16:32:00,651 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 16:32:56,391 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 16:32:56,485 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 16:32:56,489 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 16:32:56,495 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 16:45:28,163 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 16:45:28,270 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 16:45:28,274 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 16:45:28,280 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 16:48:24,614 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 16:48:24,704 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 16:48:24,708 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 16:48:24,715 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 16:49:31,386 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Net8WebApi.Controllers.UserController.UpdateUserStatus(Int32 userId, Int32 status) in G:\UnityP\进阶\Net8WebApi\Net8WebApi\Controllers\UserController.cs:line 253
+   at lambda_method45(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-07 16:49:37,573 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 16:49:37,667 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 16:49:37,676 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 16:49:37,678 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 17:00:42,097 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 17:00:42,180 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 17:00:42,204 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 17:00:42,207 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 17:19:15,243 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 17:19:15,378 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 17:19:15,384 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 17:19:15,394 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 17:21:44,565 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 17:21:44,661 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 17:21:44,664 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 17:21:44,670 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 17:23:56,000 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 17:23:56,115 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 17:23:56,121 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 17:23:56,152 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 18:06:50,719 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 18:06:50,822 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 18:06:50,825 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 18:06:50,831 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-07 18:12:02,680 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-07 18:12:02,798 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-07 18:12:02,808 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-07 18:12:02,811 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi

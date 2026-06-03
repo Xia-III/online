@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知识库管理员申请</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#36CFC9',
+            accent: '#722ED1',
+            neutral: '#F5F7FA',
+            dark: '#1D2129',
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+      }
+      .btn-primary {
+        @apply bg-primary text-white px-4 py-2 rounded-lg transition-all duration-200 hover:bg-primary/90 active:scale-95 focus:outline-none focus:ring-2 focus:ring-primary/50;
+      }
+      .btn-secondary {
+        @apply bg-white border border-gray-300 text-dark px-4 py-2 rounded-lg transition-all duration-200 hover:bg-gray-50 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-200;
+      }
+      .badge {
+        @apply px-2 py-1 rounded-full text-xs font-medium;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-inter bg-gray-50 text-dark min-h-screen flex flex-col">
+  <!-- 导航栏 -->
+  <header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <a href="#" class="flex items-center">
+            <i class="fa fa-book-open text-primary text-2xl mr-2"></i>
+          </a>
+        </div>
+      
+        <div class="flex items-center">
+          <div class="relative mr-4">
+            <input type="text" placeholder="搜索知识库..." class="pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary w-64 transition-all">
+            <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          </div>
+          
+          <div class="flex items-center">
+            <i class="fa fa-chevron-down ml-1 text-xs text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容区 -->
+  <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- 页面标题和说明 -->
+    <div class="mb-8 text-center">
+      <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-3">知识库管理员申请</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto">选择您感兴趣的知识库，申请成为主管理员或子管理员，为知识共享贡献力量</p>
+    </div>
+    
+    <!-- 知识库卡片网格 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 知识库卡片 1 - 有主管理员，子管理员未满 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+        <div class="p-5 pt-6">
+          
+          <h3 class="text-xl font-semibold mb-2">前端开发技术知识库</h3>
+          
+          <div class="mb-4">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">主管理员</span>
+              <span class="text-sm text-gray-500">1/1</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          
+          <div class="mb-5">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">子管理员</span>
+              <span class="text-sm text-gray-500">2/3</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-secondary h-2.5 rounded-full" style="width: 66%"></div>
+            </div>
+          </div>
+          
+          <div class="flex space-x-3">
+            <button class="btn-secondary flex-1" disabled>
+              <i class="fa fa-user-circle mr-1"></i> 主管理满
+            </button>
+            <button class="btn-primary flex-1 apply-btn" data-id="1" data-name="前端开发技术知识库" data-role="sub">
+              <i class="fa fa-plus-circle mr-1"></i> 申请子管理
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 知识库卡片 2 - 无主管理员，不能申请子管理 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+        <div class="p-5 pt-6">
+          
+          <h3 class="text-xl font-semibold mb-2">产品设计与管理手册</h3>
+          <div class="mb-4">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">主管理员</span>
+              <span class="text-sm text-gray-500">0/1</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <div class="flex mt-1">
+              <span class="text-xs text-gray-500">暂无主管理员</span>
+            </div>
+          </div>
+          
+          <div class="mb-5">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">子管理员</span>
+              <span class="text-sm text-gray-500">1/3</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-secondary h-2.5 rounded-full" style="width: 33%"></div>
+            </div>
+          </div>
+          
+          <div class="flex space-x-3">
+            <button class="btn-primary flex-1 apply-btn" data-id="2" data-name="产品设计与管理手册" data-role="main">
+              <i class="fa fa-user-circle mr-1"></i> 申请主管理
+            </button>
+            <button class="btn-secondary flex-1" disabled title="需先有主管理员才能申请子管理">
+              <i class="fa fa-lock mr-1"></i> 申请子管理
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 知识库卡片 3 - 有主管理员但子管理已满 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+        <div class="p-5 pt-6">
+          
+          <h3 class="text-xl font-semibold mb-2">数字营销策略库</h3>
+          
+          <div class="mb-4">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">主管理员</span>
+              <span class="text-sm text-gray-500">1/1</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          
+          <div class="mb-5">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">子管理员</span>
+              <span class="text-sm text-gray-500">3/3</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-secondary h-2.5 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          
+          <div class="flex space-x-3">
+            <button class="btn-secondary flex-1" disabled>
+              <i class="fa fa-user-circle mr-1"></i> 主管理满
+            </button>
+            <button class="btn-secondary flex-1" disabled>
+              <i class="fa fa-users mr-1"></i> 子管理满
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 知识库卡片 4 - 无主管理员，不能申请子管理 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+        <div class="p-5 pt-6">
+          
+          <h3 class="text-xl font-semibold mb-2">团队管理与协作指南</h3>
+          
+          <div class="mb-4">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">主管理员</span>
+              <span class="text-sm text-gray-500">0/1</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <div class="flex mt-1">
+              <span class="text-xs text-gray-500">暂无主管理员</span>
+            </div>
+          </div>
+          
+          <div class="mb-5">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">子管理员</span>
+              <span class="text-sm text-gray-500">0/3</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-secondary h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <div class="flex mt-1">
+              <span class="text-xs text-gray-500">暂无子管理员</span>
+            </div>
+          </div>
+          
+          <div class="flex space-x-3">
+            <button class="btn-primary flex-1 apply-btn" data-id="4" data-name="团队管理与协作指南" data-role="main">
+              <i class="fa fa-user-circle mr-1"></i> 申请主管理
+            </button>
+            <button class="btn-secondary flex-1" disabled title="需先有主管理员才能申请子管理">
+              <i class="fa fa-lock mr-1"></i> 申请子管理
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 知识库卡片 5 - 有主管理员，子管理员未满 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+        <div class="p-5 pt-6">
+          
+          <h3 class="text-xl font-semibold mb-2">数据科学与人工智能知识库</h3>
+          <p class="text-gray-600 text-sm mb-4">包含机器学习、深度学习、数据分析、大数据处理等领域的技术文档和实践案例。</p>
+          
+          <div class="mb-4">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">主管理员</span>
+              <span class="text-sm text-gray-500">1/1</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          
+          <div class="mb-5">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">子管理员</span>
+              <span class="text-sm text-gray-500">1/3</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-secondary h-2.5 rounded-full" style="width: 33%"></div>
+            </div>
+          </div>
+          
+          <div class="flex space-x-3">
+            <button class="btn-secondary flex-1" disabled>
+              <i class="fa fa-user-circle mr-1"></i> 主管理满
+            </button>
+            <button class="btn-primary flex-1 apply-btn" data-id="5" data-name="数据科学与人工智能知识库" data-role="sub">
+              <i class="fa fa-plus-circle mr-1"></i> 申请子管理
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 知识库卡片 6 - 无主管理员，不能申请子管理 -->
+      <div class="bg-white rounded-xl shadow-sm overflow-hidden card-hover">
+        <div class="p-5 pt-6">
+          <h3 class="text-xl font-semibold mb-2">创业与创新指南</h3>
+          <p class="text-gray-600 text-sm mb-4">涵盖创业计划、融资策略、商业模式设计、创新管理等创业相关知识与案例。</p>
+          
+          <div class="mb-4">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">主管理员</span>
+              <span class="text-sm text-gray-500">0/1</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <div class="flex mt-1">
+              <span class="text-xs text-gray-500">暂无主管理员</span>
+            </div>
+          </div>
+          
+          <div class="mb-5">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-sm font-medium">子管理员</span>
+              <span class="text-sm text-gray-500">0/3</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-secondary h-2.5 rounded-full" style="width: 0%"></div>
+            </div>
+            <div class="flex mt-1">
+              <span class="text-xs text-gray-500">暂无子管理员</span>
+            </div>
+          </div>
+          
+          <div class="flex space-x-3">
+            <button class="btn-primary flex-1 apply-btn" data-id="6" data-name="创业与创新指南" data-role="main">
+              <i class="fa fa-user-circle mr-1"></i> 申请主管理
+            </button>
+            <button class="btn-secondary flex-1" disabled title="需先有主管理员才能申请子管理">
+              <i class="fa fa-lock mr-1"></i> 申请子管理
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 分页 -->
+    <div class="mt-10 flex justify-center">
+      <nav class="inline-flex rounded-md shadow-sm" aria-label="分页">
+        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+          <i class="fa fa-chevron-left text-xs"></i>
+        </a>
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-primary text-sm font-medium text-white">
+          1
+        </a>
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          2
+        </a>
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          3
+        </a>
+        <span class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700">
+          ...
+        </span>
+        <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+          8
+        </a>
+        <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+          <i class="fa fa-chevron-right text-xs"></i>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- 申请模态框 -->
+  <div id="applicationModal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white rounded-xl w-full max-w-md mx-4 transform scale-95 transition-transform duration-300" id="modalContent">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-semibold" id="modalTitle">申请成为管理员</h3>
+          <button id="closeModal" class="text-gray-400 hover:text-gray-500">
+            <i class="fa fa-times text-xl"></i>
+          </button>
+        </div>
+        
+        <div class="mb-5">
+          <p class="text-gray-600 mb-2">您正在申请成为：</p>
+          <p class="font-medium" id="knowledgeBaseName">前端开发技术知识库</p>
+          <p class="text-primary font-medium" id="applicationRole">主管理员</p>
+        </div>
+        
+        <form id="applicationForm">
+          <input type="hidden" id="kbId">
+          <input type="hidden" id="roleType">     
+          
+          <div class="flex space-x-3">
+            <button type="button" id="cancelApplication" class="btn-secondary flex-1">
+              取消
+            </button>
+            <button type="submit" class="btn-primary flex-1">
+              <i class="fa fa-paper-plane mr-1"></i> 提交申请
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 申请成功提示 -->
+  <div id="successToast" class="fixed bottom-6 right-6 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 flex items-center">
+    <i class="fa fa-check-circle mr-2"></i>
+    <span>申请已提交成功！</span>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <div class="flex items-center">
+            <i class="fa fa-book-open text-primary text-xl mr-2"></i>
+            <span class="text-lg font-semibold text-primary">知识管理平台</span>
+          </div>
+          <p class="text-sm text-gray-500 mt-1">让知识共享更简单</p>
+        </div>
+        
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-500 hover:text-primary transition-colors">
+            <i class="fa fa-question-circle"></i>
+            <span class="ml-1">帮助中心</span>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-primary transition-colors">
+            <i class="fa fa-file-text-o"></i>
+            <span class="ml-1">使用条款</span>
+          </a>
+          <a href="#" class="text-gray-500 hover:text-primary transition-colors">
+            <i class="fa fa-envelope-o"></i>
+            <span class="ml-1">联系我们</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="mt-6 text-center text-sm text-gray-500">
+        &copy; 2023 知识管理平台 版权所有
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 10) {
+        navbar.classList.add('shadow');
+        navbar.classList.remove('shadow-sm');
+      } else {
+        navbar.classList.remove('shadow');
+        navbar.classList.add('shadow-sm');
+      }
+    });
+    
+    // 模态框相关操作
+    const modal = document.getElementById('applicationModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeModal = document.getElementById('closeModal');
+    const cancelApplication = document.getElementById('cancelApplication');
+    const applyButtons = document.querySelectorAll('.apply-btn');
+    const modalTitle = document.getElementById('modalTitle');
+    const knowledgeBaseName = document.getElementById('knowledgeBaseName');
+    const applicationRole = document.getElementById('applicationRole');
+    const kbIdInput = document.getElementById('kbId');
+    const roleTypeInput = document.getElementById('roleType');
+    const applicationForm = document.getElementById('applicationForm');
+    const successToast = document.getElementById('successToast');
+    
+    // 打开模态框
+    applyButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const kbId = this.getAttribute('data-id');
+        const kbName = this.getAttribute('data-name');
+        const role = this.getAttribute('data-role');
+        
+        // 设置模态框内容
+        kbIdInput.value = kbId;
+        roleTypeInput.value = role;
+        knowledgeBaseName.textContent = kbName;
+        applicationRole.textContent = role === 'main' ? '主管理员' : '子管理员';
+        modalTitle.textContent = `申请成为${role === 'main' ? '主管理员' : '子管理员'}`;
+        
+        
+        // 显示模态框
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+          modal.classList.add('opacity-100');
+          modalContent.classList.remove('scale-95');
+          modalContent.classList.add('scale-100');
+        }, 10);
+        
+        // 阻止背景滚动
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    
+    // 关闭模态框
+    function closeModalFunc() {
+      modal.classList.remove('opacity-100');
+      modalContent.classList.remove('scale-100');
+      modalContent.classList.add('scale-95');
+      
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+    
+    closeModal.addEventListener('click', closeModalFunc);
+    cancelApplication.addEventListener('click', closeModalFunc);
+    
+    // 点击模态框外部关闭
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closeModalFunc();
+      }
+    });
+    
+    // 提交申请
+    applicationForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // 模拟表单提交
+      const reason = document.getElementById('applicationReason').value;
+      const experience = document.getElementById('relatedExperience').value;
+      
+      if (!reason || !experience) {
+        alert('请填写申请理由和相关经验');
+        return;
+      }
+      
+      // 关闭模态框
+      closeModalFunc();
+      
+      // 显示成功提示
+      setTimeout(() => {
+        successToast.classList.remove('translate-y-20', 'opacity-0');
+        successToast.classList.add('translate-y-0', 'opacity-100');
+        
+        // 3秒后隐藏提示
+        setTimeout(() => {
+          successToast.classList.remove('translate-y-0', 'opacity-100');
+          successToast.classList.add('translate-y-20', 'opacity-0');
+        }, 3000);
+      }, 300);
+      
+      // 在实际应用中，这里会发送API请求
+      console.log('提交申请:', {
+        kbId: kbIdInput.value,
+        role: roleTypeInput.value,
+        reason: reason,
+        experience: experience
+      });
+    });
+  </script>
+</body>
+</html>
+    

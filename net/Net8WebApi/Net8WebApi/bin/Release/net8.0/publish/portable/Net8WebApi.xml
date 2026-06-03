@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Net8WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Net8WebApi.Controllers.AuthoizeController.Add(System.String,System.String,System.String)">
+            <summary>
+            注册
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthoizeController.AdminAddUser(System.String,System.String)">
+            <summary>
+            注册
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.Add(System.String,System.String,System.Int32)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.UpdateById(Model.EntityMap.Authority)">
+            <summary>
+            修改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindByDatasetsId(System.String)">
+            <summary>
+            条件全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindAllQueryAsync(System.Int32,System.Int32)">
+            <summary>
+            分页查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindManageAllPage(System.Int32,System.Int32,System.String)">
+            <summary>
+            查询能管理的知识库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UserInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.Logout">
+            <summary>
+            退出登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindAll">
+            <summary>
+            查询全部用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindById(System.Int32)">
+            <summary>
+            根据ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindByUsername(System.String)">
+            <summary>
+            根据用户名模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindByUsernamePage(System.Int32,System.Int32,System.String)">
+            <summary>
+            根据用户名分页模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdateById(Model.EntityDto.UserDto)">
+            <summary>
+            修改用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdateUserNameAndEmail(System.String,System.String)">
+            <summary>
+            修改用户名和邮箱
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdatePassword(System.String,System.String,System.String)">
+            <summary>
+            修改用户密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdateAvatar(System.String)">
+            <summary>
+            修改用户头像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.ResetPassword(System.Int32)">
+            <summary>
+            重置用户密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdateUserStatus(System.Int32,System.Int32)">
+            <summary>
+            修改用户状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindAllByPage(System.Int32,System.Int32,System.String)">
+            <summary>
+            根据用户名模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

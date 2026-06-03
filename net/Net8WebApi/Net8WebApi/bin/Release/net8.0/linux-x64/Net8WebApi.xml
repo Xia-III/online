@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Net8WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Net8WebApi.Controllers.ArticleController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ArticleController.FindAllProductCount">
+            <summary>
+            查询物品总数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ArticleController.GetTop10ProductsByStock">
+            <summary>
+            查询库存数量前10的物品及数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ArticleController.GetTop5WarehousesByStock">
+            <summary>
+            查询库存数量前5的仓库及数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ArticleController.FindByWarehouseId(System.Int32)">
+            <summary>
+            根据仓库ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ArticleController.FindByProductId(System.Int32)">
+            <summary>
+            根据产品ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ArticleController.UpdateStatusByArticleId(System.Int32,System.Int32)">
+            <summary>
+            修改物品在仓库中的状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ArticleController.GenerateUseStorageRack(System.Int32,System.String)">
+            <summary>
+            获取一个可用存放位置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthoizeController.Add(System.String,System.String)">
+            <summary>
+            注册
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.Add(System.String,System.String,System.Int32)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.UpdateById(Model.EntityMap.Authority)">
+            <summary>
+            修改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.UpdateStatus(System.Int32,System.Int32)">
+            <summary>
+            修改权限状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindByDatasetsId(System.String)">
+            <summary>
+            条件全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindAllQueryAsync(System.Int32,System.Int32)">
+            <summary>
+            分页查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindManageCountByDatasetsId(System.String)">
+            <summary>
+            查询管理员数量情况
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.FindManageAllPage(System.Int32,System.Int32,System.String)">
+            <summary>
+            查询能管理的知识库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.GetSubAdminApplicationsPage(System.Int32,System.Int32,System.String)">
+            <summary>
+            待审核的权限申请
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.GetMainAdminApplicationsPage(System.Int32,System.Int32,System.String)">
+            <summary>
+            查询全部主管理员权限申请
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.AuthorityController.GetMyApplicationsPage(System.Int32,System.Int32,System.String,System.Nullable{System.Int32})">
+            <summary>
+            待审核的权限申请
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.FindCustomPage(System.Int32,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.Int32})">
+            <summary>
+            分页自定义查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.FindCountInYear">
+            <summary>
+            查询本月出入库操作数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.FindById(System.Int32)">
+            <summary>
+            根据ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.FindByInventoryTransactionname(System.Int32)">
+            <summary>
+            查询仓库物品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.Add(Model.EntityMap.InventoryTransaction)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.UpdateById(Model.EntityMap.InventoryTransaction)">
+            <summary>
+            修改出入库信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.UpdateStateById(System.Int32,System.Int32,System.String)">
+            <summary>
+            审核出入库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.FindSemesterData">
+            <summary>
+            查询最近6个月的出入库和库存总量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.InventoryTransactionController.FindWeeklyData">
+            <summary>
+            查询最近7天的出入库和库存总量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.MachineController.Add(Model.EntityMap.Machine)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.MachineController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.MachineController.UpdateById(Model.EntityMap.Machine)">
+            <summary>
+            修改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.MachineController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.MachineController.FindPage(System.Int32,System.Int32,System.String,System.Int32,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.Decimal,System.String)">
+            <summary>
+            分页条件查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderController.Add(Model.EntityMap.Order)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderController.UpdateById(Model.EntityMap.Order)">
+            <summary>
+            修改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderController.FindPage(System.Int32,System.Int32,System.String,System.Byte,System.String)">
+            <summary>
+            分页条件查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderItemController.Add(Model.EntityMap.OrderItem)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderItemController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderItemController.UpdateById(Model.EntityMap.OrderItem)">
+            <summary>
+            修改
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.OrderItemController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindCount">
+            <summary>
+            查询物品样数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindById(System.Int32)">
+            <summary>
+            根据ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindByProductname(System.String)">
+            <summary>
+            根据产品名模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindByProductnamePage(System.String,System.Int32,System.Int32)">
+            <summary>
+            根据产品名分页模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.Add(Model.EntityMap.Product)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.UpdateById(Model.EntityMap.Product)">
+            <summary>
+            修改产品信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindByProductNameOrProductCodeOrModelPage(System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            根据产品名或编码或型号分页查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UserInfo">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.Logout">
+            <summary>
+            退出登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindById(System.Int32)">
+            <summary>
+            根据ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindByUsername(System.String)">
+            <summary>
+            根据用户名模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindByUsernamePage(System.Int32,System.Int32,System.String)">
+            <summary>
+            根据用户名分页模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdateById(Model.EntityDto.UserDto)">
+            <summary>
+            修改用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdatePassword(System.String,System.String,System.String)">
+            <summary>
+            修改用户密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdateAvatar(System.String)">
+            <summary>
+            修改用户头像
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.ResetPassword(System.Int32)">
+            <summary>
+            重置用户密码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdateUserStatus(System.Int32,System.Int32)">
+            <summary>
+            修改用户状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.FindCount">
+            <summary>
+            查询仓库总数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.FindById(System.Int32)">
+            <summary>
+            根据ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.FindWarehouseByManager(System.String)">
+            <summary>
+            根据管理字段查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.FindWarehouseByUsername(System.String)">
+            <summary>
+            根据用户名查询仓库
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.FindByWarehousename(System.String)">
+            <summary>
+            根据仓库名查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.FindByWarehousenameLike(System.String)">
+            <summary>
+            根据仓库名模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.FindByWarehousenamePage(System.String,System.Int32,System.Int32)">
+            <summary>
+            根据仓库名分页模糊查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.Add(Model.EntityMap.Warehouse)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.UpdateById(Model.EntityMap.Warehouse)">
+            <summary>
+            修改仓库信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.WarehouseController.UpdateWarehouseManager(System.Int32,System.String)">
+            <summary>
+            修改仓库信息
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

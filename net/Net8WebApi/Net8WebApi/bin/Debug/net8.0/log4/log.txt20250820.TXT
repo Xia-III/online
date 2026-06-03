@@ -1,0 +1,32 @@
+2025-08-20 17:02:35,133 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-20 17:02:35,284 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-20 17:02:35,311 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-20 17:02:35,322 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-20 17:07:34,267 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-20 17:07:34,366 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-20 17:07:34,392 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-20 17:07:34,421 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-20 17:37:19,652 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-20 17:37:19,747 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-20 17:37:19,781 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-20 17:37:19,793 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-20 17:37:20,407 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Authority/FindAll" for actions - Net8WebApi.Controllers.AuthorityController.FindAll (Net8WebApi),Net8WebApi.Controllers.AuthorityController.FindAll (Net8WebApi). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-20 17:38:20,229 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-20 17:38:21,585 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-20 17:38:21,621 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-20 17:38:21,632 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-20 17:52:02,982 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-20 17:52:03,075 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-20 17:52:03,100 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-20 17:52:03,113 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-20 17:57:34,835 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-20 17:57:34,927 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-20 17:57:34,952 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-20 17:57:34,965 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi

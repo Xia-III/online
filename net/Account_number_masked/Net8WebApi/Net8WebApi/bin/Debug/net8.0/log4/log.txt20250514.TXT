@@ -1,0 +1,33 @@
+2025-05-14 10:08:40,097 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-14 10:08:40,248 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-14 10:08:40,251 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-14 10:08:40,253 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-14 10:15:40,383 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-14 10:15:40,504 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-14 10:15:40,510 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-14 10:15:40,517 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-14 10:15:47,187 [.NET TP Worker] INFO  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-05-14 17:51:08,295 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-14 17:51:08,450 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-14 17:51:08,454 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-14 17:51:08,459 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-14 17:51:36,678 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-14 17:51:36,764 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-14 17:51:36,791 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-14 17:51:36,794 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-14 17:53:41,461 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-14 17:53:41,557 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-14 17:53:41,581 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-14 17:53:41,585 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-14 17:54:39,457 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-14 17:54:39,563 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-14 17:54:39,568 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-14 17:54:39,590 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-14 17:58:22,447 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-14 17:58:22,545 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-14 17:58:22,549 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-14 17:58:22,555 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-14 17:59:11,167 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-14 17:59:11,259 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-14 17:59:11,263 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-14 17:59:11,287 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi

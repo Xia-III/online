@@ -1,0 +1,508 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\model\\entitymap\\masked.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\masked.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\controllers\\maskedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\maskedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\controllers\\authoizecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\authoizecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\model\\entitydto\\userdtotwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitydto\\userdtotwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\repositoryimpl\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\utility\\decoderutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\decoderutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\repositoryimpl\\maskedrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\maskedrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\utility\\md5helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\md5helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\utility\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\utility\\customautomapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\customautomapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\net8webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\net8webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\net8webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\irepository\\imaskedrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\imaskedrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\interface\\imaskedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\imaskedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\service\\maskedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\maskedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\service\\memorytokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\memorytokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\interface\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\irepository\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\repositoryimpl\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\model\\entitymap\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\model\\entitydto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitydto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\account_number_masked\\net8webapi\\interface\\itokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\itokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 154,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MaskedController.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Controllers\\MaskedController.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\MaskedController.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Controllers\\MaskedController.cs",
+              "RelativeToolTip": "Net8WebApi\\Controllers\\MaskedController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T06:25:12.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthoizeController.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Controllers\\AuthoizeController.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\AuthoizeController.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Controllers\\AuthoizeController.cs",
+              "RelativeToolTip": "Net8WebApi\\Controllers\\AuthoizeController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAgwFIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T05:43:56.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\RepositoryImpl\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryImpl\\BaseRepository.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\RepositoryImpl\\BaseRepository.cs",
+              "RelativeToolTip": "RepositoryImpl\\BaseRepository.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAIA5wBoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T06:14:29.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\UserController.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Net8WebApi\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAuwDsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T05:58:02.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MaskedRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\RepositoryImpl\\MaskedRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryImpl\\MaskedRepository.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\RepositoryImpl\\MaskedRepository.cs",
+              "RelativeToolTip": "RepositoryImpl\\MaskedRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAmwCIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T05:33:45.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Masked.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Model\\EntityMap\\Masked.cs",
+              "RelativeDocumentMoniker": "Model\\EntityMap\\Masked.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Model\\EntityMap\\Masked.cs",
+              "RelativeToolTip": "Model\\EntityMap\\Masked.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:19:18.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CustomAutoMapperProfile.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
+              "RelativeToolTip": "Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T06:04:45.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Program.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Program.cs",
+              "RelativeToolTip": "Net8WebApi\\Program.cs",
+              "ViewState": "AgIAALcAAAAAAAAAAAA3wMUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T05:37:26.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserDtotwo.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Model\\EntityDto\\UserDtotwo.cs",
+              "RelativeDocumentMoniker": "Model\\EntityDto\\UserDtotwo.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Model\\EntityDto\\UserDtotwo.cs",
+              "RelativeToolTip": "Model\\EntityDto\\UserDtotwo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T06:18:59.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Result.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Utility\\Result.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\Result.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Utility\\Result.cs",
+              "RelativeToolTip": "Net8WebApi\\Utility\\Result.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAswDEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T05:36:48.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DecoderUtility.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Utility\\DecoderUtility.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\DecoderUtility.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Utility\\DecoderUtility.cs",
+              "RelativeToolTip": "Net8WebApi\\Utility\\DecoderUtility.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAA2wDkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T05:47:38.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MD5Helper.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Utility\\MD5Helper.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\MD5Helper.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Utility\\MD5Helper.cs",
+              "RelativeToolTip": "Net8WebApi\\Utility\\MD5Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T05:36:45.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "Net8WebApi\\appsettings.json",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\appsettings.json",
+              "RelativeToolTip": "Net8WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-09T05:37:39.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Net8WebApi.http",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Net8WebApi.http",
+              "RelativeDocumentMoniker": "Net8WebApi\\Net8WebApi.http",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\Net8WebApi.http",
+              "RelativeToolTip": "Net8WebApi\\Net8WebApi.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-01-12T14:01:30.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Net8WebApi\\appsettings.Development.json",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Net8WebApi\\appsettings.Development.json",
+              "RelativeToolTip": "Net8WebApi\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-13T05:43:55.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IMaskedRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\IRepository\\IMaskedRepository.cs",
+              "RelativeDocumentMoniker": "IRepository\\IMaskedRepository.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\IRepository\\IMaskedRepository.cs",
+              "RelativeToolTip": "IRepository\\IMaskedRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T05:34:03.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\IRepository\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "IRepository\\IUserRepository.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\IRepository\\IUserRepository.cs",
+              "RelativeToolTip": "IRepository\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T08:04:35.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "Interface\\IUserService.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Interface\\IUserService.cs",
+              "RelativeToolTip": "Interface\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T11:01:35.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IMaskedService.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Interface\\IMaskedService.cs",
+              "RelativeDocumentMoniker": "Interface\\IMaskedService.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Interface\\IMaskedService.cs",
+              "RelativeToolTip": "Interface\\IMaskedService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T05:33:23.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IBaseService.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Interface\\IBaseService.cs",
+              "RelativeDocumentMoniker": "Interface\\IBaseService.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Interface\\IBaseService.cs",
+              "RelativeToolTip": "Interface\\IBaseService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAywAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T08:38:34.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MaskedService.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Service\\MaskedService.cs",
+              "RelativeDocumentMoniker": "Service\\MaskedService.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Service\\MaskedService.cs",
+              "RelativeToolTip": "Service\\MaskedService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T05:32:51.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MemoryTokenBlacklist.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Service\\MemoryTokenBlacklist.cs",
+              "RelativeDocumentMoniker": "Service\\MemoryTokenBlacklist.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Service\\MemoryTokenBlacklist.cs",
+              "RelativeToolTip": "Service\\MemoryTokenBlacklist.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAA6wBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T06:07:43.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\UserService.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Service\\UserService.cs",
+              "RelativeToolTip": "Service\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T06:07:42.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Service\\BaseService.cs",
+              "RelativeDocumentMoniker": "Service\\BaseService.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Service\\BaseService.cs",
+              "RelativeToolTip": "Service\\BaseService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA2wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T06:07:47.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\IRepository\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "IRepository\\IBaseRepository.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\IRepository\\IBaseRepository.cs",
+              "RelativeToolTip": "IRepository\\IBaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T08:16:11.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\RepositoryImpl\\UserRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryImpl\\UserRepository.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\RepositoryImpl\\UserRepository.cs",
+              "RelativeToolTip": "RepositoryImpl\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T14:20:15.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "User.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Model\\EntityMap\\User.cs",
+              "RelativeDocumentMoniker": "Model\\EntityMap\\User.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Model\\EntityMap\\User.cs",
+              "RelativeToolTip": "Model\\EntityMap\\User.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T05:34:07.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Model\\EntityDto\\UserDto.cs",
+              "RelativeDocumentMoniker": "Model\\EntityDto\\UserDto.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Model\\EntityDto\\UserDto.cs",
+              "RelativeToolTip": "Model\\EntityDto\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T05:34:02.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ITokenBlacklist.cs",
+              "DocumentMoniker": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Interface\\ITokenBlacklist.cs",
+              "RelativeDocumentMoniker": "Interface\\ITokenBlacklist.cs",
+              "ToolTip": "G:\\Project\\Net\\Account_number_masked\\Net8WebApi\\Interface\\ITokenBlacklist.cs",
+              "RelativeToolTip": "Interface\\ITokenBlacklist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T05:36:30.777Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 196,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

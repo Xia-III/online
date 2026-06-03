@@ -1,0 +1,32 @@
+2025-05-19 13:11:04,044 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-19 13:11:04,603 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-19 13:11:04,637 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-19 13:11:04,667 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-19 14:13:45,732 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-19 14:13:46,407 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-19 14:13:46,440 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-19 14:13:46,446 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-19 15:56:36,002 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-19 15:56:36,216 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-19 15:56:36,223 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-19 15:56:36,226 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-19 17:58:46,085 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-19 17:58:46,306 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-19 17:58:46,309 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-19 17:58:46,315 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-19 21:22:29,795 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-19 21:22:29,947 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-19 21:22:29,950 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-19 21:22:29,957 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-19 21:25:18,827 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-19 21:25:18,972 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-19 21:25:18,976 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-19 21:25:18,986 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-19 21:26:53,766 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-19 21:26:53,886 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-19 21:26:53,899 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-19 21:26:53,903 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-19 21:29:44,048 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-19 21:29:44,162 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-19 21:29:44,168 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-19 21:29:44,170 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi

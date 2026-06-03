@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>数据权限申请管理系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        // Tailwind 配置
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        success: '#00B42A',
+                        warning: '#FF7D00',
+                        danger: '#F53F3F',
+                        gray: {
+                            100: '#F2F3F5',
+                            200: '#E5E6EB',
+                            300: '#C9CDD4',
+                            400: '#86909C',
+                            500: '#4E5969',
+                            600: '#272E3B',
+                            700: '#1D2129',
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 2px 14px 0 rgba(0, 0, 0, 0.06)',
+                        'hover': '0 6px 20px 0 rgba(0, 0, 0, 0.1)',
+                    }
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .transition-bg {
+                transition: background-color 0.3s ease;
+            }
+            .transition-transform {
+                transition: transform 0.3s ease;
+            }
+            .transition-all-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .touch-friendly {
+                touch-action: manipulation;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-100 text-gray-700 min-h-screen flex flex-col">
+
+    <!-- 主内容区 -->
+    <main class="flex-1 pt-16 p-3">
+        <!-- 页面标题和操作区 -->
+        <div class="mb-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-700">申请管理</h2>
+                    <p class="text-gray-400 mt-1 text-sm">管理所有数据权限申请和记录</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 选项卡 -->
+        <div class="mb-4 border-b border-gray-200">
+            <div class="flex">
+                <button id="tab-pending" class="py-3 px-2 border-b-2 border-primary text-primary font-medium text-sm flex-1 text-center">待审核申请</button>
+                <button id="tab-my-applications" class="py-3 px-2 border-b-2 border-transparent text-gray-500 hover:text-gray-700 transition-colors text-sm flex-1 text-center">我的申请记录</button>
+            </div>
+        </div>
+
+        <!-- 待审核申请列表 -->
+        <div id="pending-applications">
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="text-base font-semibold text-gray-700">待审核申请</h3>
+                <div class="flex space-x-2">
+                    <select class="border border-gray-200 rounded-lg px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+                        <option>所有数据集</option>
+                        <option>Dataset-001</option>
+                        <option>Dataset-002</option>
+                    </select>
+                    <select class="border border-gray-200 rounded-lg px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+                        <option>所有权限</option>
+                        <option>主管理员</option>
+                        <option>子管理员</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 申请卡片列表 -->
+            <div class="space-y-3">
+                <!-- 申请记录 1 -->
+                <div class="bg-white rounded-xl shadow-card overflow-hidden transition-all-custom hover:shadow-hover">
+                    <div class="p-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="text-xs text-gray-500">#AP202305001</div>
+                                <div class="flex items-center mt-2">
+                                    <img class="h-7 w-7 rounded-full object-cover" src="https://picsum.photos/id/1012/40/40" alt="用户头像">
+                                    <div class="ml-2">
+                                        <div class="text-sm font-medium text-gray-700">张三</div>
+                                        <div class="text-xs text-gray-400">zhangsan@example.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">主管理员</span>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-500">数据集</span>
+                                <span class="text-gray-700">Dataset-001</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 flex justify-end space-x-2">
+                            <button class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs hover:bg-gray-200 transition-bg touch-friendly" onclick="showDetail('AP202305001')">
+                                <i class="fa fa-eye mr-1"></i>查看
+                            </button>
+                            <button class="px-3 py-1.5 bg-success text-white rounded-lg text-xs hover:bg-success/90 transition-bg touch-friendly" onclick="approve('AP202305001')">
+                                <i class="fa fa-check mr-1"></i>通过
+                            </button>
+                            <button class="px-3 py-1.5 bg-danger text-white rounded-lg text-xs hover:bg-danger/90 transition-bg touch-friendly" onclick="reject('AP202305001')">
+                                <i class="fa fa-times mr-1"></i>拒绝
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 申请记录 2 -->
+                <div class="bg-white rounded-xl shadow-card overflow-hidden transition-all-custom hover:shadow-hover">
+                    <div class="p-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="text-xs text-gray-500">#AP202305002</div>
+                                <div class="flex items-center mt-2">
+                                    <img class="h-7 w-7 rounded-full object-cover" src="https://picsum.photos/id/1027/40/40" alt="用户头像">
+                                    <div class="ml-2">
+                                        <div class="text-sm font-medium text-gray-700">李四</div>
+                                        <div class="text-xs text-gray-400">lisi@example.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="px-2 py-1 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">子管理员</span>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-500">数据集</span>
+                                <span class="text-gray-700">Dataset-003</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 flex justify-end space-x-2">
+                            <button class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs hover:bg-gray-200 transition-bg touch-friendly" onclick="showDetail('AP202305002')">
+                                <i class="fa fa-eye mr-1"></i>查看
+                            </button>
+                            <button class="px-3 py-1.5 bg-success text-white rounded-lg text-xs hover:bg-success/90 transition-bg touch-friendly" onclick="approve('AP202305002')">
+                                <i class="fa fa-check mr-1"></i>通过
+                            </button>
+                            <button class="px-3 py-1.5 bg-danger text-white rounded-lg text-xs hover:bg-danger/90 transition-bg touch-friendly" onclick="reject('AP202305002')">
+                                <i class="fa fa-times mr-1"></i>拒绝
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 申请记录 3 -->
+                <div class="bg-white rounded-xl shadow-card overflow-hidden transition-all-custom hover:shadow-hover">
+                    <div class="p-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="text-xs text-gray-500">#AP202305003</div>
+                                <div class="flex items-center mt-2">
+                                    <img class="h-7 w-7 rounded-full object-cover" src="https://picsum.photos/id/1025/40/40" alt="用户头像">
+                                    <div class="ml-2">
+                                        <div class="text-sm font-medium text-gray-700">王五</div>
+                                        <div class="text-xs text-gray-400">wangwu@example.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">主管理员</span>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-500">数据集</span>
+                                <span class="text-gray-700">Dataset-002</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 flex justify-end space-x-2">
+                            <button class="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs hover:bg-gray-200 transition-bg touch-friendly" onclick="showDetail('AP202305003')">
+                                <i class="fa fa-eye mr-1"></i>查看
+                            </button>
+                            <button class="px-3 py-1.5 bg-success text-white rounded-lg text-xs hover:bg-success/90 transition-bg touch-friendly" onclick="approve('AP202305003')">
+                                <i class="fa fa-check mr-1"></i>通过
+                            </button>
+                            <button class="px-3 py-1.5 bg-danger text-white rounded-lg text-xs hover:bg-danger/90 transition-bg touch-friendly" onclick="reject('AP202305003')">
+                                <i class="fa fa-times mr-1"></i>拒绝
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分页 -->
+            <div class="mt-4 flex items-center justify-between">
+                <div class="text-xs text-gray-500">
+                    显示 1-3 条，共 12 条
+                </div>
+                <div class="flex space-x-1">
+                    <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded-md text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        <i class="fa fa-angle-left text-xs"></i>
+                    </button>
+                    <button class="w-7 h-7 flex items-center justify-center border border-primary bg-primary text-white rounded-md text-xs">1</button>
+                    <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded-md hover:bg-gray-50 text-xs">2</button>
+                    <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded-md hover:bg-gray-50 text-xs">3</button>
+                    <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded-md text-gray-500 hover:bg-gray-50 text-xs">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 我的申请记录 (默认隐藏) -->
+        <div id="my-applications" class="hidden">
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="text-base font-semibold text-gray-700">我的申请记录</h3>
+                <div class="flex space-x-2">
+                    <select class="border border-gray-200 rounded-lg px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+                        <option>所有状态</option>
+                        <option>申请中</option>
+                        <option>已通过</option>
+                        <option>已拒绝</option>
+                    </select>
+                    <select class="border border-gray-200 rounded-lg px-2 py-1 text-xs focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+                        <option>所有数据集</option>
+                        <option>Dataset-001</option>
+                        <option>Dataset-002</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 申请卡片列表 -->
+            <div class="space-y-3">
+                <!-- 申请记录 1 -->
+                <div class="bg-white rounded-xl shadow-card overflow-hidden transition-all-custom hover:shadow-hover">
+                    <div class="p-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="text-xs text-gray-500">#AP202305004</div>
+                                <div class="mt-2">
+                                    <span class="px-2 py-1 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">子管理员</span>
+                                </div>
+                            </div>
+                            <span class="px-2 py-1 text-xs font-medium bg-green-50 text-green-600 rounded-full">已通过</span>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-500">数据集</span>
+                                <span class="text-gray-700">Dataset-001</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 flex justify-end">
+                            <button class="px-3 py-1.5 bg-primary text-white rounded-lg text-xs hover:bg-primary/90 transition-bg touch-friendly" onclick="showDetail('AP202305004')">
+                                <i class="fa fa-eye mr-1"></i>查看
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 申请记录 2 -->
+                <div class="bg-white rounded-xl shadow-card overflow-hidden transition-all-custom hover:shadow-hover">
+                    <div class="p-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="text-xs text-gray-500">#AP202305005</div>
+                                <div class="mt-2">
+                                    <span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">主管理员</span>
+                                </div>
+                            </div>
+                            <span class="px-2 py-1 text-xs font-medium bg-yellow-50 text-yellow-600 rounded-full">申请中</span>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-500">数据集</span>
+                                <span class="text-gray-700">Dataset-002</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 flex justify-end space-x-2">
+                            <button class="px-3 py-1.5 bg-primary text-white rounded-lg text-xs hover:bg-primary/90 transition-bg touch-friendly" onclick="showDetail('AP202305005')">
+                                <i class="fa fa-eye mr-1"></i>查看
+                            </button>
+                            <button class="px-3 py-1.5 bg-gray-500 text-white rounded-lg text-xs hover:bg-gray-600 transition-bg touch-friendly" onclick="cancel('AP202305005')">
+                                <i class="fa fa-ban mr-1"></i>取消
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 申请记录 3 -->
+                <div class="bg-white rounded-xl shadow-card overflow-hidden transition-all-custom hover:shadow-hover">
+                    <div class="p-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="text-xs text-gray-500">#AP202305006</div>
+                                <div class="mt-2">
+                                    <span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">主管理员</span>
+                                </div>
+                            </div>
+                            <span class="px-2 py-1 text-xs font-medium bg-red-50 text-red-600 rounded-full">已拒绝</span>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-gray-500">数据集</span>
+                                <span class="text-gray-700">Dataset-003</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3 flex justify-end">
+                            <button class="px-3 py-1.5 bg-primary text-white rounded-lg text-xs hover:bg-primary/90 transition-bg touch-friendly" onclick="showDetail('AP202305006')">
+                                <i class="fa fa-eye mr-1"></i>查看
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分页 -->
+            <div class="mt-4 flex items-center justify-between">
+                <div class="text-xs text-gray-500">
+                    显示 1-3 条，共 9 条
+                </div>
+                <div class="flex space-x-1">
+                    <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded-md text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                        <i class="fa fa-angle-left text-xs"></i>
+                    </button>
+                    <button class="w-7 h-7 flex items-center justify-center border border-primary bg-primary text-white rounded-md text-xs">1</button>
+                    <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded-md hover:bg-gray-50 text-xs">2</button>
+                    <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded-md hover:bg-gray-50 text-xs">3</button>
+                    <button class="w-7 h-7 flex items-center justify-center border border-gray-200 rounded-md text-gray-500 hover:bg-gray-50 text-xs">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 申请详情模态框 (默认隐藏) -->
+    <div id="detail-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-3">
+        <div class="bg-white rounded-xl shadow-lg w-full max-w-md max-h-[85vh] overflow-y-auto transform transition-all-custom scale-95 opacity-0" id="modal-content">
+            <div class="p-4 border-b border-gray-200">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-base font-semibold text-gray-700" id="modal-title">申请详情</h3>
+                    <button onclick="closeDetail()" class="text-gray-400 hover:text-gray-600 p-1 touch-friendly">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="p-4">
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 gap-2">
+                        <div>
+                            <p class="text-xs text-gray-500 mb-1">申请ID</p>
+                            <p class="text-gray-700 text-sm" id="detail-id">#AP202305001</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 mb-1">申请人</p>
+                            <p class="text-gray-700 text-sm" id="detail-applicant">张三 (zhangsan@example.com)</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 mb-1">数据集</p>
+                            <p class="text-gray-700 text-sm" id="detail-dataset">Dataset-001</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 mb-1">处理人</p>
+                            <p class="text-gray-700 text-sm" id="detail-handler">-</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 mb-1">申请权限</p>
+                            <p class="text-gray-700 text-sm" id="detail-level">
+                                <span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">主管理员</span>
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 mb-1">状态</p>
+                            <p class="text-gray-700 text-sm" id="detail-status">
+                                <span class="px-2 py-1 text-xs font-medium bg-yellow-50 text-yellow-600 rounded-full">申请中</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-xs text-gray-500 mb-2">申请理由</p>
+                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-gray-700 text-sm" id="detail-reason">
+                            因工作需要，我需要获取Dataset-001的主管理员权限，以便更好地管理团队的数据访问和使用，提高工作效率。我承诺将严格遵守数据使用规范，确保数据安全。
+                        </div>
+                    </div>
+
+                    <div class="mt-2" id="review-section" style="display: none;">
+                        <p class="text-xs text-gray-500 mb-2">审核意见</p>
+                        <div class="bg-gray-50 p-3 rounded-lg border border-gray-200 text-gray-700 text-sm" id="detail-review">
+                            同意申请，张三具备相应的资质和能力管理该数据集。请申请人妥善保管权限，严格遵守数据管理规定。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-t border-gray-200 flex justify-end space-x-2" id="modal-actions">
+                <button onclick="closeDetail()" class="px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 transition-bg text-sm touch-friendly">关闭</button>
+                <button onclick="approve(document.getElementById('detail-id').textContent)" class="px-4 py-2 bg-success text-white rounded-lg hover:bg-success/90 transition-bg text-sm touch-friendly">通过</button>
+                <button onclick="reject(document.getElementById('detail-id').textContent)" class="px-4 py-2 bg-danger text-white rounded-lg hover:bg-danger/90 transition-bg text-sm touch-friendly">拒绝</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 确认操作模态框 (默认隐藏) -->
+    <div id="confirm-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-3">
+        <div class="bg-white rounded-xl shadow-lg w-full max-w-md transform transition-all-custom scale-95 opacity-0" id="confirm-modal-content">
+            <div class="p-4">
+                <div class="text-center mb-4">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-yellow-100 mb-3">
+                        <i class="fa fa-exclamation-triangle text-yellow-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-base font-semibold text-gray-700" id="confirm-title">确认通过申请？</h3>
+                    <p class="text-gray-500 mt-2 text-sm" id="confirm-message">您确定要通过此申请吗？此操作不可撤销。</p>
+                </div>
+                
+                <div class="mt-4" id="review-comment-container" style="display: none;">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">审核意见 (可选)</label>
+                    <textarea rows="3" class="w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary text-sm" placeholder="请输入审核意见..."></textarea>
+                </div>
+            </div>
+            <div class="p-4 border-t border-gray-200 flex justify-end space-x-2">
+                <button onclick="closeConfirm()" class="px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 transition-bg text-sm touch-friendly">取消</button>
+                <button onclick="confirmAction()" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-bg text-sm touch-friendly" id="confirm-button">确认</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 操作成功提示 (默认隐藏) -->
+    <div id="toast" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg p-3 max-w-[90%] z-50 flex items-center">
+        <div class="w-7 h-7 rounded-full bg-success/10 flex items-center justify-center mr-2">
+            <i class="fa fa-check text-success text-sm"></i>
+        </div>
+        <div class="flex-1">
+            <h4 class="font-medium text-gray-700 text-sm">操作成功</h4>
+            <p class="text-xs text-gray-500 mt-0.5" id="toast-message">申请已成功通过</p>
+        </div>
+        <button onclick="closeToast()" class="ml-2 text-gray-400 hover:text-gray-600 p-1 touch-friendly">
+            <i class="fa fa-times text-xs"></i>
+        </button>
+    </div>
+
+    <script>
+        // 全局变量
+        let currentAction = null;
+        let currentApplicationId = null;
+
+        // DOM 元素
+        const tabPending = document.getElementById('tab-pending');
+        const tabMyApplications = document.getElementById('tab-my-applications');
+        const pendingApplications = document.getElementById('pending-applications');
+        const myApplications = document.getElementById('my-applications');
+        const detailModal = document.getElementById('detail-modal');
+        const modalContent = document.getElementById('modal-content');
+        const confirmModal = document.getElementById('confirm-modal');
+        const confirmModalContent = document.getElementById('confirm-modal-content');
+        const toast = document.getElementById('toast');
+        const confirmTitle = document.getElementById('confirm-title');
+        const confirmMessage = document.getElementById('confirm-message');
+        const confirmButton = document.getElementById('confirm-button');
+        const reviewCommentContainer = document.getElementById('review-comment-container');
+        const modalActions = document.getElementById('modal-actions');
+        const reviewSection = document.getElementById('review-section');
+
+        // 初始化隐藏提示框
+        toast.style.transform = 'translate(-50%, 200%)';
+        toast.style.transition = 'transform 0.3s ease';
+
+        // 选项卡切换
+        tabPending.addEventListener('click', () => {
+            tabPending.classList.add('border-primary', 'text-primary');
+            tabPending.classList.remove('border-transparent', 'text-gray-500');
+            tabMyApplications.classList.add('border-transparent', 'text-gray-500');
+            tabMyApplications.classList.remove('border-primary', 'text-primary');
+            pendingApplications.classList.remove('hidden');
+            myApplications.classList.add('hidden');
+        });
+
+        tabMyApplications.addEventListener('click', () => {
+            tabMyApplications.classList.add('border-primary', 'text-primary');
+            tabMyApplications.classList.remove('border-transparent', 'text-gray-500');
+            tabPending.classList.add('border-transparent', 'text-gray-500');
+            tabPending.classList.remove('border-primary', 'text-primary');
+            myApplications.classList.remove('hidden');
+            pendingApplications.classList.add('hidden');
+        });
+
+        // 显示申请详情
+        function showDetail(applicationId) {
+            // 根据申请ID加载不同的详情数据
+            loadDetailData(applicationId);
+            
+            // 显示模态框
+            detailModal.classList.remove('hidden');
+            // 防止背景滚动
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        // 关闭申请详情
+        function closeDetail() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                detailModal.classList.add('hidden');
+                // 恢复背景滚动
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // 加载详情数据
+        function loadDetailData(applicationId) {
+            // 在实际应用中，这里会从服务器加载数据
+            document.getElementById('detail-id').textContent = applicationId;
+            
+            // 根据不同的申请ID设置不同的详情数据
+            if (applicationId === 'AP202305001') {
+                document.getElementById('detail-applicant').textContent = '张三 (zhangsan@example.com)';
+                document.getElementById('detail-dataset').textContent = 'Dataset-001';
+                document.getElementById('detail-level').innerHTML = '<span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">主管理员</span>';
+                document.getElementById('detail-status').innerHTML = '<span class="px-2 py-1 text-xs font-medium bg-yellow-50 text-yellow-600 rounded-full">申请中</span>';
+                document.getElementById('detail-handler').textContent = '-';
+                document.getElementById('detail-reason').textContent = '因工作需要，我需要获取Dataset-001的主管理员权限，以便更好地管理团队的数据访问和使用，提高工作效率。我承诺将严格遵守数据使用规范，确保数据安全。';
+                reviewSection.style.display = 'none';
+                modalActions.style.display = 'flex';
+            } else if (applicationId === 'AP202305004') {
+                document.getElementById('detail-applicant').textContent = '管理员 (admin@example.com)';
+                document.getElementById('detail-dataset').textContent = 'Dataset-001';
+                document.getElementById('detail-level').innerHTML = '<span class="px-2 py-1 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">子管理员</span>';
+                document.getElementById('detail-status').innerHTML = '<span class="px-2 py-1 text-xs font-medium bg-green-50 text-green-600 rounded-full">已通过</span>';
+                document.getElementById('detail-handler').textContent = '系统管理员';
+                document.getElementById('detail-reason').textContent = '需要Dataset-001的子管理员权限以完成日常数据分析工作，确保能够及时获取所需数据。';
+                document.getElementById('detail-review').textContent = '同意申请，申请人具备相应的资质和能力管理该数据集。请申请人妥善保管权限，严格遵守数据管理规定。';
+                reviewSection.style.display = 'block';
+                modalActions.style.display = 'none';
+            } else if (applicationId === 'AP202305006') {
+                document.getElementById('detail-applicant').textContent = '管理员 (admin@example.com)';
+                document.getElementById('detail-dataset').textContent = 'Dataset-003';
+                document.getElementById('detail-level').innerHTML = '<span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">主管理员</span>';
+                document.getElementById('detail-status').innerHTML = '<span class="px-2 py-1 text-xs font-medium bg-red-50 text-red-600 rounded-full">已拒绝</span>';
+                document.getElementById('detail-handler').textContent = '系统管理员';
+                document.getElementById('detail-reason').textContent = '为了更好地协调团队工作，需要获取Dataset-003的主管理员权限，以便分配数据访问权限给团队成员。';
+                document.getElementById('detail-review').textContent = '经审核，Dataset-003已有主管理员，且当前管理状态良好，暂时不需要额外的主管理员。建议申请子管理员权限。';
+                reviewSection.style.display = 'block';
+                modalActions.style.display = 'none';
+            } else {
+                // 默认数据
+                document.getElementById('detail-applicant').textContent = '管理员 (admin@example.com)';
+                document.getElementById('detail-dataset').textContent = 'Dataset-002';
+                document.getElementById('detail-level').innerHTML = '<span class="px-2 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">主管理员</span>';
+                document.getElementById('detail-status').innerHTML = '<span class="px-2 py-1 text-xs font-medium bg-yellow-50 text-yellow-600 rounded-full">申请中</span>';
+                document.getElementById('detail-handler').textContent = '-';
+                document.getElementById('detail-reason').textContent = '工作需要，申请Dataset-002的主管理员权限，以便管理数据和授权团队成员访问。';
+                reviewSection.style.display = 'none';
+                
+                // 如果是"我的申请记录"中的申请中状态，显示取消按钮
+                if (applicationId === 'AP202305005') {
+                    modalActions.innerHTML = `
+                        <button onclick="closeDetail()" class="px-4 py-2 border border-gray-200 rounded-lg text-gray-600 hover:bg-gray-50 transition-bg text-sm touch-friendly">关闭</button>
+                        <button onclick="cancel('${applicationId}')" class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-bg text-sm touch-friendly">取消申请</button>
+                    `;
+                } else {
+                    modalActions.style.display = 'flex';
+                }
+            }
+        }
+
+        // 审核通过
+        function approve(applicationId) {
+            currentAction = 'approve';
+            currentApplicationId = applicationId;
+            
+            confirmTitle.textContent = '确认通过申请？';
+            confirmMessage.textContent = '您确定要通过此申请吗？此操作将授予申请人相应的权限。';
+            confirmButton.textContent = '确认通过';
+            confirmButton.className = 'px-4 py-2 bg-success text-white rounded-lg hover:bg-success/90 transition-bg text-sm touch-friendly';
+            reviewCommentContainer.style.display = 'block';
+            
+            showConfirm();
+        }
+
+        // 审核拒绝
+        function reject(applicationId) {
+            currentAction = 'reject';
+            currentApplicationId = applicationId;
+            
+            confirmTitle.textContent = '确认拒绝申请？';
+            confirmMessage.textContent = '您确定要拒绝此申请吗？请填写拒绝理由。';
+            confirmButton.textContent = '确认拒绝';
+            confirmButton.className = 'px-4 py-2 bg-danger text-white rounded-lg hover:bg-danger/90 transition-bg text-sm touch-friendly';
+            reviewCommentContainer.style.display = 'block';
+            
+            showConfirm();
+        }
+
+        // 取消申请
+        function cancel(applicationId) {
+            currentAction = 'cancel';
+            currentApplicationId = applicationId;
+            
+            confirmTitle.textContent = '确认取消申请？';
+            confirmMessage.textContent = '您确定要取消此申请吗？取消后可重新提交申请。';
+            confirmButton.textContent = '确认取消';
+            confirmButton.className = 'px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-bg text-sm touch-friendly';
+            reviewCommentContainer.style.display = 'none';
+            
+            showConfirm();
+        }
+
+        // 显示确认框
+        function showConfirm() {
+            confirmModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                confirmModalContent.classList.remove('scale-95', 'opacity-0');
+                confirmModalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        // 关闭确认框
+        function closeConfirm() {
+            confirmModalContent.classList.remove('scale-100', 'opacity-100');
+            confirmModalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                confirmModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // 确认操作
+        function confirmAction() {
+            // 在实际应用中，这里会发送请求到服务器处理
+            let message = '';
+            
+            if (currentAction === 'approve') {
+                message = `申请 ${currentApplicationId} 已成功通过`;
+            } else if (currentAction === 'reject') {
+                message = `申请 ${currentApplicationId} 已成功拒绝`;
+            } else if (currentAction === 'cancel') {
+                message = `申请 ${currentApplicationId} 已成功取消`;
+            }
+            
+            // 关闭确认框和详情框
+            closeConfirm();
+            closeDetail();
+            
+            // 显示成功提示
+            showToast(message);
+        }
+
+        // 显示提示框
+        function showToast(message) {
+            document.getElementById('toast-message').textContent = message;
+            toast.style.transform = 'translate(-50%, 0)';
+            
+            // 3秒后自动关闭
+            setTimeout(() => {
+                closeToast();
+            }, 3000);
+        }
+
+        // 关闭提示框
+        function closeToast() {
+            toast.style.transform = 'translate(-50%, 200%)';
+        }
+
+        // 点击模态框背景关闭
+        detailModal.addEventListener('click', (e) => {
+            if (e.target === detailModal) {
+                closeDetail();
+            }
+        });
+
+        confirmModal.addEventListener('click', (e) => {
+            if (e.target === confirmModal) {
+                closeConfirm();
+            }
+        });
+
+        // 防止移动端双击缩放
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, { passive: false });
+
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+    </script>
+</body>
+</html>
+    

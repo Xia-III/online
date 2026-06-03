@@ -1,0 +1,174 @@
+2025-05-05 09:16:23,526 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 09:16:23,763 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 09:16:23,791 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 09:16:23,803 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 11:51:01,274 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 11:51:01,366 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 11:51:01,370 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 11:51:01,403 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 11:53:48,390 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 11:53:48,479 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 11:53:48,483 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 11:53:48,491 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 14:04:11,430 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 14:04:11,583 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 14:04:11,616 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 14:04:11,695 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 14:04:12,018 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Error reading parameter(s) for action Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi) as [FromForm] attribute used with IFormFile. Please refer to https://github.com/domaindrivendev/Swashbuckle.AspNetCore#handle-forms-and-file-uploads for more information
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateParameters(ApiDescription apiDescription, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-05 14:26:48,811 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 14:26:48,907 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 14:26:48,926 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 14:26:48,929 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 14:26:49,431 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Error reading parameter(s) for action Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi) as [FromForm] attribute used with IFormFile. Please refer to https://github.com/domaindrivendev/Swashbuckle.AspNetCore#handle-forms-and-file-uploads for more information
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateParameters(ApiDescription apiDescription, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-05 14:26:55,687 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Error reading parameter(s) for action Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi) as [FromForm] attribute used with IFormFile. Please refer to https://github.com/domaindrivendev/Swashbuckle.AspNetCore#handle-forms-and-file-uploads for more information
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateParameters(ApiDescription apiDescription, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-05 14:26:56,709 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Error reading parameter(s) for action Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi) as [FromForm] attribute used with IFormFile. Please refer to https://github.com/domaindrivendev/Swashbuckle.AspNetCore#handle-forms-and-file-uploads for more information
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateParameters(ApiDescription apiDescription, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-05 14:26:58,283 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Error reading parameter(s) for action Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi) as [FromForm] attribute used with IFormFile. Please refer to https://github.com/domaindrivendev/Swashbuckle.AspNetCore#handle-forms-and-file-uploads for more information
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateParameters(ApiDescription apiDescription, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-05 14:29:08,257 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 14:29:08,347 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 14:29:08,350 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 14:29:08,400 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 14:29:08,810 [.NET TP Worker] ERROR Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Failed to generate Operation for action - Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi). See inner exception
+ ---> Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Error reading parameter(s) for action Net8WebApi.Controllers.FileUploadController.UploadImage (Net8WebApi) as [FromForm] attribute used with IFormFile. Please refer to https://github.com/domaindrivendev/Swashbuckle.AspNetCore#handle-forms-and-file-uploads for more information
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateParameters(ApiDescription apiDescription, SchemaRepository schemaRespository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   --- End of inner exception stack trace ---
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperation(ApiDescription apiDescription, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-05-05 14:40:40,195 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 14:40:40,298 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 14:40:40,305 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 14:40:40,311 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 15:22:49,135 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 15:22:49,232 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 15:22:49,270 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 15:22:49,273 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 15:31:50,011 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 15:31:50,106 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 15:31:50,109 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 15:31:50,115 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 15:53:08,466 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 15:53:08,927 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 15:53:08,937 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 15:53:08,966 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 15:57:43,792 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 15:57:43,890 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 15:57:43,898 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 15:57:43,921 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 16:06:29,926 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 16:06:30,071 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 16:06:30,105 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 16:06:30,108 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 16:18:25,354 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 16:18:25,443 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 16:18:25,453 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 16:18:25,483 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 16:30:06,717 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 16:30:06,807 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 16:30:06,815 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 16:30:06,819 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 16:35:43,498 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 16:35:43,584 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 16:35:43,588 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 16:35:43,593 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 16:45:55,853 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 16:45:55,944 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 16:45:55,954 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 16:45:55,957 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 16:56:18,241 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 16:56:18,332 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 16:56:18,336 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 16:56:18,341 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 17:01:00,239 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 17:01:06,977 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 17:01:07,053 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 17:01:07,142 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 17:18:58,068 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 17:18:58,153 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 17:18:58,288 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 17:18:58,290 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 17:30:29,324 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 17:30:29,424 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 17:30:29,482 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 17:30:29,485 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 17:35:47,792 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 17:35:47,875 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 17:35:47,879 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 17:35:47,885 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 17:48:31,361 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 17:48:31,451 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 17:48:31,455 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 17:48:31,460 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 17:59:18,091 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 17:59:18,188 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 17:59:18,192 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 17:59:18,215 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi
+2025-05-05 18:09:12,367 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-05-05 18:09:12,455 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-05-05 18:09:12,459 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-05-05 18:09:12,464 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: G:\UnityP\进阶\Net8WebApi\Net8WebApi

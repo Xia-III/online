@@ -1,0 +1,13 @@
+
+> 0.1%,                # 全球使用率 > 0.1% 的浏览器
+last 5 versions,       # 每个浏览器的最近 5 个版本
+not dead,              # 排除已废弃的浏览器（如 IE10 以下）
+not op_mini all,       # 排除 Opera Mini（通常需要特殊处理）
+ie >= 9,               # 明确兼容 IE9 及以上
+firefox >= 4,          
+chrome >= 29,          
+safari >= 5.1,         
+ios >= 6,              
+android >= 4.4,        
+edge >= 12,            
+opera >= 15            

@@ -1,0 +1,15 @@
+G:\UnityP\进阶\Net8WebApi\Service\bin\Debug\net8.0\Service.deps.json
+G:\UnityP\进阶\Net8WebApi\Service\bin\Debug\net8.0\Service.dll
+G:\UnityP\进阶\Net8WebApi\Service\bin\Debug\net8.0\Service.pdb
+G:\UnityP\进阶\Net8WebApi\Service\bin\Debug\net8.0\Interface.dll
+G:\UnityP\进阶\Net8WebApi\Service\bin\Debug\net8.0\Interface.pdb
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\Service.csproj.AssemblyReference.cache
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\Service.csproj.Up2Date
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\Service.dll
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\refint\Service.dll
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\Service.pdb
+G:\UnityP\进阶\Net8WebApi\Service\obj\Debug\net8.0\ref\Service.dll

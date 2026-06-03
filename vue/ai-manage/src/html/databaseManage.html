@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>知识库系统</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 配置Tailwind主题 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#DBEAFE',
+                        neutral: {
+                            100: '#F3F4F6',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            600: '#4B5563',
+                            700: '#374151',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .nav-item {
+                @apply flex flex-col items-center text-gray-500 transition-all duration-300;
+            }
+            .nav-item-active {
+                @apply text-primary;
+            }
+            .nav-container {
+                @apply flex-1 flex flex-col items-center py-2 px-6;
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- 主内容区 -->
+    <main class="flex-1 p-4 md:p-6 overflow-y-auto">
+        <div class="max-w-3xl mx-auto">
+            <!-- 页面标题 -->
+            <div class="mb-6">
+                <h1 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-neutral-700">知识库</h1>
+                <p class="text-neutral-500 mt-1">管理和访问您的所有知识库</p>
+            </div>
+            
+            <!-- 知识库卡片网格 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- 知识库卡片 1 -->
+                <div class="bg-white rounded-xl shadow-sm p-5 border border-neutral-200 card-hover">
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-primary">
+                            <i class="fa fa-book"></i>
+                        </div>
+                        <button class="text-neutral-400 hover:text-neutral-600 transition-colors">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-neutral-700">产品文档库</h3>
+                    <p class="text-sm text-neutral-500 mt-1">12 个文档 · 最近更新于昨天</p>
+                </div>
+                
+                <!-- 知识库卡片 2 -->
+                <div class="bg-white rounded-xl shadow-sm p-5 border border-neutral-200 card-hover">
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        <button class="text-neutral-400 hover:text-neutral-600 transition-colors">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-neutral-700">技术知识库</h3>
+                    <p class="text-sm text-neutral-500 mt-1">28 个文档 · 最近更新于今天</p>
+                </div>
+                
+                <!-- 知识库卡片 3 -->
+                <div class="bg-white rounded-xl shadow-sm p-5 border border-neutral-200 card-hover">
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600">
+                            <i class="fa fa-briefcase"></i>
+                        </div>
+                        <button class="text-neutral-400 hover:text-neutral-600 transition-colors">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-neutral-700">项目管理指南</h3>
+                    <p class="text-sm text-neutral-500 mt-1">8 个文档 · 最近更新于3天前</p>
+                </div>
+                
+                <!-- 知识库卡片 4 -->
+                <div class="bg-white rounded-xl shadow-sm p-5 border border-neutral-200 card-hover">
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-100 flex items-center justify-center text-yellow-600">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <button class="text-neutral-400 hover:text-neutral-600 transition-colors">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-neutral-700">公司规章制度</h3>
+                    <p class="text-sm text-neutral-500 mt-1">15 个文档 · 最近更新于1周前</p>
+                </div>
+                
+                <!-- 知识库卡片 5 -->
+                <div class="bg-white rounded-xl shadow-sm p-5 border border-neutral-200 card-hover">
+                    <div class="flex items-start justify-between mb-3">
+                        <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center text-red-600">
+                            <i class="fa fa-question-circle"></i>
+                        </div>
+                        <button class="text-neutral-400 hover:text-neutral-600 transition-colors">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                    <h3 class="font-semibold text-neutral-700">常见问题解答</h3>
+                    <p class="text-sm text-neutral-500 mt-1">23 个文档 · 最近更新于2天前</p>
+                </div>
+                
+                <!-- 添加新知识库卡片 -->
+                <div class="border-2 border-dashed border-neutral-300 rounded-xl p-5 flex flex-col items-center justify-center text-neutral-500 hover:border-primary hover:text-primary transition-colors h-full card-hover cursor-pointer">
+                    <div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center mb-3">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <h3 class="font-medium">申请新知识库</h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 底部导航栏 -->
+    <footer class="bg-white border-t border-gray-100 py-2 shadow-[0_-2px_15px_rgba(0,0,0,0.05)]">
+        <div class="flex justify-between items-center max-w-md mx-auto w-full px-4">
+            <!-- 管理 -->
+            <div class="nav-container">
+                <a href="#" class="nav-item-active relative group">
+                    <span class="absolute -top-1 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <i class="fa fa-tachometer text-xl relative z-10 group-hover:scale-110 transition-transform"></i>
+                </a>
+                <span class="text-xs mt-1 font-medium nav-item-active">管理</span>
+            </div>
+            
+            <!-- 申请 -->
+            <div class="nav-container">
+                <a href="#" class="nav-item relative group">
+                    <span class="absolute -top-1 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <i class="fa fa-file-text-o text-xl relative z-10 group-hover:scale-110 transition-transform"></i>
+                </a>
+                <span class="text-xs mt-1 font-medium nav-item">申请</span>
+            </div>
+            
+            <!-- 个人中心 -->
+            <div class="nav-container">
+                <a href="#" class="nav-item relative group">
+                    <span class="absolute -top-1 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <i class="fa fa-user-o text-xl relative z-10 group-hover:scale-110 transition-transform"></i>
+                </a>
+                <span class="text-xs mt-1 font-medium nav-item">个人中心</span>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 导航项点击事件
+        document.querySelectorAll('.nav-container').forEach(container => {
+            container.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 移除所有导航项的活跃状态
+                document.querySelectorAll('.nav-container').forEach(item => {
+                    const link = item.querySelector('a');
+                    const text = item.querySelector('span');
+                    
+                    link.classList.remove('nav-item-active');
+                    link.classList.add('nav-item');
+                    text.classList.remove('nav-item-active');
+                    text.classList.add('nav-item');
+                });
+                
+                // 为当前点击项添加活跃状态
+                const activeLink = this.querySelector('a');
+                const activeText = this.querySelector('span');
+                
+                activeLink.classList.remove('nav-item');
+                activeLink.classList.add('nav-item-active');
+                activeText.classList.remove('nav-item');
+                activeText.classList.add('nav-item-active');
+            });
+        });
+    </script>
+</body>
+</html>
+    

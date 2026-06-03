@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>G:\Project\Net\Net8WebApi\Net8WebApi\bin\Release\net8.0\publish\portable</_PublishTargetUrl>
+    <History>True|2025-10-11T05:40:24.8550898Z||;True|2025-09-03T13:34:50.4444378+08:00||;True|2025-09-02T18:02:06.8635603+08:00||;True|2025-09-02T17:22:34.7905112+08:00||;True|2025-09-02T17:04:40.3231529+08:00||;True|2025-09-02T16:54:11.7256709+08:00||;True|2025-09-02T16:36:06.1734261+08:00||;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+</Project>

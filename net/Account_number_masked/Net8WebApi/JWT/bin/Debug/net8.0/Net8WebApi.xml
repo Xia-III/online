@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Net8WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Net8WebApi.Controllers.LogController.findAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindById(System.Int32)">
+            <summary>
+            根据ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.FindByProductname(System.String)">
+            <summary>
+            根据产品名查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.Add(System.String,System.String,System.String)">
+            <summary>
+            添加
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.ProductController.UpdateById(System.Int32,System.String,System.String)">
+            <summary>
+            修改用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindAll">
+            <summary>
+            查询全部
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindById(System.Int32)">
+            <summary>
+            根据ID查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.FindByUsername(System.String)">
+            <summary>
+            根据用户名查询
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.Add(System.String,System.String)">
+            <summary>
+            注册
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.DeleteById(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Net8WebApi.Controllers.UserController.UpdateById(System.Int32,System.String,System.String)">
+            <summary>
+            修改用户信息
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

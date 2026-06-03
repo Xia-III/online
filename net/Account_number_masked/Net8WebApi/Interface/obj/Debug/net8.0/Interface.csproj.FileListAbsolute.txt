@@ -1,0 +1,11 @@
+G:\UnityP\进阶\Net8WebApi\Interface\bin\Debug\net8.0\Interface.deps.json
+G:\UnityP\进阶\Net8WebApi\Interface\bin\Debug\net8.0\Interface.dll
+G:\UnityP\进阶\Net8WebApi\Interface\bin\Debug\net8.0\Interface.pdb
+G:\UnityP\进阶\Net8WebApi\Interface\obj\Debug\net8.0\Interface.GeneratedMSBuildEditorConfig.editorconfig
+G:\UnityP\进阶\Net8WebApi\Interface\obj\Debug\net8.0\Interface.AssemblyInfoInputs.cache
+G:\UnityP\进阶\Net8WebApi\Interface\obj\Debug\net8.0\Interface.AssemblyInfo.cs
+G:\UnityP\进阶\Net8WebApi\Interface\obj\Debug\net8.0\Interface.csproj.CoreCompileInputs.cache
+G:\UnityP\进阶\Net8WebApi\Interface\obj\Debug\net8.0\Interface.dll
+G:\UnityP\进阶\Net8WebApi\Interface\obj\Debug\net8.0\refint\Interface.dll
+G:\UnityP\进阶\Net8WebApi\Interface\obj\Debug\net8.0\Interface.pdb
+G:\UnityP\进阶\Net8WebApi\Interface\obj\Debug\net8.0\ref\Interface.dll

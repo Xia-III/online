@@ -1,0 +1,13 @@
+2025-08-14 17:23:24,456 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-14 17:23:24,573 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-14 17:23:24,610 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-14 17:23:24,621 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-14 17:23:47,227 [.NET TP Worker] INFO  Net8WebApi.Controllers.WeatherForecastController - Net8WebApi.Controllers.WeatherForecastController  被构造
+2025-08-14 17:31:11,151 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-14 17:31:11,277 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-14 17:31:11,320 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-14 17:31:11,331 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
+2025-08-14 17:34:22,417 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5261
+2025-08-14 17:34:22,533 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-08-14 17:34:22,564 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-08-14 17:34:22,576 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: U:\Project\Net\Net8WebApi\Net8WebApi
