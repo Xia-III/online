@@ -1,0 +1,377 @@
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 45rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-xiala:before {
+  content: "\e65c";
+}
+
+.icon-yanjing_xianshi_o:before {
+    content: "\ebcc";
+  }
+  
+  .icon-yanjing_yincang_o:before {
+    content: "\ebcd";
+  }
+
+.icon-fenxiang:before {
+  content: "\e624";
+}
+
+.icon-fanhui:before {
+  content: "\e625";
+}
+
+.icon-guanbi:before {
+  content: "\e626";
+}
+
+.icon-bofang:before {
+  content: "\e627";
+}
+
+.icon-kefu:before {
+  content: "\e628";
+}
+
+.icon-shenfenzheng:before {
+  content: "\e629";
+}
+
+.icon-quanping:before {
+  content: "\e62a";
+}
+
+.icon-duigou:before {
+  content: "\e62b";
+}
+
+.icon-shuoming:before {
+  content: "\e62c";
+}
+
+.icon-zanting:before {
+  content: "\e62d";
+}
+
+.icon-shoucang:before {
+  content: "\e62e";
+}
+
+.icon-jiantoushang:before {
+  content: "\e62f";
+}
+
+.icon-jiantoushang1:before {
+  content: "\e630";
+}
+
+.icon-jiantouyou:before {
+  content: "\e631";
+}
+
+.icon-jiantouxia:before {
+  content: "\e632";
+}
+
+.icon-saoyisao:before {
+  content: "\e633";
+}
+
+.icon-wode:before {
+  content: "\e634";
+}
+
+.icon-shouye:before {
+  content: "\e635";
+}
+
+.icon-fenlei:before {
+  content: "\e636";
+}
+
+.icon-xiaoxi:before {
+  content: "\e637";
+}
+
+.icon-faxian:before {
+  content: "\e638";
+}
+
+.icon-sousuo:before {
+  content: "\e639";
+}
+
+.icon-liulan:before {
+  content: "\e63a";
+}
+
+.icon-zhiding:before {
+  content: "\e63b";
+}
+
+.icon-xuanzhong:before {
+  content: "\e63c";
+}
+
+.icon-tabguanbi:before {
+  content: "\e63d";
+}
+
+.icon-kexuanzuobiankuang:before {
+  content: "\e63e";
+}
+
+.icon-zuoweibeijing:before {
+  content: "\e63f";
+}
+
+.icon-bukexuanzuo:before {
+  content: "\e640";
+}
+
+.icon-yigouxuan:before {
+  content: "\e641";
+}
+
+.icon-weigouxuan:before {
+  content: "\e642";
+}
+
+.icon-guanyanren:before {
+  content: "\e643";
+}
+
+.icon-dingyue:before {
+  content: "\e644";
+}
+
+.icon-dizhiguanli:before {
+  content: "\e645";
+}
+
+.icon-daifukuan:before {
+  content: "\e646";
+}
+
+.icon-daishouhuo:before {
+  content: "\e647";
+}
+
+.icon-huiyuan:before {
+  content: "\e648";
+}
+
+.icon-weishiyong:before {
+  content: "\e649";
+}
+
+.icon-pingjia:before {
+  content: "\e64a";
+}
+
+.icon-qiandao:before {
+  content: "\e64b";
+}
+
+.icon-zhuanchu:before {
+  content: "\e64c";
+}
+
+.icon-zhuanru:before {
+  content: "\e64d";
+}
+
+.icon-yanchurili:before {
+  content: "\e64e";
+}
+
+.icon-changyonggoupiaorenbianji:before {
+  content: "\e64f";
+}
+
+.icon-changyonggoupiaorenshanchu:before {
+  content: "\e650";
+}
+
+.icon-guanbi1:before {
+  content: "\e651";
+}
+
+.icon-jiajianzujianjiahao:before {
+  content: "\e652";
+}
+
+.icon-cainixihuan:before {
+  content: "\e653";
+}
+
+.icon-huanyihuan:before {
+  content: "\e654";
+}
+
+.icon-daohangdizhi:before {
+  content: "\e65e";
+}
+
+.icon-jubao:before {
+  content: "\e661";
+}
+
+.icon-mima:before {
+  content: "\e8b2";
+}
+
+
+/* 引入第三方或自定义的字体图标样式 */
+@font-face {
+  font-family: 'my-icon';
+  src: url('./my-icon.ttf') format('truetype');
+
+}
+
+.my-icon {
+  font-family: 'my-icon';
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.my-icon-a-EditSquare-Light:before {
+  content: "\e641";
+}
+
+.my-icon-Camera-Light:before {
+  content: "\e642";
+}
+
+.my-icon-Category-Light:before {
+  content: "\e643";
+}
+
+.my-icon-Edit-Light:before {
+  content: "\e644";
+}
+
+.my-icon-Document-Light:before {
+  content: "\e645";
+}
+
+.my-icon-Swap-Light:before {
+  content: "\e646";
+}
+
+.my-icon-a-TimeCircle-Light:before {
+  content: "\e648";
+}
+
+.my-icon-a-Bag2-Light:before {
+  content: "\e627";
+}
+
+.my-icon-a-2User-Light:before {
+  content: "\e628";
+}
+
+.my-icon-a-AddUser-Light:before {
+  content: "\e629";
+}
+
+.my-icon-Chat-Light:before {
+  content: "\e62a";
+}
+
+.my-icon-Buy-Light:before {
+  content: "\e62b";
+}
+
+.my-icon-Call-Light:before {
+  content: "\e62c";
+}
+
+.my-icon-a-3User-Light:before {
+  content: "\e62d";
+}
+
+.my-icon-a-CloseSquare-Light:before {
+  content: "\e62e";
+}
+
+.my-icon-Activity-Light:before {
+  content: "\e62f";
+}
+
+.my-icon-Delete-Light:before {
+  content: "\e630";
+}
+
+.my-icon-Login-Light:before {
+  content: "\e631";
+}
+
+.my-icon-Folder-Light:before {
+  content: "\e632";
+}
+
+.my-icon-Hide-Light:before {
+  content: "\e633";
+}
+
+.my-icon-Show-Light:before {
+  content: "\e634";
+}
+
+.my-icon-Unlock-Light:before {
+  content: "\e635";
+}
+
+.my-icon-Scan-Light:before {
+  content: "\e636";
+}
+
+.my-icon-a-VolumeUp-Light:before {
+  content: "\e637";
+}
+
+.my-icon-Profile-Light:before {
+  content: "\e638";
+}
+
+.my-icon-Wallet-Light:before {
+  content: "\e639";
+}
+
+.my-icon-a-PaperPlus-Light:before {
+  content: "\e63a";
+}
+
+.my-icon-Paper-Light:before {
+  content: "\e63b";
+}
+
+.my-icon-Setting-Light:before {
+  content: "\e63c";
+}
+
+.my-icon-Star-Light:before {
+  content: "\e63d";
+}
+
+.my-icon-a-PaperDownload-Light:before {
+  content: "\e63e";
+}
+
+.my-icon-Search-Light:before {
+  content: "\e63f";
+}
+
+.my-icon-Ticket-Light:before {
+  content: "\e640";
+}

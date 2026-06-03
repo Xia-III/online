@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 解决触发文本焦点会放大问题 -->
+    <!-- 在iOS 10以前，iOS和Android都可以通过一行meta标签来禁止页面缩放 -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      
+    </style>
+    <script>
+      // 禁止缩放
+      //meta + disableScale.ts + 这个
+      document.addEventListener('mousewheel', function (e) {
+        e = e || window.event;
+        if ((e.wheelDelta && event.ctrlKey) || e.detail) {
+          event.preventDefault();
+        }
+      }, {
+        capture: false,
+        passive: false
+      });
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

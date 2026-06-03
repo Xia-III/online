@@ -1,0 +1,91 @@
+@import "/src/css/iconfont.css";
+
+
+Div {
+    --theme-color: #f83d2a;
+    --themeOff-color: #91c9fa;
+    --theme2-color: #00BFFF;
+    --arrowright-color: #8F9298;
+    --box-bg-color:#ebecee;
+}
+
+.pagediv {
+    --theme-color: #f83d2a;
+    --themeOff-color: #91c9fa;
+    --theme2-color: #00BFFF;
+    font-size: 30px;
+    background-color: white;
+    --arrowright-color: #8F9298;
+}
+
+/* 布局 */
+.flex{flex: 1;}
+.dflex{display: flex;}
+.flex-start{ display: flex; justify-content: start;}
+.flex-sb{display: flex;justify-content: space-between;}
+.flex-column{display: flex;flex-direction: column;}
+.flex-wrap{flex-wrap: wrap;}
+.flex-content{justify-content: center;align-items: center;}
+.a-center{ align-items: center;}
+.t-center{ text-align: center;}
+.t-start{ text-align: start;}
+/* 装饰 */
+.thread{width: 3px;height: 20px;;background-color: var(--theme-color);border-radius: 10px;}
+/* 阴影 */
+/* .box-shadow{box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 10px -10px;} */
+.box-shadow{box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+/* 定位 */
+.pr{position: relative;} .pa{position: absolute;}
+/* 盒子大小 */
+.w100{ width: 100vw;}
+.w25{width: 25%;}
+.hauto{height: auto;}
+.h-100{height: 100px;}
+/* 外间距 */
+.mg-20{margin: 20px;}
+.mt-4{ margin-top: 4px;}
+.mt-10{margin-top: 10px;}
+.mt-14{margin-top: 14px;}
+.mt-16{margin-top: 16px;}
+.ml-10{ margin-left: 10px;}
+.ml-20{ margin-left: 20px;}
+.mt-20{margin-top: 20px;}
+.mt30{margin-top: 30%;}
+.mb-20{margin-bottom: 20px;}
+.mg-20-20-0{margin: 20px 20px 0;}
+.mx-10{margin: 0 10px;}
+.mx-20{margin: 0 20px;}
+/* 内 */
+.pd-20{padding: 20px;}
+.pd-12{padding: 12px;}
+.py-10{padding: 10px 0;}
+.pd-4-8{padding: 4px 8px;}
+.pd-6-12{padding: 6px 12px;}
+.pb-20{padding-bottom: 20px;}
+/* 圆角 */
+.br05{ border-radius: 50%;} 
+.br-4{ border-radius: 4px;}
+.br-10{ border-radius: 10px;}
+.br-20{ border-radius: 20px;}
+/* 边框 */
+.bb{border-bottom: 1px solid #f4f4f4;}
+/* 背景颜色 */
+.bg-fff{ background: white;}
+.bg-box{background-color: #ededed;}
+/* 字体颜色 */
+.col-fff{ color: white;}
+.col-888{color: #888888;}
+.col-beige{color: #FFD700}
+.col-black{color: #3c3c3c;}
+.col-red{color: #E93323;}
+/* 字体 */
+.font-16{ /* 默认 */ font-size: 16px;}
+.font-18{ font-size: 18px;}
+.font-14{ font-size: 14px;}
+.font-10{font-size: 10px;}
+.fw-500{font-weight: 500;}
+.fw-bold{font-weight: bold;}
+/* 限制行数 */
+.font-hidden { display: block;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.font-hidden-two { display: -webkit-box; -webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.min-w{min-width: 0;}/* 解决 nowrap 超出盒子范围*/
