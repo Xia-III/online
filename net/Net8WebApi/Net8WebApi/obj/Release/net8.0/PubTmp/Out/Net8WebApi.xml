@@ -16,6 +16,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Net8WebApi.Controllers.AiRecordController.DeleteByUserId(System.String)">
+            <summary>
+            删除
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Net8WebApi.Controllers.AuthoizeController.Add(System.String,System.String,System.String)">
             <summary>
             注册

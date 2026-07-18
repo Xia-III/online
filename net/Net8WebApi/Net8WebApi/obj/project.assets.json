@@ -5045,11 +5045,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Net8WebApi.csproj",
+      "projectUniqueName": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Net8WebApi.csproj",
       "projectName": "Net8WebApi",
-      "projectPath": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Net8WebApi.csproj",
+      "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Net8WebApi.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\obj\\",
+      "outputPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -5072,23 +5072,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "G:\\Project\\Net\\Net8WebApi\\Interface\\IService.csproj": {
-              "projectPath": "G:\\Project\\Net\\Net8WebApi\\Interface\\IService.csproj"
+            "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IService.csproj": {
+              "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IService.csproj"
             },
-            "G:\\Project\\Net\\Net8WebApi\\IRepository\\IRepository.csproj": {
-              "projectPath": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IRepository.csproj"
+            "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IRepository.csproj": {
+              "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IRepository.csproj"
             },
-            "G:\\Project\\Net\\Net8WebApi\\Model\\Model.csproj": {
-              "projectPath": "G:\\Project\\Net\\Net8WebApi\\Model\\Model.csproj"
+            "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\Model.csproj": {
+              "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\Model.csproj"
             },
-            "G:\\Project\\Net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj": {
-              "projectPath": "G:\\Project\\Net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj"
+            "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj": {
+              "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj"
             },
-            "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj": {
-              "projectPath": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj"
+            "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj": {
+              "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj"
             },
-            "G:\\Project\\Net\\Net8WebApi\\Service\\ServiceImpl.csproj": {
-              "projectPath": "G:\\Project\\Net\\Net8WebApi\\Service\\ServiceImpl.csproj"
+            "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\ServiceImpl.csproj": {
+              "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\ServiceImpl.csproj"
             }
           }
         }

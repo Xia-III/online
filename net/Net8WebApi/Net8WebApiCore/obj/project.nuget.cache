@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xfcwm2LocFE=",
+  "dgSpecHash": "1tZTpn00pgs=",
   "success": true,
-  "projectFilePath": "G:\\Project\\Net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj",
+  "projectFilePath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.2\\microsoft.extensions.dependencyinjection.abstractions.9.0.2.nupkg.sha512",

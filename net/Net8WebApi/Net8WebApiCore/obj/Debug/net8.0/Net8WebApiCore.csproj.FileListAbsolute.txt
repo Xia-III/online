@@ -34,3 +34,16 @@ G:\Project\Net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.dll
 G:\Project\Net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\refint\Net8WebApiCore.dll
 G:\Project\Net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.pdb
 G:\Project\Net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\ref\Net8WebApiCore.dll
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\bin\Debug\net8.0\Net8WebApiCore.deps.json
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\bin\Debug\net8.0\Net8WebApiCore.dll
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\bin\Debug\net8.0\Net8WebApiCore.pdb
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.csproj.AssemblyReference.cache
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.GeneratedMSBuildEditorConfig.editorconfig
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.AssemblyInfoInputs.cache
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.AssemblyInfo.cs
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.csproj.CoreCompileInputs.cache
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.sourcelink.json
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.dll
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\refint\Net8WebApiCore.dll
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\Net8WebApiCore.pdb
+G:\Project\Repositories\online\net\Net8WebApi\Net8WebApiCore\obj\Debug\net8.0\ref\Net8WebApiCore.dll

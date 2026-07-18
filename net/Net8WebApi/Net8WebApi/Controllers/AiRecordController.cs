@@ -33,7 +33,10 @@ namespace Net8WebApi.Controllers
                         {
                                  return Result.Error("保存失败,已存在");
                         }
-                        return await _AiRecordService.CreateAsync(aiRecord) ? Result.Success(null, "设置成功") : Result.Error("申请失败");
+                        T = new AiRecord();
+                        T.UserId = aiRecord.UserId;
+                        T.DialogueId = aiRecord.DialogueId;
+                        return await _AiRecordService.CreateAsync(T) ? Result.Success(null, "设置成功") : Result.Error("申请失败");
                 }
                 /// <summary>
                 /// 条件全部
@@ -48,6 +51,23 @@ namespace Net8WebApi.Controllers
                         }
                         return Result.Error("未找到相关记录");
                 }
+
+                /// <summary>
+                /// 删除
+                /// </summary>
+                /// <returns></returns>
+                [HttpPost("DeleteByUserId")]
+                public async Task<Result> DeleteByUserId(string userId)
+                {
+                        AiRecord a = await _AiRecordService.FindAsync(t => t.UserId == userId);
+                        if (a != null)
+                        {
+                                await _AiRecordService.DeleteAsync(a.Id);
+                                return Result.Success();
+                        }
+                        return Result.Error("未找到相关记录");
+                }
+
         }
 }
 

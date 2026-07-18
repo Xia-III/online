@@ -7,7 +7,7 @@
             </div>
         </div>
 
-        <div class="chat-content" ref="chatContentRef" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">
+        <div class="chat-content" ref="chatContentRef">
             <!-- 历史消息提示区域只在下拉时显示 -->
             <div v-if="conversation_id && isAtTop && isPulling" class="history-available-hint" :class="{ 'refreshing': isRefreshing, 'ready': isPulling && pullDistance >= pullThreshold }" ref="hintRef">
                 <span>{{ isRefreshing ? '正在获取历史消息...' : (isPulling ? (pullDistance >= pullThreshold ? '释放立即获取历史消息' : '下拉获取历史消息') : '下拉可查看历史消息') }}</span>
@@ -112,9 +112,6 @@
             <div ref="bottomAnchor"></div>
         </div>
 
-        <!-- 增加底部空间以防内容被footer遮挡 -->
-        <div style="height: 2.2rem;"></div>
-
         <div class="chat-footer">
             <!-- 支付常见问题与产品相关问题按钮并排放置 -->
             <div class="buttons-container">
@@ -145,17 +142,30 @@
             </div>
             
             <!-- input 框 -->
-            <div class="input-container">
-                <input placeholder="很高兴为您服务，请描述您的问题" v-model="inputValue" @keydown.up.prevent="navigateMatches('up')"
-                    @keydown.down.prevent="navigateMatches('down')" @keydown.enter="handleEnterKey" />
-                <button @click="sendQuestion">发送</button>
+            <div class="input-area">
+                <!-- 模式切换 -->
+                <!-- <div class="mode-toggle">
+                    <div class="mode-segment" :class="{ active: !isImageMode }" @click="setChatMode('chat')">
+                        <span class="mode-icon">💬</span>
+                        <span class="mode-label">聊天</span>
+                    </div>
+                    <div class="mode-segment" :class="{ active: isImageMode }" @click="setChatMode('image')">
+                        <span class="mode-icon">🎨</span>
+                        <span class="mode-label">生图</span>
+                    </div>
+                </div> -->
+                <div class="input-container">
+                    <input :placeholder="isImageMode ? '请描述想要的图片' : '很高兴为您服务，请描述您的问题'" v-model="inputValue" @keydown.up.prevent="navigateMatches('up')"
+                        @keydown.down.prevent="navigateMatches('down')" @keydown.enter="handleEnterKey" />
+                    <button @click="isImageMode ? generateImage() : sendQuestion()">发送</button>
 
-                <!-- 匹配的热门问题列表 -->
-                <div class="matched-questions" v-if="matchedQuestions.length > 0 && inputValue.trim().length > 0">
-                    <div class="matched-question-item" v-for="(question, index) in matchedQuestions" :key="question.id"
-                        :class="{ 'active': selectedMatchIndex === index }" @click="selectMatchedQuestion(question)">
-                        <span v-html="highlightMatch(question.name)"></span>
-                        <span v-if="question.parent" class="matched-parent">（{{ question.parent }}）</span>
+                    <!-- 匹配的热门问题列表 -->
+                    <div class="matched-questions" v-if="!isImageMode && matchedQuestions.length > 0 && inputValue.trim().length > 0">
+                        <div class="matched-question-item" v-for="(question, index) in matchedQuestions" :key="question.id"
+                            :class="{ 'active': selectedMatchIndex === index }" @click="selectMatchedQuestion(question)">
+                            <span v-html="highlightMatch(question.name)"></span>
+                            <span v-if="question.parent" class="matched-parent">（{{ question.parent }}）</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,7 +182,7 @@
 
 import { ref, nextTick, computed, onMounted, onBeforeUnmount } from 'vue'
 import { showImagePreview, showToast } from 'vant';
-import { chatMessagesAPI, conversationsAPI, messagesAPI, annotationsAPI, messageFeedbackAPI } from '../api/index'
+import { chatMessagesAPI, conversationsAPI, messagesAPI, annotationsAPI, messageFeedbackAPI, generateImageAPI } from '../api/index'
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
 import { useRoute } from 'vue-router'
 
@@ -269,15 +279,14 @@ const initFingerprint = async () => {
         // 可以将设备ID存储到localStorage中以便后续使用
         localStorage.setItem('deviceId', deviceId.value)
         
-        // 通过API获取会话ID
+        // 通过API获取历史会话ID
         const storedDialogueId = await getAiRecord(deviceId.value);
         if (storedDialogueId) {
             conversation_id.value = storedDialogueId;
-            // 保存到localStorage以便后续使用
             localStorage.setItem('conversation_id', conversation_id.value);
         } else {
-            // 清除之前的会话状态
-            conversation_id.value = '';
+            // 无历史会话，清除localStorage但保留内存中的conversation_id
+            // 避免竞态：sendQuestion可能已在指纹加载完成前建立了新会话
             localStorage.removeItem('conversation_id');
         }
     } catch (error) {
@@ -321,7 +330,15 @@ onMounted(() => {
         chatContentRef.value.addEventListener('scroll', handleScroll);
         // 初始检查是否在顶部
         isAtTop.value = chatContentRef.value.scrollTop <= 1;
+        // 手动注册触摸事件（{ passive: false } 以允许 preventDefault 阻止页面拖动）
+        chatContentRef.value.addEventListener('touchstart', handleTouchStart, { passive: false });
+        chatContentRef.value.addEventListener('touchmove', handleTouchMove, { passive: false });
+        chatContentRef.value.addEventListener('touchend', handleTouchEnd, { passive: false });
     }
+    
+    // 锁定 body 滚动，防止下拉时拖动整个页面
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
     
     // 添加窗口大小变化事件监听
     window.addEventListener('resize', handleResize);
@@ -338,10 +355,16 @@ onMounted(() => {
 onBeforeUnmount(() => {
     if (chatContentRef.value) {
         chatContentRef.value.removeEventListener('scroll', handleScroll);
+        chatContentRef.value.removeEventListener('touchstart', handleTouchStart);
+        chatContentRef.value.removeEventListener('touchmove', handleTouchMove);
+        chatContentRef.value.removeEventListener('touchend', handleTouchEnd);
     }
     window.removeEventListener('resize', handleResize);
     document.removeEventListener('click', closePaymentTagsOnClickOutside);
     document.removeEventListener('click', closeProductTagsOnClickOutside);
+    // 恢复 body 滚动
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
 })
 
 // 支付常见问题
@@ -499,129 +522,129 @@ const onQuestionClick = async (item) => {
     // 滚动到底部
     scrollToBottom()
     
-    try {
-        const response = await fetch('v1/chat-messages', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer app-xPJ41Pa0JlFZm0NzzvgS9l3b'
-            },
-            body: JSON.stringify({
-                inputs: {},
-                query: queryText.value,
-                response_mode: 'streaming',
-                conversation_id: conversation_id.value,
-                user: deviceId.value || 'abc-123', // 使用设备ID作为用户标识
-                files: [{
-                    type: 'image',
-                    transfer_method: 'remote_url',
-                    url: 'https://cloud.dify.ai/logo/logo-site.png'
-                }]
-            })
-        });
+    // 内部函数：执行流式请求，支持 404 自动无会话重试
+    const doSend = async (convId) => {
+        try {
+            const response = await fetch('v1/chat-messages', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer app-xPJ41Pa0JlFZm0NzzvgS9l3b'
+                },
+                body: JSON.stringify({
+                    inputs: {},
+                    query: queryText.value,
+                    response_mode: 'streaming',
+                    conversation_id: convId,
+                    user: deviceId.value || 'abc-' + Date.now(),
+                    files: [{
+                        type: 'image',
+                        transfer_method: 'remote_url',
+                        url: 'https://cloud.dify.ai/logo/logo-site.png'
+                    }]
+                })
+            });
 
-        if (!response.ok || !response.body) {
-            throw new Error('网络异常或接口无响应体');
-        }
+            if (!response.ok) {
+                // 404 + 携带了会话ID → Dify 侧会话已过期，清除后无会话重试
+                if (response.status === 404 && convId) {
+                    conversation_id.value = '';
+                    localStorage.removeItem('conversation_id');
+                    console.log('会话已过期(404)，清除本地会话ID，无会话模式重试');
+                    fetch(`q1/AiRecord/DeleteByUserId?userId=${deviceId.value}`, { method: 'POST', headers: { 'accept': 'text/plain' }, body: '' }).catch(() => {});
+                    return await doSend('');
+                }
+                const statusMsg = { 400:'请求参数有误', 401:'会话已过期，请刷新重试', 403:'暂无访问权限', 404:'服务不可用', 429:'请求过于频繁，请稍后重试', 500:'服务器繁忙，请稍后重试', 502:'服务暂时不可用', 503:'服务维护中' };
+                qaPairs.value[index].answer = statusMsg[response.status] || `服务异常(${response.status})，请稍后重试`;
+                return;
+            }
+            if (!response.body) {
+                qaPairs.value[index].answer = '服务响应异常，请稍后重试';
+                return;
+            }
 
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder('utf-8');
-        let buffer = '';
-        let completedAnswer = '';
-        let messageId = '';
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder('utf-8');
+            let buffer = '';
+            let completedAnswer = '';
+            let messageId = '';
 
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
 
-            buffer += decoder.decode(value, { stream: true });
+                buffer += decoder.decode(value, { stream: true });
+                const lines = buffer.split('\n\n');
+                buffer = lines.pop();
 
-            const lines = buffer.split('\n\n');
-            buffer = lines.pop(); // 保留不完整的最后一段
+                for (const line of lines) {
+                    if (line.startsWith('data:')) {
+                        const jsonStr = line.replace(/^data:\s*/, '');
+                        if (jsonStr === '[DONE]') break;
 
-            for (const line of lines) {
-                if (line.startsWith('data:')) {
-                    const jsonStr = line.replace(/^data:\s*/, '');
-                    if (jsonStr === '[DONE]') break;
+                        try {
+                            const parsed = JSON.parse(jsonStr);
+                            if (parsed.event === 'message') {
+                                const textFragment = parsed.answer || '';
+                                completedAnswer += textFragment;
+                                qaPairs.value[index].answer = completedAnswer;
 
-                    try {
-                        const parsed = JSON.parse(jsonStr);
-                        
-                        // 处理消息事件，这是包含实际文本片段的事件
-                        if (parsed.event === 'message') {
-                            const textFragment = parsed.answer || '';
-                            completedAnswer += textFragment;
-                            qaPairs.value[index].answer = completedAnswer;
-                            
-                            // 保存message_id用于后续反馈
-                            if (!messageId && parsed.id) {
-                                messageId = parsed.id;
-                                message_id.value = messageId;
-                                
-                                // 将新消息ID添加到已显示集合中
-                                displayedMessageIds.value.add(messageId);
-                                // 给当前消息项添加ID属性
-                                qaPairs.value[index].id = messageId;
+                                if (!messageId && parsed.id) {
+                                    messageId = parsed.id;
+                                    message_id.value = messageId;
+                                    displayedMessageIds.value.add(messageId);
+                                    qaPairs.value[index].id = messageId;
+                                }
+
+                                if (parsed.conversation_id && !conversation_id.value) {
+                                    conversation_id.value = parsed.conversation_id;
+                                    localStorage.setItem('conversation_id', conversation_id.value);
+                                    console.log('保存conversation_id:', conversation_id.value);
+                                    await saveAiRecord(deviceId.value, conversation_id.value);
+                                }
+
+                                await nextTick();
+                                scrollToBottom();
+                            } else if (parsed.event === 'workflow_started' && parsed.conversation_id) {
+                                console.log('工作流开始，但不从此处获取会话ID');
+                            } else if (parsed.event === 'workflow_finished') {
+                                const { cleanedText, imageUrls, videoUrls } = extractImageUrl(completedAnswer);
+                                if (imageUrls.length > 0) {
+                                    qaPairs.value[index].imageUrls = imageUrls;
+                                    await loadImages(imageUrls);
+                                }
+                                if (videoUrls.length > 0) {
+                                    qaPairs.value[index].videoUrls = videoUrls;
+                                }
+                                if (imageUrls.length > 0 || videoUrls.length > 0) {
+                                    qaPairs.value[index].answer = cleanedText;
+                                }
+                                qaPairs.value[index].feedbackFlag = true;
                             }
-                            
-                            // 保存conversation_id
-                            if (parsed.conversation_id && !conversation_id.value) {
-                                conversation_id.value = parsed.conversation_id;
-                                // 保存到localStorage以便后续恢复会话
-                                localStorage.setItem('conversation_id', conversation_id.value);
-                                console.log('保存conversation_id:', conversation_id.value);
-                                
-                                // 保存设备ID和会话ID的对应关系到后端
-                                await saveAiRecord(deviceId.value, conversation_id.value);
-                            }
-                            
-                            await nextTick();
-                            scrollToBottom();
+                        } catch (err) {
+                            console.warn('解析失败：', err);
                         }
-                        // 处理工作流开始事件，获取conversation_id
-                        else if (parsed.event === 'workflow_started' && parsed.conversation_id) {
-                            // 不再从workflow_started获取conversation_id
-                            console.log('工作流开始，但不从此处获取会话ID');
-                        }
-                        // 处理工作流程结束事件
-                        else if (parsed.event === 'workflow_finished') {
-                            // 工作流完成，检查是否有图片或视频URL
-                            const { cleanedText, imageUrls, videoUrls } = extractImageUrl(completedAnswer);
-                            
-                            if (imageUrls.length > 0) {
-                                qaPairs.value[index].imageUrls = imageUrls;
-                                await loadImages(imageUrls);
-                            }
-                            
-                            if (videoUrls.length > 0) {
-                                qaPairs.value[index].videoUrls = videoUrls;
-                            }
-                            
-                            // 如果有图片或视频，则更新文本内容为清理后的文本
-                            if (imageUrls.length > 0 || videoUrls.length > 0) {
-                                qaPairs.value[index].answer = cleanedText;
-                            }
-                            
-                            // 显示反馈按钮
-                            qaPairs.value[index].feedbackFlag = true;
-                        }
-                    } catch (err) {
-                        console.warn('解析失败：', err);
                     }
                 }
             }
+        } catch (error) {
+            if (error.name === 'AbortError') {
+                console.log('请求被取消');
+                qaPairs.value[index].answer = '请求已取消';
+            } else if (error instanceof TypeError && error.message === 'Failed to fetch') {
+                console.error('网络请求失败:', error);
+                qaPairs.value[index].answer = '网络连接失败，请检查网络后重试';
+            } else {
+                console.error('请求错误:', error);
+                qaPairs.value[index].answer = '服务响应异常，请稍后重试';
+            }
+        } finally {
+            qaPairs.value[index].questionLoading = false;
+            disabledBtn.value = false;
         }
-    } catch (error) {
-        if (error.name === 'AbortError') {
-            console.log('请求被取消');
-        } else {
-            console.error('请求错误:', error);
-        }
-        qaPairs.value[index].answer = '暂时未找到该资源';
-    } finally {
-        qaPairs.value[index].questionLoading = false;
-        disabledBtn.value = false;
-    }
+    };
+
+    await doSend(conversation_id.value);
 }
 
 
@@ -727,6 +750,7 @@ const yltp = (dwimg) => {
 
 const inputValue = ref('')
 const selectedMatchIndex = ref(-1) // 当前选中的匹配项索引
+const isImageMode = ref(false) // 是否为图片生成模式
 
 // 构建所有可直接发送的选项（支付常见问题标签、产品相关问题二级选项、热门问题）
 const allProductChildren = computed(() =>
@@ -781,11 +805,16 @@ const navigateMatches = (direction) => {
 
 // 处理回车键
 const handleEnterKey = () => {
-    // 如果有选中的匹配项，则选择该项
+    // 生图模式：直接生成图片，不走匹配项逻辑
+    if (isImageMode.value) {
+        generateImage();
+        return;
+    }
+
+    // 聊天模式：优先选择匹配项，否则直接发送
     if (matchedQuestions.value.length > 0 && selectedMatchIndex.value >= 0) {
         selectMatchedQuestion(matchedQuestions.value[selectedMatchIndex.value]);
     } else {
-        // 否则直接发送当前输入
         sendQuestion();
     }
 };
@@ -842,132 +871,181 @@ const sendQuestion = async () => {
     await nextTick();
     scrollToBottom();
 
-    try {
-        const response = await fetch('v1/chat-messages', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                Authorization: 'Bearer app-xPJ41Pa0JlFZm0NzzvgS9l3b' // 如有
-            },
-            body: JSON.stringify({
-                inputs: {},
-                query: question,
-                response_mode: 'streaming',
-                conversation_id: conversation_id.value,
-                user: deviceId.value || 'abc-123', // 使用设备ID作为用户标识
-                files: [{
-                    type: 'image',
-                    transfer_method: 'remote_url',
-                    url: 'https://cloud.dify.ai/logo/logo-site.png'
-                }]
-            })
-        });
+    // 内部函数：执行流式请求，支持 404 自动无会话重试
+    const doSend = async (convId) => {
+        try {
+            const response = await fetch('v1/chat-messages', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer app-xPJ41Pa0JlFZm0NzzvgS9l3b'
+                },
+                body: JSON.stringify({
+                    inputs: {},
+                    query: question,
+                    response_mode: 'streaming',
+                    conversation_id: convId,
+                    user: deviceId.value || 'abc-' + Date.now(),
+                    files: [{
+                        type: 'image',
+                        transfer_method: 'remote_url',
+                        url: 'https://cloud.dify.ai/logo/logo-site.png'
+                    }]
+                })
+            });
 
-        if (!response.ok || !response.body) {
-            throw new Error('网络异常或接口无响应体');
-        }
+            if (!response.ok) {
+                // 404 + 携带了会话ID → Dify 侧会话已过期，清除后无会话重试
+                if (response.status === 404 && convId) {
+                    conversation_id.value = '';
+                    localStorage.removeItem('conversation_id');
+                    console.log('会话已过期(404)，清除本地会话ID，无会话模式重试');
+                    fetch(`q1/AiRecord/DeleteByUserId?userId=${deviceId.value}`, { method: 'POST', headers: { 'accept': 'text/plain' }, body: '' }).catch(() => {});
+                    return await doSend('');
+                }
+                const statusMsg = { 400:'请求参数有误', 401:'会话已过期，请刷新重试', 403:'暂无访问权限', 404:'服务不可用', 429:'请求过于频繁，请稍后重试', 500:'服务器繁忙，请稍后重试', 502:'服务暂时不可用', 503:'服务维护中' };
+                qaPairs.value[index].answer = statusMsg[response.status] || `服务异常(${response.status})，请稍后重试`;
+                return;
+            }
+            if (!response.body) {
+                qaPairs.value[index].answer = '服务响应异常，请稍后重试';
+                return;
+            }
 
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder('utf-8');
-        let buffer = '';
-        let completedAnswer = '';
-        let messageId = '';
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder('utf-8');
+            let buffer = '';
+            let completedAnswer = '';
+            let messageId = '';
 
-        while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
 
-            buffer += decoder.decode(value, { stream: true });
+                buffer += decoder.decode(value, { stream: true });
+                const lines = buffer.split('\n\n');
+                buffer = lines.pop();
 
-            const lines = buffer.split('\n\n');
-            buffer = lines.pop(); // 保留不完整的最后一段
+                for (const line of lines) {
+                    if (line.startsWith('data:')) {
+                        const jsonStr = line.replace(/^data:\s*/, '');
+                        if (jsonStr === '[DONE]') break;
 
-            for (const line of lines) {
-                if (line.startsWith('data:')) {
-                    const jsonStr = line.replace(/^data:\s*/, '');
-                    if (jsonStr === '[DONE]') break;
+                        try {
+                            const parsed = JSON.parse(jsonStr);
+                            if (parsed.event === 'message') {
+                                const textFragment = parsed.answer || '';
+                                completedAnswer += textFragment;
+                                qaPairs.value[index].answer = completedAnswer;
 
-                    try {
-                        const parsed = JSON.parse(jsonStr);
-                        
-                        // 处理消息事件，这是包含实际文本片段的事件
-                        if (parsed.event === 'message') {
-                            const textFragment = parsed.answer || '';
-                            completedAnswer += textFragment;
-                            qaPairs.value[index].answer = completedAnswer;
-                            
-                            // 保存message_id用于后续反馈
-                            if (!messageId && parsed.id) {
-                                messageId = parsed.id;
-                                message_id.value = messageId;
-                                
-                                // 将新消息ID添加到已显示集合中
-                                displayedMessageIds.value.add(messageId);
-                                // 给当前消息项添加ID属性
-                                qaPairs.value[index].id = messageId;
+                                if (!messageId && parsed.id) {
+                                    messageId = parsed.id;
+                                    message_id.value = messageId;
+                                    displayedMessageIds.value.add(messageId);
+                                    qaPairs.value[index].id = messageId;
+                                }
+
+                                if (parsed.conversation_id && !conversation_id.value) {
+                                    conversation_id.value = parsed.conversation_id;
+                                    localStorage.setItem('conversation_id', conversation_id.value);
+                                    console.log('保存conversation_id:', conversation_id.value);
+                                    await saveAiRecord(deviceId.value, conversation_id.value);
+                                }
+
+                                await nextTick();
+                                scrollToBottom();
+                            } else if (parsed.event === 'workflow_started' && parsed.conversation_id) {
+                                console.log('工作流开始，但不从此处获取会话ID');
+                            } else if (parsed.event === 'workflow_finished') {
+                                const { cleanedText, imageUrls, videoUrls } = extractImageUrl(completedAnswer);
+                                if (imageUrls.length > 0) {
+                                    qaPairs.value[index].imageUrls = imageUrls;
+                                    await loadImages(imageUrls);
+                                }
+                                if (videoUrls.length > 0) {
+                                    qaPairs.value[index].videoUrls = videoUrls;
+                                }
+                                if (imageUrls.length > 0 || videoUrls.length > 0) {
+                                    qaPairs.value[index].answer = cleanedText;
+                                }
+                                qaPairs.value[index].feedbackFlag = true;
                             }
-                            
-                            // 保存conversation_id
-                            if (parsed.conversation_id && !conversation_id.value) {
-                                conversation_id.value = parsed.conversation_id;
-                                // 保存到localStorage以便后续恢复会话
-                                localStorage.setItem('conversation_id', conversation_id.value);
-                                console.log('保存conversation_id:', conversation_id.value);
-                                
-                                // 保存设备ID和会话ID的对应关系到后端
-                                await saveAiRecord(deviceId.value, conversation_id.value);
-                            }
-                            
-                            await nextTick();
-                            scrollToBottom();
+                        } catch (err) {
+                            console.warn('解析失败：', err);
                         }
-                        // 处理工作流开始事件，获取conversation_id
-                        else if (parsed.event === 'workflow_started' && parsed.conversation_id) {
-                            // 不再从workflow_started获取conversation_id
-                            console.log('工作流开始，但不从此处获取会话ID');
-                        } 
-                        // 处理工作流程结束事件
-                        else if (parsed.event === 'workflow_finished') {
-                            // 工作流完成，检查是否有图片或视频URL
-                            const { cleanedText, imageUrls, videoUrls } = extractImageUrl(completedAnswer);
-                            
-                            if (imageUrls.length > 0) {
-                                qaPairs.value[index].imageUrls = imageUrls;
-                                await loadImages(imageUrls);
-                            }
-                            
-                            if (videoUrls.length > 0) {
-                                qaPairs.value[index].videoUrls = videoUrls;
-                            }
-                            
-                            // 如果有图片或视频，则更新文本内容为清理后的文本
-                            if (imageUrls.length > 0 || videoUrls.length > 0) {
-                                qaPairs.value[index].answer = cleanedText;
-                            }
-                            
-                            // 显示反馈按钮
-                            qaPairs.value[index].feedbackFlag = true;
-                        }
-                    } catch (err) {
-                        console.warn('解析失败：', err);
                     }
                 }
             }
+        } catch (error) {
+            if (error.name === 'AbortError') {
+                console.log('请求被取消');
+                qaPairs.value[index].answer = '请求已取消';
+            } else if (error instanceof TypeError && error.message === 'Failed to fetch') {
+                console.error('网络请求失败:', error);
+                qaPairs.value[index].answer = '网络连接失败，请检查网络后重试';
+            } else {
+                console.error('请求出错:', error);
+                qaPairs.value[index].answer = '服务响应异常，请稍后重试';
+            }
+        } finally {
+            qaPairs.value[index].questionLoading = false;
+            disabledBtn.value = false;
+        }
+    };
+
+    await doSend(conversation_id.value);
+}
+
+// 图片生成
+const generateImage = async () => {
+    if (!inputValue.value?.trim() || disabledBtn.value) return;
+
+    disabledBtn.value = true;
+    const prompt = inputValue.value;
+    inputValue.value = '';
+
+    const newItem = {
+        question: prompt,
+        answer: '',
+        imageUrls: [],
+        videoUrls: [],
+        questionLoading: true,
+        feedbackFlag: false,
+        like: false,
+        dislike: false,
+        timestamp: new Date()
+    };
+    qaPairs.value.push(newItem);
+    const index = qaPairs.value.length - 1;
+
+    await nextTick();
+    scrollToBottom();
+
+    try {
+        const response = await generateImageAPI({
+            model: "Kwai-Kolors/Kolors",
+            prompt: prompt,
+            image_size: "1024x1024",
+            batch_size: 1,
+            num_inference_steps: 20,
+            guidance_scale: 7.5
+        });
+
+        if (response && response.data && response.data.images && response.data.images.length > 0) {
+            const imageUrl = response.data.images[0].url;
+            qaPairs.value[index].imageUrls = [imageUrl];
+            qaPairs.value[index].answer = '';
+        } else {
+            qaPairs.value[index].answer = '图片生成失败，请稍后重试';
         }
     } catch (error) {
-        if (error.name === 'AbortError') {
-            console.log('请求被取消');
-        } else {
-            console.error('请求出错:', error);
-        } 
-        qaPairs.value[index].answer = '暂时未找到该资源';
+        console.error('图片生成失败:', error);
+        qaPairs.value[index].answer = '图片生成失败，请稍后重试';
     } finally {
         qaPairs.value[index].questionLoading = false;
         disabledBtn.value = false;
     }
 }
-
-
 
 // 点赞反馈
 const feedbackHelp = async (item) => {
@@ -982,7 +1060,7 @@ const feedbackHelp = async (item) => {
 
     const feedbackData = {
         rating: item,
-        user: deviceId.value || 'abc-123',
+        user: deviceId.value || 'abc-' + Date.now(),
         content: "message feedback information"
     };
 
@@ -1104,7 +1182,7 @@ const getHistoryMessages = async () => {
 
         const response = await messagesAPI({
             conversation_id: conversation_id.value,
-            user: deviceId.value || 'abc-123',
+            user: deviceId.value || 'abc-' + Date.now(),
             first_id: historyFirstId.value, // 使用存储的first_id参数
             limit: 10
         });
@@ -1260,54 +1338,56 @@ const handleTouchStart = (e) => {
 };
 
 const handleTouchMove = (e) => {
-    // 获取触摸点的X和Y坐标
     const touchY = e.touches[0].clientY;
     const touchX = e.touches[0].clientX;
-    
-    // 计算垂直和水平方向的移动距离
     const touchDeltaY = touchY - touchStartY.value;
     const touchDeltaX = touchX - touchStartX.value;
     
-    // 如果是水平滑动（水平移动大于垂直移动），阻止默认行为
+    // 水平滑动：阻止默认行为（CSS touch-action: pan-y 也可能不足，JS 兜底）
     if (Math.abs(touchDeltaX) > Math.abs(touchDeltaY) && Math.abs(touchDeltaX) > 10) {
-        // 只在明显的水平滑动时阻止默认行为
         e.preventDefault();
         return;
     }
     
-    // 严格检查：如果不在顶部，直接退出，不做任何处理
-    if (!isAtTop.value) {
-        // 确保重置下拉状态
-        isPulling.value = false;
-        pullDistance.value = 0;
-        isHintVisible.value = false;
+    // 实时更新 isAtTop（scroll 事件有延迟，这里做二次确认更可靠）
+    if (chatContentRef.value) {
+        isAtTop.value = chatContentRef.value.scrollTop <= 1;
+    }
+    
+    // 顶部 + 向下拉：无论是否有 conversation_id，都必须阻止浏览器原生行为
+    // 否则浏览器会触发整页弹性滚动/下拉刷新，导致页面整体被拖动
+    if (isAtTop.value && touchDeltaY > 0) {
+        e.preventDefault();
+        
+        if (conversation_id.value && !isRefreshing.value) {
+            if (touchDeltaY > 20) {
+                isPulling.value = true;
+                pullDistance.value = Math.min(pullThreshold * 1.5, Math.pow(touchDeltaY, 0.8));
+                requestAnimationFrame(() => {
+                    isHintVisible.value = checkHintVisibility();
+                });
+            }
+        } else {
+            isPulling.value = false;
+            pullDistance.value = 0;
+            isHintVisible.value = false;
+        }
         return;
     }
     
-    // 只有在以下条件全部满足时才考虑触发下拉刷新:
-    // 1. 确认在顶部
-    // 2. 是向下拉动（不是向上滑动）
-    // 3. 有会话ID可以加载历史消息
-    // 4. 不是已经在刷新状态
-    if (touchDeltaY > 0 && conversation_id.value && !isRefreshing.value) {
-        // 只有当下拉距离超过一定阈值才真正启动下拉刷新模式
-        // 这样可以避免轻微的下拉触发刷新
-        if (touchDeltaY > 20) {  // 降低启动阈值以提高灵敏度
-            isPulling.value = true;
-            // 添加阻尼效果，使下拉不会线性增长
-            pullDistance.value = Math.min(pullThreshold * 1.5, Math.pow(touchDeltaY, 0.8));
-            
-            // 在下一帧立即检查提示区域可见性
-            requestAnimationFrame(() => {
-                isHintVisible.value = checkHintVisibility();
-            });
+    // 底部 + 向上拉：阻止浏览器原生弹性滚动
+    const el = chatContentRef.value;
+    if (el && touchDeltaY < 0) {
+        const atBottom = el.scrollHeight - el.scrollTop - el.clientHeight <= 1;
+        if (atBottom) {
+            e.preventDefault();
         }
-    } else {
-        // 如果不满足下拉刷新条件，则重置状态
-        isPulling.value = false;
-        pullDistance.value = 0;
-        isHintVisible.value = false;
     }
+    
+    // 不在边界时正常滚动，重置下拉状态
+    isPulling.value = false;
+    pullDistance.value = 0;
+    isHintVisible.value = false;
 };
 
 const handleTouchEnd = (e) => {
@@ -1400,6 +1480,15 @@ const selectProductIssue = (tag) => {
     sendQuestion() // 直接发送问题
 }
 
+// 设置对话模式（chat/生图）
+const setChatMode = (mode) => {
+    const newMode = mode === 'image'
+    if (isImageMode.value !== newMode) {
+        isImageMode.value = newMode
+        inputValue.value = ''
+    }
+}
+
 // 批量加载图片
 function loadImages(urls) {
     return Promise.all(urls.map(url => new Promise((resolve) => {
@@ -1451,20 +1540,14 @@ const onHotQuestionClick = (item) => {
 <style scoped lang="less">
 .chat-dialog {
     background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    z-index: 1001;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
-    position: relative;
-    width: 100%; /* 确保宽度固定 */
-    min-height: 100vh; /* 改为最小高度 */
-    overflow-x: hidden; /* 禁止水平滚动 */
-    touch-action: pan-y; /* 只允许垂直平移 */
-    margin: 0 auto; /* 居中显示 */
-    max-width: 100%; /* 确保不超出屏幕 */
-    box-sizing: border-box; /* 包含padding/border在宽度内 */
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top);
+    padding-top: var(--window-top, 0px);
 }
 
 /* 下拉提示区域和历史消息提示合并，只保留一个提示区域 */
@@ -1510,6 +1593,7 @@ const onHotQuestionClick = (item) => {
 }
 
 .header {
+    flex-shrink: 0;
     padding: .35rem .5rem;
     background: linear-gradient(135deg, #1890ff, #0050b3);
     color: white;
@@ -1517,11 +1601,8 @@ const onHotQuestionClick = (item) => {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: fixed;
-    top: var(--window-top);
-    left: 0;
-    z-index: 100;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 
     .agent-info {
         display: flex;
@@ -1565,21 +1646,21 @@ const onHotQuestionClick = (item) => {
 
 .chat-content {
     flex: 1;
+    min-height: 0;
     padding: .3rem;
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
     gap: .3rem;
-    padding-top: 1.5rem; /* 增加顶部padding，为导航栏预留更多空间 */
-    margin-bottom: 2.2rem; /* 减小底部边距，让聊天区域延伸到白色区域下方 */
-    padding-bottom: 0; /* 移除底部内边距，配合margin-bottom */
     overflow-y: auto;
-    overflow-x: hidden; /* 禁止水平滚动 */
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     scroll-behavior: smooth;
-    touch-action: pan-y; /* 只允许垂直平移 */
-    width: 100%; /* 确保宽度固定 */
-    max-width: 100%; /* 修改为100%而不是100vw */
-    box-sizing: border-box; /* 确保padding包含在宽度内 */
+    touch-action: pan-y;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 
     .chat-container {
         // background-color: #f9fafb;
@@ -1665,21 +1746,78 @@ const onHotQuestionClick = (item) => {
 }
 
 .chat-footer {
+    flex-shrink: 0;
     border-top: 1px solid rgba(232, 232, 232, 0.5);
     background-color: rgba(255, 255, 255, 0.97);
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    z-index: 999;
     backdrop-filter: blur(5px);
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-    padding-top: 0; /* 移除顶部内边距 */
-    box-sizing: border-box; /* 确保padding包含在宽度内 */
+    padding-top: 0.1rem;
+    padding-bottom: env(safe-area-inset-bottom);
+    box-sizing: border-box;
     
     // 支付常见问题与产品相关问题按钮并排放置
     .buttons-container {
         display: none;
+    }
+
+    .mode-toggle {
+        display: flex;
+        margin: 0 .3rem .12rem .3rem;
+        // background: #f0f2f5;
+        border-radius: 10px;
+        padding: 0.06rem;
+        gap: 0.25rem;
+        // box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+
+        .mode-segment {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.1rem;
+            padding: 0.15rem 0;
+            border-radius: 8px;
+            background: #f0f2f5;
+            font-size: 0.31rem;
+            font-weight: 500;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.05s ease, box-shadow 0.05s ease;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            min-height: 0.63rem;
+
+            .mode-icon {
+                font-size: 0.40rem;
+                line-height: 1;
+            }
+
+            .mode-label {
+                line-height: 1;
+            }
+
+            &.active {
+                background: linear-gradient(135deg, #1890ff, #096dd9);
+                color: #fff;
+                box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+                font-weight: 600;
+
+                .mode-icon {
+                    transform: scale(1.1);
+                    transition: transform 0.05s ease;
+                }
+            }
+
+            &:not(.active):active {
+                background: rgba(24, 144, 255, 0.08);
+                color: #1890ff;
+            }
+        }
+    }
+
+    .input-area {
+        position: relative;
     }
 
     .input-container {

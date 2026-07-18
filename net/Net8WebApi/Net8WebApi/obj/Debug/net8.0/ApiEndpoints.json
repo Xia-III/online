@@ -27,6 +27,32 @@
   },
   {
     "ContainingType": "Net8WebApi.Controllers.AiRecordController",
+    "Method": "DeleteByUserId",
+    "RelativePath": "api/AiRecord/DeleteByUserId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Net8WebApi.Utility.Result",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Net8WebApi.Controllers.AiRecordController",
     "Method": "FindByDatasetsId",
     "RelativePath": "api/AiRecord/FindByUserId",
     "HttpMethod": "GET",

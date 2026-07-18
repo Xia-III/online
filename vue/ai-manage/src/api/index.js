@@ -63,3 +63,7 @@ export const getManageDatasetsListAPI = getManageDatasetsList
 export const getKnowledgeDocumentAdminListByDatasetsIdAPI = getKnowledgeDocumentAdminListByDatasetsId
 export const deleteKnowledgeDocumentAdminAPI = deleteKnowledgeDocumentAdmin
 
+
+import { generateImage } from './siliconflow'
+// 图片生成接口：
+export const generateImageAPI = generateImage

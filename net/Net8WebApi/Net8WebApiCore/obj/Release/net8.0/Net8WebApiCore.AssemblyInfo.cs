@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Net8WebApiCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8337b9bbc101fff50fd2d4c593d86f27f75c754c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Net8WebApiCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Net8WebApiCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

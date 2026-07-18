@@ -1,201 +1,209 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\Project\\Net\\Net8WebApi\\",
+  "WorkspaceRootPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\controllers\\authoritycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\authoritycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\controllers\\airecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\controllers\\airecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\airecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\net8webapi\\model\\entitymap\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\net8webapi\\model\\entitymap\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\net8webapi\\model\\entitymap\\filerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\filerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\net8webapi\\model\\entitymap\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\net8webapi\\model\\entitymap\\authority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\authority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\net8webapi\\repositoryimpl\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\net8webapi\\repositoryimpl\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\net8webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\net8webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\controllers\\authoizecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\authoizecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\net8webapi\\repositoryimpl\\repositoryimpl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\repositoryimpl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\utility\\filecleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\filecleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\utility\\customautomapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\customautomapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\utility\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\utility\\md5helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\md5helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\net\\net8webapi\\net8webapi\\utility\\fileext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\fileext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\net8webapi\\repositoryimpl\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\net8webapi\\repositoryimpl\\filerecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\filerecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\net8webapi\\irepository\\iairecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iairecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\net8webapi\\interface\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\net8webapi\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\net8webapi\\interface\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\net8webapi\\service\\filerecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\filerecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\net8webapi\\interface\\itokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\itokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\net8webapi\\irepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\net8webapi\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\net8webapi\\irepository\\iauthorityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iauthorityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\net8webapi\\repositoryimpl\\airecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\airecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\net8webapi\\service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\net8webapi\\service\\authorityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\authorityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\net8webapi\\interface\\iauthorityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\iauthorityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\net8webapi\\interface\\iairecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\interface\\iairecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\iairecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\net\\net8webapi\\repositoryimpl\\authorityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\authorityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\interface\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\ibaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\net8webapi\\interface\\ifilerecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\interface\\ifilerecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\ifilerecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\net8webapi\\irepository\\ifilerecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\ifilerecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\repositoryimpl\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\net\\net8webapi\\irepository\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\net\\net8webapi\\model\\entitymap\\airecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\model\\entitymap\\airecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\airecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\net8webapi\\service\\airecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\model\\entitymap\\authority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\authority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\model\\model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\model.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\repositoryimpl\\airecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\airecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\controllers\\authoizecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\authoizecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\controllers\\authoritycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\authoritycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\model\\entitymap\\filerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\filerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\irepository\\iairecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iairecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\irepository\\iauthorityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iauthorityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\utility\\customautomapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\customautomapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\utility\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\model\\entitydto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitydto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\utility\\filecleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\filecleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\model\\entitymap\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\model\\entitymap\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\model\\entitymap\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8103C3E-FDF6-4B0A-8190-7DAEC744CE01}|Model\\Model.csproj|solutionrelative:model\\entitymap\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\repositoryimpl\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\net8webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\net8webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\repositoryimpl\\repositoryimpl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\repositoryimpl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\utility\\md5helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\md5helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\net8webapi\\utility\\fileext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5380F350-90BC-466B-83BD-B827A2F20D3D}|Net8WebApi\\Net8WebApi.csproj|solutionrelative:net8webapi\\utility\\fileext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\repositoryimpl\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\repositoryimpl\\filerecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\filerecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\interface\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\service\\filerecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\filerecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\interface\\itokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\itokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\irepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\service\\authorityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\authorityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\interface\\iauthorityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\iauthorityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\repositoryimpl\\authorityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8121327-523E-41CA-B7C9-D8CFB183FB19}|RepositoryImpl\\RepositoryImpl.csproj|solutionrelative:repositoryimpl\\authorityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\irepository\\ifilerecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\ifilerecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\irepository\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F51F5047-127C-425A-861D-F7E9B6121E26}|IRepository\\IRepository.csproj|solutionrelative:irepository\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\service\\airecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\airecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\net\\net8webapi\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E53D841-9059-416B-9B47-732E1A329612}|Interface\\IService.csproj|solutionrelative:interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\net8webapi\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\net\\net8webapi\\service\\memorytokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|g:\\project\\repositories\\online\\net\\net8webapi\\service\\memorytokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{24843743-A95A-47BC-A397-0C2F9683FD8C}|Service\\ServiceImpl.csproj|solutionrelative:service\\memorytokenblacklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -206,7 +214,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 154,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -218,84 +226,336 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Store.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\Store.cs",
-              "RelativeDocumentMoniker": "Model\\EntityMap\\Store.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\Store.cs",
-              "RelativeToolTip": "Model\\EntityMap\\Store.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAA1wE0AAAABAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "UploadController.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\UploadController.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\UploadController.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\UploadController.cs",
+              "RelativeToolTip": "Net8WebApi\\Controllers\\UploadController.cs",
+              "ViewState": "AgIAAJIBAAAAAAAAAAA3wH8BAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-06T08:27:00.739Z"
+              "WhenOpened": "2025-12-27T08:30:03.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthorityController.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\AuthorityController.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\AuthorityController.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\AuthorityController.cs",
+              "RelativeToolTip": "Net8WebApi\\Controllers\\AuthorityController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwGcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T08:58:42.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryImpl\\BaseRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\BaseRepository.cs",
+              "RelativeToolTip": "RepositoryImpl\\BaseRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwB4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:43:47.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Authority.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\Authority.cs",
+              "RelativeDocumentMoniker": "Model\\EntityMap\\Authority.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\Authority.cs",
+              "RelativeToolTip": "Model\\EntityMap\\Authority.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-05T08:59:12.53Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AiRecordController.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\AiRecordController.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\AiRecordController.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\AiRecordController.cs",
+              "RelativeToolTip": "Net8WebApi\\Controllers\\AiRecordController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA0wB4AAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T05:20:32.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IBaseService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IBaseService.cs",
+              "RelativeDocumentMoniker": "Interface\\IBaseService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IBaseService.cs",
+              "RelativeToolTip": "Interface\\IBaseService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAIA4wBIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:43:25.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAiRecordService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IAiRecordService.cs",
+              "RelativeDocumentMoniker": "Interface\\IAiRecordService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IAiRecordService.cs",
+              "RelativeToolTip": "Interface\\IAiRecordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:43:34.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IFileRecordService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IFileRecordService.cs",
+              "RelativeDocumentMoniker": "Interface\\IFileRecordService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IFileRecordService.cs",
+              "RelativeToolTip": "Interface\\IFileRecordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:43:24.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AiRecord.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\AiRecord.cs",
+              "RelativeDocumentMoniker": "Model\\EntityMap\\AiRecord.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\AiRecord.cs",
+              "RelativeToolTip": "Model\\EntityMap\\AiRecord.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T05:20:26.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Model",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\Model.csproj",
+              "RelativeDocumentMoniker": "Model\\Model.csproj",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\Model.csproj",
+              "RelativeToolTip": "Model\\Model.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-17T06:58:51.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthoizeController.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\AuthoizeController.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\AuthoizeController.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\AuthoizeController.cs",
+              "RelativeToolTip": "Net8WebApi\\Controllers\\AuthoizeController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwGsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T02:13:04.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IAiRecordRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IAiRecordRepository.cs",
+              "RelativeDocumentMoniker": "IRepository\\IAiRecordRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IAiRecordRepository.cs",
+              "RelativeToolTip": "IRepository\\IAiRecordRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:44:31.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FileRecord.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\FileRecord.cs",
+              "RelativeDocumentMoniker": "Model\\EntityMap\\FileRecord.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\FileRecord.cs",
+              "RelativeToolTip": "Model\\EntityMap\\FileRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T02:15:38.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AiRecordRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\AiRecordRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryImpl\\AiRecordRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\AiRecordRepository.cs",
+              "RelativeToolTip": "RepositoryImpl\\AiRecordRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:44:41.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAuthorityRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IAuthorityRepository.cs",
+              "RelativeDocumentMoniker": "IRepository\\IAuthorityRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IAuthorityRepository.cs",
+              "RelativeToolTip": "IRepository\\IAuthorityRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:44:28.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CustomAutoMapperProfile.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
+              "RelativeToolTip": "Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T08:30:08.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Result.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\Result.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\Result.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\Result.cs",
+              "RelativeToolTip": "Net8WebApi\\Utility\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T01:23:41.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityDto\\UserDto.cs",
+              "RelativeDocumentMoniker": "Model\\EntityDto\\UserDto.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityDto\\UserDto.cs",
+              "RelativeToolTip": "Model\\EntityDto\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-17T06:46:04.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FileCleanupService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\FileCleanupService.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\FileCleanupService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\FileCleanupService.cs",
+              "RelativeToolTip": "Net8WebApi\\Utility\\FileCleanupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T08:30:13.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "UserController.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\UserController.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\UserController.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\UserController.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "Net8WebApi\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAPsAAAAAAAAAAIA2wLEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAIAzwKoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-27T08:30:04.061Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\WeatherForecast.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\WeatherForecast.cs",
-              "RelativeToolTip": "Net8WebApi\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-20T10:04:37.976Z"
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "Net8WebApi\\appsettings.json",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\appsettings.json",
+              "RelativeToolTip": "Net8WebApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-18T05:20:35.376Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Program.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Program.cs",
-              "RelativeToolTip": "Net8WebApi\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAA2wC8AAABEAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "User.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\User.cs",
+              "RelativeDocumentMoniker": "Model\\EntityMap\\User.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\User.cs",
+              "RelativeToolTip": "Model\\EntityMap\\User.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA6wDEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T08:35:19.745Z"
+              "WhenOpened": "2026-01-05T09:03:11.87Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AiRecordController.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\AiRecordController.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\AiRecordController.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\AiRecordController.cs",
-              "RelativeToolTip": "Net8WebApi\\Controllers\\AiRecordController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "Product.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\Product.cs",
+              "RelativeDocumentMoniker": "Model\\EntityMap\\Product.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\Product.cs",
+              "RelativeToolTip": "Model\\EntityMap\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T05:20:32.076Z"
+              "WhenOpened": "2026-03-19T07:32:41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthorityController.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\AuthorityController.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\AuthorityController.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\AuthorityController.cs",
-              "RelativeToolTip": "Net8WebApi\\Controllers\\AuthorityController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAcwGcAAAArAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "Store.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\Store.cs",
+              "RelativeDocumentMoniker": "Model\\EntityMap\\Store.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\EntityMap\\Store.cs",
+              "RelativeToolTip": "Model\\EntityMap\\Store.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T08:58:42.292Z"
+              "WhenOpened": "2026-04-06T08:27:00.739Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 24,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\ProductController.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Net8WebApi\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAALMAAAAAAAAAAAAAAH8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T07:50:32.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\appsettings.Development.json",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Net8WebApi\\appsettings.Development.json",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\appsettings.Development.json",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\appsettings.Development.json",
               "RelativeToolTip": "Net8WebApi\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -303,95 +563,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "Net8WebApi\\appsettings.json",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\appsettings.json",
-              "RelativeToolTip": "Net8WebApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-18T05:20:35.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UploadController.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\UploadController.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\UploadController.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\UploadController.cs",
-              "RelativeToolTip": "Net8WebApi\\Controllers\\UploadController.cs",
-              "ViewState": "AgIAAJIBAAAAAAAAAAA3wH8BAABFAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\Program.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Program.cs",
+              "RelativeToolTip": "Net8WebApi\\Program.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAA2wC8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T08:30:03.351Z"
+              "WhenOpened": "2025-12-27T08:35:19.745Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\User.cs",
-              "RelativeDocumentMoniker": "Model\\EntityMap\\User.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\User.cs",
-              "RelativeToolTip": "Model\\EntityMap\\User.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADEAAAArAAAAAAAAAA==",
+              "DocumentIndex": 26,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Net8WebApi\\WeatherForecast.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\WeatherForecast.cs",
+              "RelativeToolTip": "Net8WebApi\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T09:03:11.87Z"
+              "WhenOpened": "2026-03-20T10:04:37.976Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Authority.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\Authority.cs",
-              "RelativeDocumentMoniker": "Model\\EntityMap\\Authority.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\Authority.cs",
-              "RelativeToolTip": "Model\\EntityMap\\Authority.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T08:59:12.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Product.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\Product.cs",
-              "RelativeDocumentMoniker": "Model\\EntityMap\\Product.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\Product.cs",
-              "RelativeToolTip": "Model\\EntityMap\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:32:41Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FileRecord.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\FileRecord.cs",
-              "RelativeDocumentMoniker": "Model\\EntityMap\\FileRecord.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\FileRecord.cs",
-              "RelativeToolTip": "Model\\EntityMap\\FileRecord.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAmwBcAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T02:15:38.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BaseRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\BaseRepository.cs",
-              "RelativeDocumentMoniker": "RepositoryImpl\\BaseRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\BaseRepository.cs",
-              "RelativeToolTip": "RepositoryImpl\\BaseRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:43:47.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 28,
               "Title": "UserRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\UserRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\UserRepository.cs",
               "RelativeDocumentMoniker": "RepositoryImpl\\UserRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\UserRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\UserRepository.cs",
               "RelativeToolTip": "RepositoryImpl\\UserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -399,11 +601,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 29,
               "Title": "Net8WebApi.http",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Net8WebApi.http",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Net8WebApi.http",
               "RelativeDocumentMoniker": "Net8WebApi\\Net8WebApi.http",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Net8WebApi.http",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Net8WebApi.http",
               "RelativeToolTip": "Net8WebApi\\Net8WebApi.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
@@ -411,119 +613,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\ProductController.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Net8WebApi\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAYwH8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:50:32.618Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AuthoizeController.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\AuthoizeController.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Controllers\\AuthoizeController.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Controllers\\AuthoizeController.cs",
-              "RelativeToolTip": "Net8WebApi\\Controllers\\AuthoizeController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAADwv2sAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T02:13:04.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 32,
               "Title": "FileExt.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\FileExt.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\FileExt.cs",
               "RelativeDocumentMoniker": "Net8WebApi\\Utility\\FileExt.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\FileExt.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\FileExt.cs",
               "RelativeToolTip": "Net8WebApi\\Utility\\FileExt.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:56:03.984Z"
+              "WhenOpened": "2026-03-19T07:56:03.984Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CustomAutoMapperProfile.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
-              "RelativeToolTip": "Net8WebApi\\Utility\\CustomAutoMapperProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T08:30:08.422Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FileCleanupService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\FileCleanupService.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\FileCleanupService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\FileCleanupService.cs",
-              "RelativeToolTip": "Net8WebApi\\Utility\\FileCleanupService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T08:30:13.384Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 30,
               "Title": "RepositoryImpl.csproj",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj",
               "RelativeDocumentMoniker": "RepositoryImpl\\RepositoryImpl.csproj",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj",
               "RelativeToolTip": "RepositoryImpl\\RepositoryImpl.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-28T05:43:53.657Z"
+              "WhenOpened": "2026-03-28T05:43:53.657Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "IBaseService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Interface\\IBaseService.cs",
-              "RelativeDocumentMoniker": "Interface\\IBaseService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Interface\\IBaseService.cs",
-              "RelativeToolTip": "Interface\\IBaseService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAIA4wBIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:43:25.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IAiRecordRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IAiRecordRepository.cs",
-              "RelativeDocumentMoniker": "IRepository\\IAiRecordRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IAiRecordRepository.cs",
-              "RelativeToolTip": "IRepository\\IAiRecordRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:44:31.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Result.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\Result.cs",
-              "RelativeDocumentMoniker": "Net8WebApi\\Utility\\Result.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\Result.cs",
-              "RelativeToolTip": "Net8WebApi\\Utility\\Result.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T01:23:41.781Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "ProductRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\ProductRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\ProductRepository.cs",
               "RelativeDocumentMoniker": "RepositoryImpl\\ProductRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\ProductRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\ProductRepository.cs",
               "RelativeToolTip": "RepositoryImpl\\ProductRepository.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -531,23 +651,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "MD5Helper.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\MD5Helper.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\MD5Helper.cs",
               "RelativeDocumentMoniker": "Net8WebApi\\Utility\\MD5Helper.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Net8WebApi\\Utility\\MD5Helper.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApi\\Utility\\MD5Helper.cs",
               "RelativeToolTip": "Net8WebApi\\Utility\\MD5Helper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T08:58:49.551Z"
+              "WhenOpened": "2026-01-14T08:58:49.551Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "FileRecordRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\FileRecordRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\FileRecordRepository.cs",
               "RelativeDocumentMoniker": "RepositoryImpl\\FileRecordRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\FileRecordRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\FileRecordRepository.cs",
               "RelativeToolTip": "RepositoryImpl\\FileRecordRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -555,11 +676,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "IProductService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Interface\\IProductService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IProductService.cs",
               "RelativeDocumentMoniker": "Interface\\IProductService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Interface\\IProductService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IProductService.cs",
               "RelativeToolTip": "Interface\\IProductService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -567,11 +688,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "ProductService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Service\\ProductService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\ProductService.cs",
               "RelativeDocumentMoniker": "Service\\ProductService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Service\\ProductService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\ProductService.cs",
               "RelativeToolTip": "Service\\ProductService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -579,11 +700,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "FileRecordService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Service\\FileRecordService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\FileRecordService.cs",
               "RelativeDocumentMoniker": "Service\\FileRecordService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Service\\FileRecordService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\FileRecordService.cs",
               "RelativeToolTip": "Service\\FileRecordService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -591,11 +712,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 38,
               "Title": "ITokenBlacklist.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Interface\\ITokenBlacklist.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\ITokenBlacklist.cs",
               "RelativeDocumentMoniker": "Interface\\ITokenBlacklist.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Interface\\ITokenBlacklist.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\ITokenBlacklist.cs",
               "RelativeToolTip": "Interface\\ITokenBlacklist.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -603,11 +724,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 39,
               "Title": "IProductRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IProductRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IProductRepository.cs",
               "RelativeDocumentMoniker": "IRepository\\IProductRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IProductRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IProductRepository.cs",
               "RelativeToolTip": "IRepository\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -615,11 +736,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 40,
               "Title": "IUserRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IUserRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IUserRepository.cs",
               "RelativeDocumentMoniker": "IRepository\\IUserRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IUserRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IUserRepository.cs",
               "RelativeToolTip": "IRepository\\IUserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -627,35 +748,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "IAuthorityRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IAuthorityRepository.cs",
-              "RelativeDocumentMoniker": "IRepository\\IAuthorityRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IAuthorityRepository.cs",
-              "RelativeToolTip": "IRepository\\IAuthorityRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:44:28.416Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "AiRecordRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\AiRecordRepository.cs",
-              "RelativeDocumentMoniker": "RepositoryImpl\\AiRecordRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\AiRecordRepository.cs",
-              "RelativeToolTip": "RepositoryImpl\\AiRecordRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:44:41.775Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "AuthorityRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\AuthorityRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\AuthorityRepository.cs",
               "RelativeDocumentMoniker": "RepositoryImpl\\AuthorityRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\AuthorityRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\AuthorityRepository.cs",
               "RelativeToolTip": "RepositoryImpl\\AuthorityRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -663,11 +760,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "BaseService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Service\\BaseService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\BaseService.cs",
               "RelativeDocumentMoniker": "Service\\BaseService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Service\\BaseService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\BaseService.cs",
               "RelativeToolTip": "Service\\BaseService.cs",
               "ViewState": "AgIAADMAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -675,11 +772,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "AuthorityService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Service\\AuthorityService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\AuthorityService.cs",
               "RelativeDocumentMoniker": "Service\\AuthorityService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Service\\AuthorityService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\AuthorityService.cs",
               "RelativeToolTip": "Service\\AuthorityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -687,11 +784,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "IAuthorityService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Interface\\IAuthorityService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IAuthorityService.cs",
               "RelativeDocumentMoniker": "Interface\\IAuthorityService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Interface\\IAuthorityService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IAuthorityService.cs",
               "RelativeToolTip": "Interface\\IAuthorityService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -699,35 +796,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "IAiRecordService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Interface\\IAiRecordService.cs",
-              "RelativeDocumentMoniker": "Interface\\IAiRecordService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Interface\\IAiRecordService.cs",
-              "RelativeToolTip": "Interface\\IAiRecordService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:43:34.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "IFileRecordService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Interface\\IFileRecordService.cs",
-              "RelativeDocumentMoniker": "Interface\\IFileRecordService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Interface\\IFileRecordService.cs",
-              "RelativeToolTip": "Interface\\IFileRecordService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-19T07:43:24.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "IFileRecordRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IFileRecordRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IFileRecordRepository.cs",
               "RelativeDocumentMoniker": "IRepository\\IFileRecordRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IFileRecordRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IFileRecordRepository.cs",
               "RelativeToolTip": "IRepository\\IFileRecordRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -735,11 +808,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "IBaseRepository.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IBaseRepository.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IBaseRepository.cs",
               "RelativeDocumentMoniker": "IRepository\\IBaseRepository.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IBaseRepository.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IBaseRepository.cs",
               "RelativeToolTip": "IRepository\\IBaseRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -747,23 +820,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "AiRecord.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\AiRecord.cs",
-              "RelativeDocumentMoniker": "Model\\EntityMap\\AiRecord.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Model\\EntityMap\\AiRecord.cs",
-              "RelativeToolTip": "Model\\EntityMap\\AiRecord.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-18T05:20:26.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 47,
               "Title": "AiRecordService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Service\\AiRecordService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\AiRecordService.cs",
               "RelativeDocumentMoniker": "Service\\AiRecordService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Service\\AiRecordService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\AiRecordService.cs",
               "RelativeToolTip": "Service\\AiRecordService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -771,11 +832,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 48,
               "Title": "IUserService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Interface\\IUserService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IUserService.cs",
               "RelativeDocumentMoniker": "Interface\\IUserService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Interface\\IUserService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Interface\\IUserService.cs",
               "RelativeToolTip": "Interface\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -783,11 +844,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 49,
               "Title": "UserService.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Service\\UserService.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\UserService.cs",
               "RelativeDocumentMoniker": "Service\\UserService.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Service\\UserService.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\UserService.cs",
               "RelativeToolTip": "Service\\UserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -795,11 +856,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "MemoryTokenBlacklist.cs",
-              "DocumentMoniker": "G:\\Project\\Net\\Net8WebApi\\Service\\MemoryTokenBlacklist.cs",
+              "DocumentMoniker": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\MemoryTokenBlacklist.cs",
               "RelativeDocumentMoniker": "Service\\MemoryTokenBlacklist.cs",
-              "ToolTip": "G:\\Project\\Net\\Net8WebApi\\Service\\MemoryTokenBlacklist.cs",
+              "ToolTip": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Service\\MemoryTokenBlacklist.cs",
               "RelativeToolTip": "Service\\MemoryTokenBlacklist.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

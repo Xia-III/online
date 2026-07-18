@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Project\\Net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj": {}
+    "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj": {}
   },
   "projects": {
-    "G:\\Project\\Net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj": {
+    "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Project\\Net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj",
+        "projectUniqueName": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj",
         "projectName": "Net8WebApiCore",
-        "projectPath": "G:\\Project\\Net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj",
+        "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApiCore\\Net8WebApiCore.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "G:\\Project\\Net\\Net8WebApi\\Net8WebApiCore\\obj\\",
+        "outputPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Net8WebApiCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

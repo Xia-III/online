@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-wrapper">
     <router-view v-slot="{ Component }">
       <keep-alive>
         <component :is="Component" />
@@ -26,15 +26,26 @@ const getUrlParam = (name) => {
 <style lang="less">
 html,
 body {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
   background-color: #f1f1f1;
   padding: 0;
+}
 
-  // padding-bottom: 140px;
-  // background-color: #f1f1f1;
-  .van-overflow-hidden {
-    overflow: visible !important;
-    overflow-x: visible !important;
-    overflow-y: visible !important;
-  }
+#app {
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-wrapper {
+  height: 100%;
+}
+
+.van-overflow-hidden {
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
 }
 </style>

@@ -4007,11 +4007,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj",
+      "projectUniqueName": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj",
       "projectName": "RepositoryImpl",
-      "projectPath": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj",
+      "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\RepositoryImpl.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "G:\\Project\\Net\\Net8WebApi\\RepositoryImpl\\obj\\",
+      "outputPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\RepositoryImpl\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -4034,11 +4034,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "G:\\Project\\Net\\Net8WebApi\\IRepository\\IRepository.csproj": {
-              "projectPath": "G:\\Project\\Net\\Net8WebApi\\IRepository\\IRepository.csproj"
+            "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IRepository.csproj": {
+              "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\IRepository\\IRepository.csproj"
             },
-            "G:\\Project\\Net\\Net8WebApi\\Model\\Model.csproj": {
-              "projectPath": "G:\\Project\\Net\\Net8WebApi\\Model\\Model.csproj"
+            "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\Model.csproj": {
+              "projectPath": "G:\\Project\\Repositories\\online\\net\\Net8WebApi\\Model\\Model.csproj"
             }
           }
         }

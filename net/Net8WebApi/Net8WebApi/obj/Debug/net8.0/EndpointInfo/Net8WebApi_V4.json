@@ -94,6 +94,45 @@
         }
       }
     },
+    "/api/AiRecord/DeleteByUserId": {
+      "post": {
+        "tags": [
+          "AiRecord"
+        ],
+        "summary": "删除",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Result"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/User/Login": {
       "post": {
         "tags": [
@@ -1935,6 +1974,10 @@
       "AiRecord": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "userId": {
             "type": "string",
             "nullable": true
@@ -1942,6 +1985,10 @@
           "dialogueId": {
             "type": "string",
             "nullable": true
+          },
+          "createTime": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
