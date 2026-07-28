@@ -38,7 +38,7 @@ module.exports = defineConfig({
           target: 'https://api.siliconflow.cn',
           changeOrigin: true,
           pathRewrite: {
-            '^/siliconflow': '/v1/images'
+            '^/siliconflow': '/v1'
           }
         },
       }

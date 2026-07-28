@@ -145,7 +145,7 @@
             <div class="input-area">
                 <!-- 模式切换 -->
                 <!-- <div class="mode-toggle">
-                    <div class="mode-segment" :class="{ active: !isImageMode }" @click="setChatMode('chat')">
+                    <div class="mode-segment" :class="{ active: !isImageMode && !isTranslateMode }" @click="setChatMode('chat')">
                         <span class="mode-icon">💬</span>
                         <span class="mode-label">聊天</span>
                     </div>
@@ -153,14 +153,32 @@
                         <span class="mode-icon">🎨</span>
                         <span class="mode-label">生图</span>
                     </div>
+                    <div class="mode-segment" :class="{ active: isTranslateMode }" @click="setChatMode('translate')">
+                        <span class="mode-icon">🌐</span>
+                        <span class="mode-label">翻译</span>
+                    </div>
                 </div> -->
+                <!-- 翻译模式：目标语言选择 -->
+                <div v-if="isTranslateMode" class="language-selector">
+                    <div class="language-selector-btn" @click="toggleLanguageSelector">
+                        <span>目标语言：<span class="target-lang">{{ targetLanguage }}</span></span>
+                        <span class="language-arrow" :class="{ open: isLanguageSelectorVisible }">▾</span>
+                    </div>
+                    <div v-if="isLanguageSelectorVisible" class="language-tags" @click.stop>
+                        <div v-for="lang in targetLanguages" :key="lang" class="language-tag"
+                             :class="{ active: targetLanguage === lang }"
+                             @click="selectTargetLanguage(lang)">
+                            {{ lang }}
+                        </div>
+                    </div>
+                </div>
                 <div class="input-container">
-                    <input :placeholder="isImageMode ? '请描述想要的图片' : '很高兴为您服务，请描述您的问题'" v-model="inputValue" @keydown.up.prevent="navigateMatches('up')"
+                    <input :placeholder="isTranslateMode ? '请输入要翻译的文本' : (isImageMode ? '请描述想要的图片' : '很高兴为您服务，请描述您的问题')" v-model="inputValue" @keydown.up.prevent="navigateMatches('up')"
                         @keydown.down.prevent="navigateMatches('down')" @keydown.enter="handleEnterKey" />
-                    <button @click="isImageMode ? generateImage() : sendQuestion()">发送</button>
+                    <button @click="isTranslateMode ? translateText() : (isImageMode ? generateImage() : sendQuestion())">发送</button>
 
                     <!-- 匹配的热门问题列表 -->
-                    <div class="matched-questions" v-if="!isImageMode && matchedQuestions.length > 0 && inputValue.trim().length > 0">
+                    <div class="matched-questions" v-if="!isImageMode && !isTranslateMode && matchedQuestions.length > 0 && inputValue.trim().length > 0">
                         <div class="matched-question-item" v-for="(question, index) in matchedQuestions" :key="question.id"
                             :class="{ 'active': selectedMatchIndex === index }" @click="selectMatchedQuestion(question)">
                             <span v-html="highlightMatch(question.name)"></span>
@@ -182,7 +200,7 @@
 
 import { ref, nextTick, computed, onMounted, onBeforeUnmount } from 'vue'
 import { showImagePreview, showToast } from 'vant';
-import { chatMessagesAPI, conversationsAPI, messagesAPI, annotationsAPI, messageFeedbackAPI, generateImageAPI } from '../api/index'
+import { chatMessagesAPI, conversationsAPI, messagesAPI, annotationsAPI, messageFeedbackAPI, generateImageAPI, generateChatAPI } from '../api/index'
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
 import { useRoute } from 'vue-router'
 
@@ -362,6 +380,7 @@ onBeforeUnmount(() => {
     window.removeEventListener('resize', handleResize);
     document.removeEventListener('click', closePaymentTagsOnClickOutside);
     document.removeEventListener('click', closeProductTagsOnClickOutside);
+    document.removeEventListener('click', closeLanguageSelectorOnClickOutside);
     // 恢复 body 滚动
     document.body.style.overflow = '';
     document.documentElement.style.overflow = '';
@@ -751,6 +770,16 @@ const yltp = (dwimg) => {
 const inputValue = ref('')
 const selectedMatchIndex = ref(-1) // 当前选中的匹配项索引
 const isImageMode = ref(false) // 是否为图片生成模式
+const isTranslateMode = ref(false) // 是否为翻译模式
+
+// 翻译模式：目标语言选择
+const targetLanguage = ref('英文')
+const isLanguageSelectorVisible = ref(false)
+const targetLanguages = ref([
+    '英文', '日文', '韩文', '法文', '德文',
+    '西班牙文', '葡萄牙文', '俄文', '泰文', '越南文',
+    '阿拉伯文', '意大利文'
+])
 
 // 构建所有可直接发送的选项（支付常见问题标签、产品相关问题二级选项、热门问题）
 const allProductChildren = computed(() =>
@@ -805,6 +834,12 @@ const navigateMatches = (direction) => {
 
 // 处理回车键
 const handleEnterKey = () => {
+    // 翻译模式：直接翻译
+    if (isTranslateMode.value) {
+        translateText();
+        return;
+    }
+
     // 生图模式：直接生成图片，不走匹配项逻辑
     if (isImageMode.value) {
         generateImage();
@@ -1041,6 +1076,58 @@ const generateImage = async () => {
     } catch (error) {
         console.error('图片生成失败:', error);
         qaPairs.value[index].answer = '图片生成失败，请稍后重试';
+    } finally {
+        qaPairs.value[index].questionLoading = false;
+        disabledBtn.value = false;
+    }
+}
+
+// 文本翻译
+const translateText = async () => {
+    if (!inputValue.value?.trim() || disabledBtn.value) return;
+
+    disabledBtn.value = true;
+    const text = inputValue.value;
+    inputValue.value = '';
+
+    const newItem = {
+        question: text,
+        answer: '',
+        imageUrls: [],
+        videoUrls: [],
+        questionLoading: true,
+        feedbackFlag: false,
+        like: false,
+        dislike: false,
+        timestamp: new Date()
+    };
+    qaPairs.value.push(newItem);
+    const index = qaPairs.value.length - 1;
+
+    await nextTick();
+    scrollToBottom();
+
+    try {
+        const response = await generateChatAPI({
+            model: 'tencent/Hunyuan-MT-7B',
+            messages: [
+                { role: 'system', content: `把下面的文本翻译成${targetLanguage.value}，不要额外解释` },
+                { role: 'user', content: text }
+            ],
+            temperature: 0.7,
+            top_p: 0.6,
+            top_k: 20,
+            frequency_penalty: 0.0
+        });
+
+        if (response && response.data && response.data.choices && response.data.choices.length > 0) {
+            qaPairs.value[index].answer = response.data.choices[0].message.content || '';
+        } else {
+            qaPairs.value[index].answer = '翻译失败，请稍后重试';
+        }
+    } catch (error) {
+        console.error('翻译失败:', error);
+        qaPairs.value[index].answer = '翻译失败，请稍后重试';
     } finally {
         qaPairs.value[index].questionLoading = false;
         disabledBtn.value = false;
@@ -1480,12 +1567,54 @@ const selectProductIssue = (tag) => {
     sendQuestion() // 直接发送问题
 }
 
-// 设置对话模式（chat/生图）
+// 设置对话模式（chat/生图/翻译）
 const setChatMode = (mode) => {
-    const newMode = mode === 'image'
-    if (isImageMode.value !== newMode) {
-        isImageMode.value = newMode
-        inputValue.value = ''
+    if (mode === 'image') {
+        if (!isImageMode.value) {
+            isImageMode.value = true
+            isTranslateMode.value = false
+            inputValue.value = ''
+        }
+    } else if (mode === 'translate') {
+        if (!isTranslateMode.value) {
+            isTranslateMode.value = true
+            isImageMode.value = false
+            inputValue.value = ''
+        }
+    } else {
+        if (isImageMode.value || isTranslateMode.value) {
+            isImageMode.value = false
+            isTranslateMode.value = false
+            inputValue.value = ''
+        }
+    }
+}
+
+// 翻译模式：切换语言选择器显示/隐藏
+const toggleLanguageSelector = () => {
+    isLanguageSelectorVisible.value = !isLanguageSelectorVisible.value
+    if (isLanguageSelectorVisible.value) {
+        setTimeout(() => {
+            document.addEventListener('click', closeLanguageSelectorOnClickOutside)
+        }, 10)
+    } else {
+        document.removeEventListener('click', closeLanguageSelectorOnClickOutside)
+    }
+}
+
+// 翻译模式：选择目标语言
+const selectTargetLanguage = (lang) => {
+    targetLanguage.value = lang
+    isLanguageSelectorVisible.value = false
+    document.removeEventListener('click', closeLanguageSelectorOnClickOutside)
+}
+
+// 翻译模式：点击外部关闭语言选择器
+const closeLanguageSelectorOnClickOutside = (event) => {
+    const container = document.querySelector('.language-selector')
+    if (container && !container.contains(event.target)) {
+        isLanguageSelectorVisible.value = false
+        document.removeEventListener('click', closeLanguageSelectorOnClickOutside)
     }
 }
 
@@ -1812,6 +1941,83 @@ const onHotQuestionClick = (item) => {
             &:not(.active):active {
                 background: rgba(24, 144, 255, 0.08);
                 color: #1890ff;
+            }
+        }
+    }
+
+    // 翻译模式：目标语言选择器
+    .language-selector {
+        margin: 0 .3rem .1rem .3rem;
+        position: relative;
+
+        .target-lang {
+            color: #e53935;
+            font-weight: 600;
+        }
+
+        .language-selector-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .1rem;
+            padding: .18rem .3rem;
+            background: #f0f2f5;
+            border-radius: 8px;
+            font-size: .35rem;
+            color: #666;
+            cursor: pointer;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            transition: all 0.2s;
+
+            &:active {
+                background: rgba(24, 144, 255, 0.08);
+                color: #1890ff;
+            }
+
+            .language-arrow {
+                font-size: .24rem;
+                transition: transform 0.2s;
+                &.open {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .language-tags {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: .2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .15rem;
+            z-index: 100;
+            margin-top: .1rem;
+
+            .language-tag {
+                padding: .15rem .35rem;
+                background: #f5f5f5;
+                border-radius: 6px;
+                font-size: .28rem;
+                color: #555;
+                cursor: pointer;
+                transition: all 0.2s;
+                white-space: nowrap;
+
+                &:active {
+                    background: #e8e8e8;
+                }
+
+                &.active {
+                    background: linear-gradient(135deg, #1890ff, #096dd9);
+                    color: #fff;
+                    box-shadow: 0 2px 6px rgba(24, 144, 255, 0.25);
+                }
             }
         }
     }

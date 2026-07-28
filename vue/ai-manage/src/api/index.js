@@ -64,6 +64,8 @@ export const getKnowledgeDocumentAdminListByDatasetsIdAPI = getKnowledgeDocument
 export const deleteKnowledgeDocumentAdminAPI = deleteKnowledgeDocumentAdmin
 
 
-import { generateImage } from './siliconflow'
+import { generateImage,generateChat } from './siliconflow'
 // 图片生成接口：
 export const generateImageAPI = generateImage
+// 聊天生成接口：
+export const generateChatAPI = generateChat
