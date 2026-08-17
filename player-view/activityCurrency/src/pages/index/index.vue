@@ -91,10 +91,9 @@ export default {
             url: `/pages/home/home?salesQRCodeId=${parseInt(state)}`
           });
         } else {
-          // 登录失败，显示错误信息或执行其他操作
+          // 登录失败，优先显示后端返回的具体错误信息，否则回退到通用提示
           console.error('登录失败:', response);
-          this.message = '登录失败，请重试';
-          // 可以在这里添加错误处理逻辑，比如重新尝试或显示错误提示
+          this.message = (response.data && response.data.message) || '登录失败，请重试';
         }
       } catch (error) {
         console.error('登录请求出错:', error);
