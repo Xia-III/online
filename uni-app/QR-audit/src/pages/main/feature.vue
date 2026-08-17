@@ -419,7 +419,7 @@ export default {
       } else if (tabName === 'manage') {
         // 管理页面跳转到role2页面
         uni.redirectTo({
-          url: '/pages/main/role2'
+          url: '/pages/main/manage'
         });
       } else if (tabName === 'history') {
         // 当前就是审核页面，无需跳转

@@ -30,7 +30,7 @@
 					}
 				},
 				{
-					"path": "role2",
+					"path": "manage",
 					"style": {
 						"navigationStyle": "custom"
 					}

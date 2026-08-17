@@ -1,5 +1,5 @@
 <template>
-  <view class="feature-container-role2">
+  <view class="feature-container-manage">
     <!-- 顶部搜索和添加区域 -->
     <view class="top-section">
       <view class="search-box">
@@ -38,7 +38,7 @@
     <view v-if="showAddForm" class="modal-overlay" @click="closeModal">
       <view class="modal-content" @click.stop>
         <text class="modal-title">添加用户</text>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>账号 *</label>
           <input
             type="text"
@@ -49,7 +49,7 @@
           />
           <text v-if="addFormErrors.account" class="error-message">{{ addFormErrors.account }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>密码 *</label>
           <input
             type="text"
@@ -60,7 +60,7 @@
           />
           <text v-if="addFormErrors.password" class="error-message">{{ addFormErrors.password }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>描述</label>
           <input
             type="text"
@@ -69,14 +69,14 @@
             class="form-input"
           />
         </view>
-        <view class="form-group-role2" @click="showAddressSelector = true">
+        <view class="form-group-manage" @click="showAddressSelector = true">
           <label>代理场地 *</label>
           <view class="picker" :class="{ 'error-input': addFormErrors.addressId }">
             {{ selectedAddressIndex >= 0 ? addressList[selectedAddressIndex].name : '请选择代理场地' }}
           </view>
           <text v-if="addFormErrors.addressId" class="error-message">{{ addFormErrors.addressId }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>二维码有效时间（分钟）</label>
           <input
             type="number"
@@ -87,7 +87,7 @@
           />
           <text v-if="addFormErrors.expireMin" class="error-message">{{ addFormErrors.expireMin }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>活动币数</label>
           <input
             type="number"
@@ -98,7 +98,7 @@
           />
           <text v-if="addFormErrors.coins" class="error-message">{{ addFormErrors.coins }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>活动币有效时间（小时）</label>
           <input
             type="number"
@@ -109,7 +109,7 @@
           />
           <text v-if="addFormErrors.coinsExpireHour" class="error-message">{{ addFormErrors.coinsExpireHour }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>活动每天领取次数</label>
           <input
             type="number"
@@ -228,7 +228,7 @@
     <view v-if="showUpdateModal" class="modal-overlay" @click="closeUpdateModal">
       <view class="modal-content" @click.stop>
         <text class="modal-title">修改用户信息</text>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>昵称</label>
           <input
             type="text"
@@ -239,7 +239,7 @@
           />
           <text v-if="updateFormErrors.nickname" class="error-message">{{ updateFormErrors.nickname }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>描述</label>
           <input
             type="text"
@@ -250,7 +250,7 @@
           />
           <text v-if="updateFormErrors.description" class="error-message">{{ updateFormErrors.description }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>密码</label>
           <input
             type="text"
@@ -261,14 +261,14 @@
           />
           <text v-if="updateFormErrors.password" class="error-message">{{ updateFormErrors.password }}</text>
         </view>
-        <view class="form-group-role2" @click="showUpdateAddressSelector = true">
+        <view class="form-group-manage" @click="showUpdateAddressSelector = true">
           <label>代理场地</label>
           <view class="picker" :class="{ 'error-input': updateFormErrors.addressId }">
             {{ updateSelectedAddressIndex >= 0 ? addressList[updateSelectedAddressIndex].name : (selectedAdmin.addressId ? getAddressNameById(selectedAdmin.addressId) : '请选择代理场地') }}
           </view>
           <text v-if="updateFormErrors.addressId" class="error-message">{{ updateFormErrors.addressId }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>二维码有效时间（分钟）</label>
           <input
             type="number"
@@ -279,7 +279,7 @@
           />
           <text v-if="updateFormErrors.expireMin" class="error-message">{{ updateFormErrors.expireMin }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>活动币数</label>
           <input
             type="number"
@@ -290,7 +290,7 @@
           />
           <text v-if="updateFormErrors.coins" class="error-message">{{ updateFormErrors.coins }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>活动币有效时间（小时）</label>
           <input
             type="number"
@@ -301,7 +301,7 @@
           />
           <text v-if="updateFormErrors.coinsExpireHour" class="error-message">{{ updateFormErrors.coinsExpireHour }}</text>
         </view>
-        <view class="form-group-role2">
+        <view class="form-group-manage">
           <label>活动每天领取次数</label>
           <input
             type="number"
@@ -1280,7 +1280,7 @@ page {
   height: 100%;
 }
 
-.feature-container-role2 {
+.feature-container-manage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1412,11 +1412,11 @@ page {
   text-align: center;
 } 
 
-.form-group-role2 {
+.form-group-manage {
   margin-bottom: 15rpx;
 }
 
-.form-group-role2 label {
+.form-group-manage label {
   display: block;
   font-size: 28rpx;
   margin-bottom: 10rpx;

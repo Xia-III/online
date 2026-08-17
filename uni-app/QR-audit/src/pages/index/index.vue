@@ -384,7 +384,7 @@ export default {
           // 根据角色确定跳转页面
           if (userInfo.role === 4) {
             // 角色4视为管理员，跳转到role2页面
-            targetPage = '/pages/main/role2';
+            targetPage = '/pages/main/manage';
           } 
           // 其他角色都按普通用户处理，跳转到role1页面
 

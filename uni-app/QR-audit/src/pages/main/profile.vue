@@ -538,7 +538,7 @@ export default {
         if (this.userInfo && this.userInfo.role) {
           if (this.userInfo.role === 4) {
             uni.redirectTo({
-              url: '/pages/main/role2'
+              url: '/pages/main/manage'
             });
           } else {
             // 其他角色没有管理页面
