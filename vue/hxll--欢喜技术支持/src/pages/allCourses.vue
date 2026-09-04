@@ -21,24 +21,29 @@
 </template>
 
 <script>
-import $http from 'axios'
 import { Dialog, Toast, ImagePreview } from 'vant'
 export default {
     name: 'allCourses',
     data() {
         const that = this;
         return {
-            list: []
+            // 教程列表：直接硬编码，不再从 product.json 动态请求，避免微信浏览器缓存旧数据
+            // 更新/新增教程时，只需修改此列表
+            list: [
+                {
+                    id: 3,
+                    img: 'https://www.huanxizn.com/portal/img/flow/zhinenghezi.png'
+                },
+                {
+                    id: 5,
+                    img: 'https://www.huanxizn.com/portal/img/flow/weixinrenzheng.png'
+                }
+            ]
         }
     },
     methods: {
         onClickLeft() {
             this.$router.push('/');
-        },
-        getData() {
-            $http.get('./static/json/product.json').then(res => {
-                this.list = res.data;
-            })
         },
         toDetails(item) {
             this.rowId = item.id;
@@ -82,8 +87,16 @@ export default {
         }
     },
     created() {
-        this.getData()
-
+        // 给教程封面图片 URL 追加时间戳参数，确保每次进入页面都获取最新资源
+        // 微信浏览器会按 URL 缓存图片，URL 不变时即使服务器内容更新也会显示旧图
+        // 深拷贝避免污染硬编码的原始 list 数据
+        this.list = this.list.map(item => {
+            const copy = Object.assign({}, item);
+            const ts = Date.now();
+            const separator = (copy.img.indexOf('?') > -1) ? '&' : '?';
+            copy.img = copy.img + separator + 'v=' + ts;
+            return copy;
+        });
     },
     mounted() {
         //给window添加一个滚动滚动监听事件

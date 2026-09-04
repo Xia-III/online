@@ -33,13 +33,12 @@
 </template>
 
 <script>
-import $http from 'axios'
 import { Dialog, Toast, ImagePreview } from 'vant'
 export default {
     name: 'productDetails',
     data() {
         return {
-            list: [],
+            list: {},
             showLoading: false,
             id: '',
             active: 'a',
@@ -47,6 +46,45 @@ export default {
             sum: 0,
             scrollTop: 0,
             fileList: false,
+            // 资源映射表：直接硬编码，不再从 product.json 动态请求，避免微信浏览器缓存旧数据
+            // 更新资源时，只需修改此表
+            resourceMap: {
+                3: {
+                    id: 3,
+                    title: '设备安装教程',
+                    img: 'https://www.huanxizn.com/portal/img/flow/zhinenghezi.png',
+                    admin: [
+                        'https://www.huanxizn.com/portal/img/flow/zhinenghezi03.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/zhinenghezi04.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/zhinenghezi05.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/zhinenghezi06.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/zhinenghezi07.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/zhinenghezi08.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/zhinenghezi09.jpg'
+                    ],
+                    video: 'https://www.huanxizn.com/portal/video/zhinenghezi.mp4'
+                },
+                5: {
+                    id: 5,
+                    title: '微信认证教程',
+                    img: 'https://www.huanxizn.com/portal/img/flow/weixinrenzheng.png',
+                    admin: [
+                        'https://www.huanxizn.com/portal/img/flow/weixin1.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin2.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin3.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin4.png',
+                        'https://www.huanxizn.com/portal/img/flow/weixin5.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin6.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin7.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin8.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin9.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin10.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin11.jpg',
+                        'https://www.huanxizn.com/portal/img/flow/weixin12.jpg'
+                    ],
+                    video: ''
+                }
+            },
             playerOptions: {
                 playbackRates: [0.7, 1.0, 1.5, 2.0], //播放速度
                 autoplay: false, //如果true,浏览器准备好时开始播放。
@@ -78,15 +116,33 @@ export default {
             this.$router.go(-1);
             this.current = 0
         },
+        // 给资源 URL 追加上缓存版本参数，确保每次进入页面都获取最新资源
+        // 微信浏览器会按 URL 缓存图片，URL 不变时即使服务器内容更新也会显示旧图
+        appendCacheVersion(url) {
+            if (!url) {
+                return url;
+            }
+            // 加时间戳，保证每次进入页面都是"新 URL"，强制绕开浏览器/微信缓存
+            const ts = Date.now();
+            const separator = (url.indexOf('?') > -1) ? '&' : '?';
+            return url + separator + 'v=' + ts;
+        },
         fetchData() {
             this.showLoading = true;
-            $http.get('./static/json/product.json').then(res => {
-                this.showLoading = false;
-                this.list = res.data.find((item) => {   //获取对应id的数据  filter返回数组，find返回对象
-                    return item.id == this.id;
-                });
-                this.playerOptions.sources[0].src = this.list.video;
-            })
+            // 直接从本地资源映射表获取资源，不再请求 product.json
+            // 避免微信浏览器缓存旧 JSON 导致资源无法更新
+            let data = this.resourceMap[this.id] || {};
+            // 深拷贝，避免直接修改 resourceMap 里的原始数据
+            this.list = JSON.parse(JSON.stringify(data));
+            // 给所有图片和视频 URL 追加时间戳参数，强制获取最新资源
+            if (this.list.admin && this.list.admin.length) {
+                this.list.admin = this.list.admin.map(item => this.appendCacheVersion(item));
+            }
+            if (this.list.video) {
+                this.list.video = this.appendCacheVersion(this.list.video);
+            }
+            this.showLoading = false;
+            this.playerOptions.sources[0].src = this.list.video || '';
         },
         onChange(index) {
             this.current = index;
