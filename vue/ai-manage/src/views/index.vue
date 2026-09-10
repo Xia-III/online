@@ -144,7 +144,7 @@
             <!-- input 框 -->
             <div class="input-area">
                 <!-- 模式切换 -->
-                <!-- <div class="mode-toggle">
+                <div class="mode-toggle">
                     <div class="mode-segment" :class="{ active: !isImageMode && !isTranslateMode }" @click="setChatMode('chat')">
                         <span class="mode-icon">💬</span>
                         <span class="mode-label">聊天</span>
@@ -157,7 +157,7 @@
                         <span class="mode-icon">🌐</span>
                         <span class="mode-label">翻译</span>
                     </div>
-                </div> -->
+                </div>
                 <!-- 翻译模式：目标语言选择 -->
                 <div v-if="isTranslateMode" class="language-selector">
                     <div class="language-selector-btn" @click="toggleLanguageSelector">
@@ -776,7 +776,7 @@ const isTranslateMode = ref(false) // 是否为翻译模式
 const targetLanguage = ref('英文')
 const isLanguageSelectorVisible = ref(false)
 const targetLanguages = ref([
-    '英文', '日文', '韩文', '法文', '德文',
+    '中文', '英文', '日文', '韩文', '法文', '德文',
     '西班牙文', '葡萄牙文', '俄文', '泰文', '越南文',
     '阿拉伯文', '意大利文'
 ])
@@ -1071,7 +1071,7 @@ const generateImage = async () => {
             qaPairs.value[index].imageUrls = [imageUrl];
             qaPairs.value[index].answer = '';
         } else {
-            qaPairs.value[index].answer = '图片生成失败，请稍后重试';
+            qaPairs.value[index].answer = response?.data?.code === 50604 ? '当前过多人使用，请稍后重试' : '图片生成失败，请稍后重试';
         }
     } catch (error) {
         console.error('图片生成失败:', error);
