@@ -5,6 +5,8 @@
             <div class="agent-info">
                 <div class="agent-name">小蜗</div>
             </div>
+            <!-- 测试按钮 -->
+            <button class="test-btn" @click="showTestPopup = true">测试</button>
         </div>
 
         <div class="chat-content" ref="chatContentRef">
@@ -147,7 +149,7 @@
                 <div class="mode-toggle">
                     <div class="mode-segment" :class="{ active: !isImageMode && !isTranslateMode }" @click="setChatMode('chat')">
                         <span class="mode-icon">💬</span>
-                        <span class="mode-label">聊天</span>
+                        <span class="mode-label">客服</span>
                     </div>
                     <div class="mode-segment" :class="{ active: isImageMode }" @click="setChatMode('image')">
                         <span class="mode-icon">🎨</span>
@@ -193,6 +195,23 @@
                 <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2023017957号-1</a><span> · 广州欢喜莲莲信息科技服务有限公司</span>
             </div>
         </div>
+
+        <!-- 测试弹窗 -->
+        <van-popup v-model:show="showTestPopup" round position="center" :style="{ width: '72%' }">
+            <div class="test-popup">
+                <div class="test-popup-title">请选择功能</div>
+                <div class="test-popup-option" @click="goToTranslateChat">
+                    <span class="option-icon">💬</span>
+                    <span class="option-text">对话翻译</span>
+                    <van-icon name="arrow" class="option-arrow" />
+                </div>
+                <div class="test-popup-option" @click="goToInterpreterVolc">
+                    <span class="option-icon">🎧</span>
+                    <span class="option-text">同声传译</span>
+                    <van-icon name="arrow" class="option-arrow" />
+                </div>
+            </div>
+        </van-popup>
     </div>
 </template>
 
@@ -202,7 +221,23 @@ import { ref, nextTick, computed, onMounted, onBeforeUnmount } from 'vue'
 import { showImagePreview, showToast } from 'vant';
 import { chatMessagesAPI, conversationsAPI, messagesAPI, annotationsAPI, messageFeedbackAPI, generateImageAPI, generateChatAPI } from '../api/index'
 import FingerprintJS from '@fingerprintjs/fingerprintjs'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+
+// 路由
+const router = useRouter()
+
+// 测试弹窗
+const showTestPopup = ref(false)
+
+const goToTranslateChat = () => {
+    showTestPopup.value = false
+    router.push('/translateChat')
+}
+
+const goToInterpreterVolc = () => {
+    showTestPopup.value = false
+    router.push('/interpreterVolc')
+}
 
 // 设备指纹ID
 const deviceId = ref('')
@@ -1743,6 +1778,28 @@ const onHotQuestionClick = (item) => {
             letter-spacing: 0.02rem;
         }
     }
+
+    .test-btn {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: #fff;
+        font-size: .28rem;
+        padding: .1rem .3rem;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-sizing: border-box;
+        white-space: nowrap;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        &:active {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(0.95);
+        }
+    }
 }
 
 .agent-status {
@@ -2370,5 +2427,62 @@ const onHotQuestionClick = (item) => {
   color: #aaa;
   font-size: 0.28rem;
   margin-left: 0.2rem;
+}
+
+/* 测试弹窗样式 */
+.test-popup {
+    padding: .5rem .4rem .4rem;
+    box-sizing: border-box;
+    width: 100%;
+
+    .test-popup-title {
+        font-size: .36rem;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+        margin-bottom: .4rem;
+    }
+
+    .test-popup-option {
+        display: flex;
+        align-items: center;
+        padding: .35rem .3rem;
+        border-radius: 12px;
+        background: #f5f7fa;
+        margin-bottom: .25rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: 1px solid transparent;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            background: #e8f3ff;
+            border-color: rgba(24, 144, 255, 0.3);
+        }
+
+        &:active {
+            transform: scale(0.98);
+            background: #dcecff;
+        }
+
+        .option-icon {
+            font-size: .44rem;
+            margin-right: .25rem;
+        }
+
+        .option-text {
+            flex: 1;
+            font-size: .34rem;
+            color: #333;
+        }
+
+        .option-arrow {
+            color: #bbb;
+            font-size: .4rem;
+        }
+    }
 }
 </style>

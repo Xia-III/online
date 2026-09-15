@@ -64,8 +64,17 @@ export const getKnowledgeDocumentAdminListByDatasetsIdAPI = getKnowledgeDocument
 export const deleteKnowledgeDocumentAdminAPI = deleteKnowledgeDocumentAdmin
 
 
-import { generateImage,generateChat } from './siliconflow'
+import { generateImage,generateChat,generateTranscription } from './siliconflow'
 // 图片生成接口：
 export const generateImageAPI = generateImage
 // 聊天生成接口：
 export const generateChatAPI = generateChat
+// 语音识别接口：
+export const generateTranscriptionAPI = generateTranscription
+
+import { synthesizeSpeech, resolveTtsConfig, TTS_LANG_MAP } from './volcTts'
+// 火山引擎语音合成接口：
+export const synthesizeSpeechAPI = synthesizeSpeech
+// 按目标语言取 TTS 配置（{ speaker, language }），返回后传给 synthesizeSpeechAPI
+export const resolveSpeakerForLang = resolveTtsConfig
+export const ttsSpeakerMap = TTS_LANG_MAP

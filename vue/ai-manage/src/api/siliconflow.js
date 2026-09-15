@@ -12,6 +12,11 @@ export const generateChat = data => request4({
     url: 'siliconflow/chat/completions',
     data: data
 })
+export const generateTranscription = data => request4({
+    method: 'POST',
+    url: 'siliconflow/audio/transcriptions',
+    data: data
+})
 
 
 

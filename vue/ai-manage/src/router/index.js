@@ -20,6 +20,21 @@ const routes = [
     }
   },
   {
+    path: '/translateChat',
+    name: 'translateChat',
+    component: () => import('@/views/translateChat.vue'),
+    meta: {
+      title: '对话翻译'
+    }
+  },
+  {
+    path: '/interpreterVolc',
+    component: () => import('@/views/interpreterVolc.vue'),
+    meta: {
+      title: '同声传译（火山引擎）'
+    }
+  },
+  {
     path: '/manage',
     redirect: 'login',
     meta: {
@@ -90,7 +105,6 @@ const routes = [
       title: '知识库'
     }
   },
-
 ]
 
 const router = createRouter({

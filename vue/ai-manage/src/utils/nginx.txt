@@ -1,0 +1,122 @@
+location / {
+root /www/wwwroot/APP/VUE/ai-manage/dist;
+try_files $uri $uri/ /index.html;
+index index.html index.htm;
+}
+
+location /v1/ {
+    # 代理头配置
+    proxy_set_header Host $proxy_host;  # 使用目标服务器的真实域名
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header REMOTE-HOST $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    
+    # 以下两种方式选择一种
+    # 方式1：添加结尾斜杠
+    proxy_pass http://localhost:8008;
+    # rewrite ^/api/(.*)$ /$1 break;
+    
+}
+
+location /api/ {
+    # 代理头配置
+    proxy_set_header Host $proxy_host;  # 使用目标服务器的真实域名
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header REMOTE-HOST $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    
+    # 以下两种方式选择一种
+    # 方式1：添加结尾斜杠
+    proxy_pass https://www.huanxizn.com/PublicAccount/api/;
+    # rewrite ^/api/(.*)$ /$1 break;
+    
+}
+
+location /q1/ {
+    # 代理头配置
+    proxy_set_header Host $proxy_host;  # 使用目标服务器的真实域名
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header REMOTE-HOST $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    
+    # 以下两种方式选择一种
+    # 方式1：添加结尾斜杠
+    proxy_pass http://localhost:5261/api/;
+    # rewrite ^/api/(.*)$ /$1 break;
+    
+}
+location /siliconflow/ {
+    # 代理头配置
+    proxy_set_header Host $proxy_host;  # 使用目标服务器的真实域名
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header REMOTE-HOST $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    
+    # 以下两种方式选择一种
+    # 方式1：添加结尾斜杠
+    proxy_pass https://api.siliconflow.cn/v1/;
+    # rewrite ^/api/(.*)$ /$1 break;
+    
+}
+
+# ============ 火山引擎 AST 同声传译 WebSocket 代理 ============
+# 浏览器原生 WebSocket 无法携带自定义请求头，鉴权头必须由服务端代理注入
+# 前端固定请求同源路径 /ast-ws（见 src/api/astTranslate.js 的 getWsUrl）
+location /ast-ws {
+    # WebSocket 升级（必须）
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+
+    # 目标：火山引擎同声传译，路径完全替换（等价于 dev 代理的 pathRewrite）
+    proxy_pass https://openspeech.bytedance.com/api/v4/ast/v2/translate;
+
+    # 注入 AST 鉴权头（与 vue.config.js 中 dev server 代理保持一致）
+    proxy_set_header X-Api-Key "30a78276-0088-45a5-aafa-ccb4d0fa61bf";
+    proxy_set_header X-Api-Resource-Id "volc.service_type.10053";
+
+    # Host 使用目标域名，避免网关校验失败
+    proxy_set_header Host $proxy_host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    # 实时翻译会话可能持续较久，放宽读写超时（默认 60s 会掐断长会话）
+    proxy_read_timeout 3600s;
+    proxy_send_timeout 3600s;
+}
+
+# ============ 火山引擎 TTS 语音合成 HTTP 代理 ============
+# 浏览器 fetch 无法携带自定义请求头，鉴权头由服务端代理注入（与 /ast-ws 同模式）
+# 前端固定请求同源路径 /tts（见 src/api/volcTts.js 的 fetch('/tts')）
+location /tts {
+    # 目标：火山引擎单向流式语音合成（HTTP Chunked 响应），路径完全重写（等价于 dev 代理的 pathRewrite）
+    proxy_pass https://openspeech.bytedance.com/api/v3/tts/unidirectional;
+
+    # 关键：火山返回 chunked 流式响应，必须 HTTP/1.1（nginx 默认 1.0 不支持 chunked）
+    proxy_http_version 1.1;
+    # 清空转发请求的 Connection 头，避免上游误判 keep-alive 语义
+    proxy_set_header Connection "";
+
+    # 注入 TTS 鉴权头（与 vue.config.js 中 dev 代理保持一致）
+    proxy_set_header X-Api-Key "30a78276-0088-45a5-aafa-ccb4d0fa61bf";
+    proxy_set_header X-Api-Resource-Id "seed-tts-2.0";
+    # 每次请求必须唯一：nginx 内置 $request_id 每次请求自动生成
+    proxy_set_header X-Api-Request-Id $request_id;
+
+    # Host 使用目标域名，避免网关校验失败
+    proxy_set_header Host $proxy_host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    # 流式响应直接透传，不做缓冲（前端边收边解析）
+    proxy_buffering off;
+
+    # 合成长文本音频耗时可能较长，放宽读写超时（默认 60s 可能掐断）
+    proxy_read_timeout 300s;
+    proxy_send_timeout 300s;
+}
+
+error_page 500 502 503 504 /50x.html;
+location = /50x.html {
+root html;
+}
