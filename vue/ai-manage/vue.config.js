@@ -144,6 +144,23 @@ module.exports = defineConfig({
             proxyReq.setHeader('X-Api-Request-Id', genRequestId())
           },
         },
+        // 火山引擎 BigASR 大模型录音文件识别（极速版 / flash，同步返回）
+        // 浏览器无法携带自定义请求头，鉴权头由代理注入（与 /tts 同模式）
+        '/recognize': {
+          target: 'https://openspeech.bytedance.com',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/recognize': '/api/v3/auc/bigmodel/recognize/flash'
+          },
+          onProxyReq(proxyReq) {
+            if (astApiKey) {
+              proxyReq.setHeader('X-Api-Key', astApiKey)
+            }
+            proxyReq.setHeader('X-Api-Resource-Id', 'volc.bigasr.auc_turbo')
+            proxyReq.setHeader('X-Api-Request-Id', genRequestId())
+            proxyReq.setHeader('X-Api-Sequence', '-1')
+          },
+        },
       },
     }
 

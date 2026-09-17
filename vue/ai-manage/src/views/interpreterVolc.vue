@@ -2,7 +2,16 @@
   <div class="interpreter-container">
     <!-- 顶部导航栏 -->
     <div class="top-nav">
-      <h2 class="nav-title">同声传译<span class="nav-badge">火山引擎</span></h2>
+      <!-- 返回按钮：白底胶囊 + 左箭头，与 translateChat.vue 的 header-back 一致 -->
+      <div class="nav-back" @click="goBack" title="返回">
+        <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5"></path>
+          <path d="M12 19l-7-7 7-7"></path>
+        </svg>
+        返回
+      </div>
+      <h2 class="nav-title">同声传译</h2>
     </div>
 
     <!-- 主内容区 -->
@@ -20,13 +29,13 @@
 
       <!-- 模式切换 -->
       <div class="mode-tabs">
-        <div class="mode-tab" :class="{ active: mode === 'offline' }" @click="switchMode('offline')">
-          <el-icon><Upload /></el-icon>
-          <span>在线翻译</span>
-        </div>
         <div class="mode-tab" :class="{ active: mode === 'realtime' }" @click="switchMode('realtime')">
           <el-icon><Microphone /></el-icon>
           <span>实时传译</span>
+        </div>
+        <div class="mode-tab" :class="{ active: mode === 'offline' }" @click="switchMode('offline')">
+          <el-icon><Upload /></el-icon>
+          <span>在线翻译</span>
         </div>
       </div>
 
@@ -280,6 +289,15 @@ import { prewarmMicrophone } from '@/utils/micPermission'
 
 const router = useRouter()
 
+/** 返回上一页；无历史记录（直接打开链接进入）时兜底回首页 */
+const goBack = () => {
+  if (router.options.history.state.back) {
+    router.back()
+  } else {
+    router.replace('/index')
+  }
+}
+
 // ============================================================
 // 共享：语言 / 模式 / 音色配置
 // ============================================================
@@ -292,7 +310,7 @@ const targetLang = ref('en')
 const translateMode = ref('s2s')   // 's2s' 语音到语音 | 's2t' 语音到文本
 const speakerId = ref('zh_female_vv_uranus_bigtts')          // 空 = 复刻说话人音色
 const denoise = ref(false)
-const mode = ref('offline')        // 'offline' | 'realtime'
+const mode = ref('realtime')        // 'offline' | 'realtime'
 
 const keyReady = isAstKeyConfigured()
 
@@ -907,6 +925,44 @@ onBeforeUnmount(() => {
   z-index: 10;
 }
 
+/* 返回按钮：白色胶囊 + 左箭头，与 translateChat.vue 的 header-back 同款
+   （top-nav 为 sticky positioned，可作 absolute 定位参照） */
+.nav-back {
+  position: absolute;
+  left: .3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: .08rem;
+  color: #1890ff;
+  font-size: .28rem;
+  font-weight: 600;
+  padding: .12rem .24rem;
+  background: #ffffff;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s;
+}
+
+.nav-back .back-icon {
+  width: .3rem;
+  height: .3rem;
+  flex-shrink: 0;
+}
+
+.nav-back:hover {
+  background: #eef3fb;
+}
+
+.nav-back:active {
+  transform: translateY(-50%) scale(0.94);
+  background: #e8f0fe;
+}
+
 .nav-title {
   display: flex;
   align-items: center;
@@ -916,20 +972,6 @@ onBeforeUnmount(() => {
   letter-spacing: 0.02rem;
   color: #ffffff;
   margin: 0;
-}
-
-/* 火山引擎徽章：白底蓝字胶囊，与 translateChat 头部"清空"按钮同风格 */
-.nav-badge {
-  display: inline-block;
-  padding: .05rem .18rem;
-  font-size: .22rem;
-  font-weight: 600;
-  letter-spacing: 0;
-  color: #1890ff;
-  background: #ffffff;
-  border-radius: 9999px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  vertical-align: middle;
 }
 
 .content {

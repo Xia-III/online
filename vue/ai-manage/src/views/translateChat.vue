@@ -2,6 +2,14 @@
     <div class="translate-chat">
         <!-- 顶部标题栏 -->
         <div class="header">
+            <div class="header-back" @click="goBack">
+                <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5"></path>
+                    <path d="M12 19l-7-7 7-7"></path>
+                </svg>
+                返回
+            </div>
             <div class="header-title">对话翻译</div>
             <div class="header-clear" @click="handleClearConversation">
                 <svg class="clear-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -88,16 +96,30 @@
 
         <!-- 底部操作区 -->
         <div class="chat-footer">
-            <!-- 目标语言选择 -->
-            <div class="language-selector">
-                <div class="language-selector-btn" @click="toggleLanguageSelector">
-                    <span>目标语言：<span class="target-lang">{{ targetLanguage }}</span></span>
-                    <span class="language-arrow" :class="{ open: isLanguageSelectorVisible }">▾</span>
+            <!-- 语言选择：源语言（默认自动识别） + 目标语言 -->
+            <div class="language-row">
+                <div class="language-selector">
+                    <div class="language-selector-btn" @click="toggleLanguageSelector('source')">
+                        <span>源语言：<span class="target-lang">{{ sourceLanguage }}</span></span>
+                        <span class="language-arrow" :class="{ open: languageSelectorOpen === 'source' }">▾</span>
+                    </div>
+                    <div v-if="languageSelectorOpen === 'source'" class="language-tags" @click.stop>
+                        <div v-for="lang in sourceLanguages" :key="lang" class="language-tag"
+                             :class="{ active: sourceLanguage === lang }" @click="selectLanguage('source', lang)">
+                            {{ lang }}
+                        </div>
+                    </div>
                 </div>
-                <div v-if="isLanguageSelectorVisible" class="language-tags" @click.stop>
-                    <div v-for="lang in targetLanguages" :key="lang" class="language-tag"
-                         :class="{ active: targetLanguage === lang }" @click="selectTargetLanguage(lang)">
-                        {{ lang }}
+                <div class="language-selector">
+                    <div class="language-selector-btn" @click="toggleLanguageSelector('target')">
+                        <span>目标语言：<span class="target-lang">{{ targetLanguage }}</span></span>
+                        <span class="language-arrow" :class="{ open: languageSelectorOpen === 'target' }">▾</span>
+                    </div>
+                    <div v-if="languageSelectorOpen === 'target'" class="language-tags" @click.stop>
+                        <div v-for="lang in targetLanguages" :key="lang" class="language-tag"
+                             :class="{ active: targetLanguage === lang }" @click="selectLanguage('target', lang)">
+                            {{ lang }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,6 +128,13 @@
             <div class="input-area">
                 <!-- 文本输入模式 -->
                 <div class="input-container" v-if="inputMode === 'text'">
+                    <!-- 上传录音文件 -->
+                    <div class="mode-switch-btn" @click="handleUploadClick" title="上传录音文件">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" class="switch-icon">
+                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                        </svg>
+                    </div>
                     <!-- 点击切换为语音模式 -->
                     <div class="mode-switch-btn" @click="switchToVoiceMode" title="切换为语音输入">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"
@@ -122,12 +151,20 @@
 
                 <!-- 语音输入模式（按住说话，松开发送音频文件） -->
                 <div class="voice-input-container" v-else>
+                    <!-- 上传录音文件 -->
+                    <div class="mode-switch-btn" @click="handleUploadClick" title="上传录音文件">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"
+                             stroke-linecap="round" stroke-linejoin="round" class="switch-icon">
+                            <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                        </svg>
+                    </div>
                     <!-- 点击切换回文本模式 -->
                     <div class="mode-switch-btn" @click="switchToTextMode" title="切换为键盘输入">
                         <svg viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2"
-                             stroke-linecap="round" class="switch-icon">
-                            <rect x="2" y="4" width="20" height="14" rx="2"></rect>
-                            <line x1="2" y1="11" x2="22" y2="11"></line>
+                             stroke-linecap="round" stroke-linejoin="round" class="switch-icon">
+                            <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                            <line x1="9" y1="20" x2="15" y2="20"></line>
+                            <line x1="12" y1="4" x2="12" y2="20"></line>
                         </svg>
                     </div>
                     <!-- 按住说话按钮（仿新版微信：长椭圆胶囊 + 外围描边） -->
@@ -150,6 +187,10 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 隐藏的文件选择器：点击"上传录音"按钮时触发（accept 限定音频，选中后走识别翻译流程） -->
+                <input ref="fileInputRef" type="file" accept="audio/*" class="file-input-hidden"
+                       @change="onFileSelected" />
             </div>
         </div>
 
@@ -182,9 +223,21 @@
 
 <script setup>
 import { ref, nextTick, computed, watch, onMounted, onActivated, onDeactivated, onBeforeUnmount } from 'vue'
+import { useRouter } from 'vue-router'
 import { showToast, showConfirmDialog } from 'vant'
-import { generateTranscriptionAPI, generateChatAPI, synthesizeSpeechAPI, resolveSpeakerForLang } from '../api/index'
+import { recognizeSpeechAPI, generateChatAPI, synthesizeSpeechAPI, resolveSpeakerForLang } from '../api/index'
 import { prewarmMicrophone } from '../utils/micPermission'
+
+const router = useRouter()
+
+/** 返回上一页；无历史记录（直接打开链接进入）时兜底回首页 */
+const goBack = () => {
+    if (router.options.history.state.back) {
+        router.back()
+    } else {
+        router.replace('/index')
+    }
+}
 
 // ============================================================
 // 消息数据
@@ -268,36 +321,130 @@ const switchToTextMode = () => {
 }
 
 // ============================================================
-// 目标语言选择
+// 上传录音文件（直接选择本地音频，复用语音识别/翻译流程）
+// ============================================================
+const MAX_UPLOAD_SIZE = 15 * 1024 * 1024 // 单个文件上限 15MB（识别前需转为 16kHz WAV，控制 base64 体积）
+
+const fileInputRef = ref(null)
+
+/** 点击上传按钮：打开系统文件选择器（发送中 / 录音中不响应） */
+const handleUploadClick = () => {
+    if (sending.value || isRecording.value) return
+    fileInputRef.value?.click()
+}
+
+/** 读取音频时长：Web Audio 解码（decodeAudioData），与识别链路共用同一解码器。
+ *  不用 <audio>.duration 的原因：MP3（尤其 VBR 编码 / Safari）在 loadedmetadata 时
+ *  duration 常为 Infinity，会被"无法解析"误杀；而 decodeAudioData 解码后必然返回
+ *  有限真实时长，且解码失败 = 识别必然失败，预检拦截语义与识别链路完全一致。 */
+const getAudioDuration = (blob) => new Promise((resolve, reject) => {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)()
+    blob.arrayBuffer()
+        .then((arrayBuffer) => ctx.decodeAudioData(arrayBuffer))
+        .then((audioBuffer) => {
+            try { ctx.close() } catch (e) { /* ignore */ }
+            resolve(audioBuffer.duration)
+        })
+        .catch((error) => {
+            try { ctx.close() } catch (e) { /* ignore */ }
+            reject(error)
+        })
+})
+
+/** 文件选择回调：类型/大小校验 → 取时长 → 走与语音输入相同的识别/翻译流程 */
+const onFileSelected = (event) => {
+    const file = event.target.files?.[0]
+    event.target.value = '' // 重置：允许重复选择同一文件
+    if (!file) return
+    if (sending.value) return
+
+    // 类型校验：MIME 或扩展名任一命中即放行（部分系统/浏览器上报的 MIME 不可靠）
+    const isAudio = /^audio\//.test(file.type) || /\.(mp3|wav|m4a|aac|amr|ogg|oga|flac|wma)$/i.test(file.name)
+    if (!isAudio) {
+        showToast('请选择音频文件（mp3/wav/m4a 等）')
+        return
+    }
+    if (file.size > MAX_UPLOAD_SIZE) {
+        showToast(`文件过大，请上传 ${MAX_UPLOAD_SIZE / 1024 / 1024}MB 以内的音频`)
+        return
+    }
+    handleUploadFile(file)
+}
+
+/** 上传文件：解码校验可解码性并取时长 → 复用 sendAudioMessage（识别 → 翻译） */
+const handleUploadFile = async (file) => {
+    let duration = 0
+    try {
+        duration = await getAudioDuration(file)
+    } catch (error) {
+        console.error('音频解码失败:', error)
+    }
+    // 解码失败/时长无效：该格式浏览器 Web Audio 无法处理（识别链路同样依赖 decodeAudioData），提前拦截
+    if (!duration || !isFinite(duration)) {
+        showToast('无法解析该音频文件，请更换格式（mp3/wav/m4a）')
+        return
+    }
+    await sendAudioMessage(file, Math.max(1, Math.round(duration)))
+}
+
+// ============================================================
+// 语言选择：源语言（默认自动识别）+ 目标语言
 // ============================================================
 const targetLanguage = ref('英文')
-const isLanguageSelectorVisible = ref(false)
+const sourceLanguage = ref('自动识别')
 const targetLanguages = ref([
     '中文', '英文', '日文', '韩文', '法文', '德文',
     '西班牙文', '葡萄牙文', '俄文', '泰文', '越南文',
     '阿拉伯文', '意大利文'
 ])
+const sourceLanguages = ['自动识别', ...targetLanguages.value]
 
-const toggleLanguageSelector = () => {
-    isLanguageSelectorVisible.value = !isLanguageSelectorVisible.value
-    if (isLanguageSelectorVisible.value) {
+/** 中文标签 → 火山 BigASR language 参数（极速版支持的 BCP-47，覆盖自动识别语种范围） */
+const SOURCE_LANG_CODE = {
+    '中文': 'zh-CN',
+    '英文': 'en-US',
+    '日文': 'ja-JP',
+    '韩文': 'ko-KR',
+    '法文': 'fr-FR',
+    '德文': 'de-DE',
+    '西班牙文': 'es-MX',
+    '葡萄牙文': 'pt-BR',
+    '俄文': 'ru-RU',
+    '泰文': 'th-TH',
+    '越南文': 'vi-VN',
+    '阿拉伯文': 'ar-SA',
+    '意大利文': 'it-IT'
+}
+
+/** 当前展开的语言选择器：'source' | 'target' | null（同一时刻只展开一个） */
+const languageSelectorOpen = ref(null)
+
+const toggleLanguageSelector = (which) => {
+    languageSelectorOpen.value = languageSelectorOpen.value === which ? null : which
+    if (languageSelectorOpen.value) {
         setTimeout(() => document.addEventListener('click', closeLanguageSelectorOnClickOutside), 10)
     } else {
         document.removeEventListener('click', closeLanguageSelectorOnClickOutside)
     }
 }
 
-const selectTargetLanguage = (lang) => {
-    targetLanguage.value = lang
-    isLanguageSelectorVisible.value = false
+const selectLanguage = (which, lang) => {
+    if (which === 'source') {
+        sourceLanguage.value = lang
+    } else {
+        targetLanguage.value = lang
+    }
+    languageSelectorOpen.value = null
     document.removeEventListener('click', closeLanguageSelectorOnClickOutside)
-    showToast(`目标语言：${lang}`)
+    showToast(`${which === 'source' ? '源语言' : '目标语言'}：${lang}`)
 }
 
 const closeLanguageSelectorOnClickOutside = (event) => {
-    const container = document.querySelector('.language-selector')
-    if (container && !container.contains(event.target)) {
-        isLanguageSelectorVisible.value = false
+    // 源语言/目标语言两个选择器，点击任一选择器内部都视为"选择器内"
+    const containers = document.querySelectorAll('.language-selector')
+    const clickedInside = Array.from(containers).some((el) => el.contains(event.target))
+    if (!clickedInside) {
+        languageSelectorOpen.value = null
         document.removeEventListener('click', closeLanguageSelectorOnClickOutside)
     }
 }
@@ -491,10 +638,12 @@ watch(isRecording, (recording) => {
 
 /** 文本翻译（generateChatAPI，用法参考 index.vue 的 translateText） */
 const translateText = async (text, lang) => {
+    // 指定了源语言时告知模型，有助于准确翻译；自动识别时不指定
+    const sourcePart = sourceLanguage.value === '自动识别' ? '' : `${sourceLanguage.value}`
     const response = await generateChatAPI({
         model: 'tencent/Hunyuan-MT-7B',
         messages: [
-            { role: 'system', content: `把下面的文本翻译成${lang}，不要额外解释` },
+            { role: 'system', content: `把下面的${sourcePart}文本翻译成${lang}，不要额外解释` },
             { role: 'user', content: text }
         ],
         temperature: 0.7,
@@ -507,16 +656,14 @@ const translateText = async (text, lang) => {
     return content
 }
 
-/** 语音文件识别为文本（generateTranscriptionAPI，model: XingChenAGI/XingChenASR-V3.2） */
+/** 语音文件识别为文本（火山 BigASR 极速版，volc.bigasr.auc_turbo；源语言=自动识别时自动检测语种） */
 const transcribeAudio = async (blob) => {
-    const formData = new FormData()
-    // 按录音编码推断文件后缀：iOS(Safari) 为 mp4/m4a，Android/桌面为 webm
-    const isMp4 = blob.type.includes('mp4') || blob.type.includes('m4a') || blob.type.includes('aac')
-    formData.append('file', blob, isMp4 ? 'audio.m4a' : 'audio.webm')
-    formData.append('model', 'XingChenAGI/XingChenASR-V3.2')
-    const response = await generateTranscriptionAPI(formData)
-    // 响应格式: { duration, text, usage: { type: 'duration', seconds } }
-    return response?.data?.text || ''
+    const autoDetect = sourceLanguage.value === '自动识别'
+    const text = await recognizeSpeechAPI(blob, {
+        language: autoDetect ? '' : SOURCE_LANG_CODE[sourceLanguage.value] || '',
+        enableAutoLang: autoDetect
+    })
+    return text
 }
 
 /** 推送 AI 译文回复（loading → 译文）；发送锁由调用方（sendMessage / sendAudioMessage）负责 */
@@ -600,7 +747,11 @@ const sendAudioMessage = async (blob, duration) => {
         } catch (error) {
             console.error('语音识别失败:', error)
             if (messages.value.some((m) => m.id === id)) {
-                await pushAiReply('语音识别失败，请重试或使用文本输入')
+                // 区分"资源未开通"（火山控制台未授权 volc.bigasr.auc_turbo）与普通失败，便于排查
+                const notGranted = /not granted|not authorize|\u672a\u6388\u6743|\u672a\u5f00\u901a/i.test(error?.message || '')
+                await pushAiReply(notGranted
+                    ? '语音识别服务未开通，请在火山控制台开通「大模型录音文件识别（极速版）」后重试'
+                    : '语音识别失败，请重试或使用文本输入')
             }
             return
         }
@@ -816,6 +967,39 @@ onBeforeUnmount(() => {
         font-weight: 600;
         font-size: .36rem;
         letter-spacing: 0.02rem;
+    }
+
+    /* 返回按钮：白色胶囊 + 左箭头，与右侧"清空"胶囊对称，与蓝色标题栏形成高对比 */
+    .header-back {
+        position: absolute;
+        left: .3rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        align-items: center;
+        gap: .08rem;
+        color: #1890ff;
+        font-size: .28rem;
+        font-weight: 600;
+        padding: .12rem .24rem;
+        background: #fff;
+        border-radius: 9999px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: all 0.2s;
+
+        .back-icon {
+            width: .3rem;
+            height: .3rem;
+            flex-shrink: 0;
+        }
+
+        &:active {
+            transform: translateY(-50%) scale(0.94);
+            background: #e8f0fe;
+        }
     }
 
     /* 清空会话按钮：白色胶囊 + 垃圾桶图标，与蓝色标题栏形成高对比 */
@@ -1161,10 +1345,19 @@ onBeforeUnmount(() => {
     padding-bottom: env(safe-area-inset-bottom);
     box-sizing: border-box;
 
-    /* 目标语言选择 */
-    .language-selector {
+    /* 语言选择行：源语言 + 目标语言并排 */
+    .language-row {
+        display: flex;
+        gap: .12rem;
         margin: 0 .3rem .1rem .3rem;
+    }
+
+    /* 语言选择器（源语言 / 目标语言各占一行半宽） */
+    .language-selector {
+        flex: 1;
+        min-width: 0;
         position: relative;
+        margin: 0;
 
         .target-lang {
             color: #e53935;
@@ -1266,6 +1459,11 @@ onBeforeUnmount(() => {
             }
         }
 
+        /* 隐藏的文件选择器（由"上传录音"按钮触发） */
+        .file-input-hidden {
+            display: none;
+        }
+
         /* 文本模式输入条 */
         .input-container {
             display: flex;
@@ -1341,19 +1539,19 @@ onBeforeUnmount(() => {
 
             /* 按住说话按钮：长椭圆胶囊 + 外围一圈线条描边（新版微信样式特征） */
             .hold-btn {
-                height: .8rem;
+                height: 1.1rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: .1rem;
+                gap: .14rem;
                 border-radius: 9999px;
                 background-color: #fff;
                 border: 1px solid rgba(0, 0, 0, 0.06);
                 box-shadow:
                     0 0 0 3px rgba(24, 144, 255, 0.08),
                     0 2px 6px rgba(0, 0, 0, 0.04);
-                font-size: .32rem;
-                font-weight: 500;
+                font-size: .38rem;
+                font-weight: 600;
                 color: #333;
                 cursor: pointer;
                 user-select: none;
@@ -1368,8 +1566,8 @@ onBeforeUnmount(() => {
                     justify-content: center;
 
                     svg {
-                        width: .34rem;
-                        height: .34rem;
+                        width: .42rem;
+                        height: .42rem;
                         color: #1890ff;
                     }
                 }

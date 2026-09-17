@@ -116,6 +116,33 @@ location /tts {
     proxy_send_timeout 300s;
 }
 
+# ============ 火山引擎 BigASR 大模型录音文件识别（极速版 / flash）代理 ============
+# 浏览器 fetch 无法携带自定义请求头，鉴权头由服务端代理注入（与 /tts 同模式）
+# 前端固定请求同源路径 /recognize（见 src/api/volcRecognize.js 的 fetch('/recognize')）
+location /recognize {
+    # 目标：火山引擎大模型录音文件识别极速版（一次请求同步返回结果），路径完全重写
+    proxy_pass https://openspeech.bytedance.com/api/v3/auc/bigmodel/recognize/flash;
+
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+
+    # 注入 BigASR 鉴权头（与 vue.config.js 中 dev 代理保持一致；与 /ast-ws、/tts 同一把火山 API Key）
+    proxy_set_header X-Api-Key "30a78276-0088-45a5-aafa-ccb4d0fa61bf";
+    proxy_set_header X-Api-Resource-Id "volc.bigasr.auc_turbo";
+    # 每次请求必须唯一：nginx 内置 $request_id 每次请求自动生成
+    proxy_set_header X-Api-Request-Id $request_id;
+    proxy_set_header X-Api-Sequence "-1";
+
+    # Host 使用目标域名，避免网关校验失败
+    proxy_set_header Host $proxy_host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+    # 识别大文件音频耗时可能较长，放宽读写超时（默认 60s 可能掐断）
+    proxy_read_timeout 300s;
+    proxy_send_timeout 300s;
+}
+
 error_page 500 502 503 504 /50x.html;
 location = /50x.html {
 root html;

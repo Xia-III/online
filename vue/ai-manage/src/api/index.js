@@ -78,3 +78,7 @@ export const synthesizeSpeechAPI = synthesizeSpeech
 // 按目标语言取 TTS 配置（{ speaker, language }），返回后传给 synthesizeSpeechAPI
 export const resolveSpeakerForLang = resolveTtsConfig
 export const ttsSpeakerMap = TTS_LANG_MAP
+
+import { recognizeSpeech } from './volcRecognize'
+// 火山引擎 大模型录音文件识别（极速版，同步返回）：
+export const recognizeSpeechAPI = recognizeSpeech
